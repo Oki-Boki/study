@@ -45,40 +45,61 @@ legend {overflow:hidden;width:1px;height:1px;margin:-1px 0 0 -1px;font-size:0;li
 .blind:after {display:none}
 
 img {vertical-align:top;width:100%;}
-
 em {font-style:normal;}
 
-.wrap {display: block; position: relative;}
-.header {display: block; position: relative;}
+/* ==========================================================================
+	03. style
+  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
+   ========================================================================== */
+.wrap {position: relative;}
 
-.main_menu_area {display: block; position: relative; width: 1200px; margin: 0 auto;}
-.main_menu_area::after {content: ''; display: block; clear: both;}
-.util_menu {display: block; float: right; position: relative; width: 312px; margin-top: 12px; font-size: 12px; line-height: 32px;}
-.util_menu a {margin-right: 10px;}
-.util_menu a:first-child {margin-right: 75px;}
-.util_menu a:first-child::before {content: ''; display: block; position: absolute; left: 55px; top: 4px; width: 21px; height: 21px; background: url(../images/icon/fontsize_up.png) 0 0 no-repeat;}
-.util_menu a:nth-child(1)::after {content: ''; display: block; position: absolute; left: 80px; top: 4px; width: 21px; height: 21px; background: url(../images/icon/fontsize_down.png) 0 0 no-repeat;}
-.util_menu a:nth-child(2)::after {content: '|'; display: block; position: absolute; left: 169px; top: -2px;}
-.util_menu .icon {display: inline-block; width: 34px; height: 33px;}
+.header {position: relative; width: 1200px; margin: 0 auto;}
+.header::after {content: ''; display: block; clear: both;}
 
-.logo {display: block; float: left; width: 254px; height: 46px; margin-top: 46px;}
+/* ==========================================================================
+   로고
+  ========================================================================== */
+.header .logo {float: left; width: 254px; height: 46px; margin-top: 46px;}
 
-.menu_wrap {display: block; float: right; margin: 24px auto 0; font-size: 18px; font-weight: bold; color: #222;}
-.menu_wrap .menu_area {display: block;}
-.menu_wrap .menu_area li {display: block; float: left; margin-left: 30px;}
+/* ==========================================================================
+   유틸메뉴
+  ========================================================================== */
+.header .util_menu {float: right; position: relative; margin-top: 12px; font-size: 12px; line-height: 30px;}
+.header .util_menu::after {content: ''; display: block; clear: both;}
 
-.drop_menu_wrap {position: relative; width: 100%; height: 245px; margin: 25px auto 0; background: url(../images/sub_visual01.jpg) 0 0 no-repeat;}
-.drop_menu_wrap h2 {position: absolute; top: 120px; left: 50%; transform: translateX(-50%); font-size: 45px; font-weight: bold; color: #fff;}
-.drop_menu_area {height: 53px; background: rgba(0,59,193,.5);}
-.drop_menu_area::after {content: ''; display: block; clear: both;}
-.drop_menu_area .drop_menu_list {display: block; position: relative; width: 1200px; margin: 0 auto; font-size: 16px; color: #fff;}
-.drop_menu_area .drop_menu_list li {float: left; height: 53px; width: 56px; padding: 22px 21px 19px; border-left: 1px solid rgba(177,177,176,.27); box-sizing: border-box;}
-.drop_menu_area .drop_menu_list > li:first-child {width: 56px;}
-.drop_menu_area .drop_menu_list > li:nth-child(2) {width: 220px;}
-.drop_menu_area .drop_menu_list > li:last-child {width: 295px; border-right: 1px solid rgba(177,177,176,.27);}
-.drop_menu_area .drop_menu_list > li:nth-child(2)::after {content: ''; display: block; position: absolute; left: 230px; top: 9px; width: 36px; height: 36px; background: url(../images/icon/arr_down.png) 0 0 no-repeat;}
-.drop_menu_area .drop_menu_list > li:last-child::after {content: ''; display: block; position: absolute; left: 524px; top: 9px; width: 36px; height: 36px; background: url(../images/icon/arr_down.png) 0 0 no-repeat;}
-.drop_menu_area .drop_menu_list > li .icon {display: block; width: 14px;}
-.drop_menu_area .drop_menu_list li.checked {background: #2c83e0;}
-.drop_menu_list li .drop_submenu_area {width: 295px; margin: 15px 0 0 -22px; border-left: 1px solid rgba(177,177,176,.27); border-right: 1px solid rgba(177,177,176,.27); border-bottom: 1px solid rgba(177,177,176,.27); box-sizing: border-box; background: #2c83e0;}
-.drop_menu_list li .drop_submenu_area li {display: block; float: none;}
+.header .util_menu .util_list {margin-left: 20px; float: left;}
+.header .util_menu .util_list:first-child {margin-left: 0;}
+.header .util_menu .util_list  p {float: left;}
+.header .util_menu .util_list .fontsize {display: inline-block; margin: 6px 0 0 6px;}
+.header .util_menu .util_list .fontsize a {display: inline-block; width: 21px; height: 21px; cursor: pointer;}
+.header .util_menu .util_list .fontsize a:active {background: #b1b0ab;}
+.header .util_menu .util_list.list02 a {display: inline-block; margin-left: 12px;}
+.header .util_menu .util_list.list02 a:first-child {margin-left: 0;}
+.header .util_menu .util_list.list02 a::before {content: '|'; display: block; position: absolute; margin: -2px 0 0 -10px;}
+.header .util_menu .util_list.list02 a:first-child::before {display: none;}
+.header .util_menu .icon {display: inline-block; width: 34px; height: 33px; padding: 0;}
+
+/* ==========================================================================
+   메인메뉴
+  ========================================================================== */
+.header .menu { float: right; margin: 24px auto 0; font-size: 18px; font-weight: bold; color: #222;}
+.header .menu .menu_list li {float: left; margin-left: 3px;}
+.header .menu .menu_list li:first-child {margin-left: 0;}
+.header .menu .menu_list li a {padding: 12px;}
+
+.container {position: relative;}
+.content .nav_area {position: relative; width: 100%; height: 245px; margin: 25px auto 0; background: url(../images/sub_visual01.jpg) 0 0 no-repeat;}
+.content .nav_area h2 {padding-top: 120px; text-align: center; font-size: 45px; font-weight: bold; color: #fff;}
+.content .nav_area .nav {position: absolute; top: 0; width: 100%; height: 53px; background: rgba(0,59,193,.5);}
+
+.content .nav_area .nav .nav_list {width: 1200px; margin: 0 auto; font-size: 16px; color: #fff;}
+.content .nav_area .nav .nav_list::after {content: ''; display: block; clear: both;}
+.content .nav_area .nav .nav_list > li {float: left; position: relative; height: 53px; padding: 22px 50px 19px 21px; border-left: 1px solid rgba(177,177,176,.27);}
+.content .nav_area .nav .nav_list > li:first-child {width: 56px; padding: 22px 21px 19px;}
+.content .nav_area .nav .nav_list > li:last-child {border-right: 1px solid rgba(177,177,176,.27);}
+.content .nav_area .nav .nav_list > li p::after {content: ''; display: inline-block; position: absolute; right: 0; top: 0; width: 36px; height: 36px; background: url(../images/icon/arr_down.png) -5px 12px no-repeat;}
+.content .nav_area .nav .nav_list > li:first-child p::after {display: none;}
+.content .nav_area .nav .nav_list > li .home {width: 14px;}
+.content .nav_area .nav .nav_list .on {background: #2c83e0;}
+.content .nav_area .nav .nav_list .on .subnav {padding: 22px 50px 19px 21px; border: 1px solid rgba(177,177,176,.27); border-top: 0; background: #2c83e0;}
+.content .nav_area .nav .nav_list .on .subnav li {display: block;}
