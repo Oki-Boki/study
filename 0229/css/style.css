@@ -15,18 +15,18 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;word-break:keep-all;}
+time, mark, audio, video {margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; box-sizing:border-box; word-break:keep-all;}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {display:block;}
-body {line-height:1;font-family:'Nanum Gothic','맑은고딕',Malgun Gothic,dotum,'돋음',arial,sans-serif;font-size:14px;color:#666;min-width:320px;}
+body {line-height:1; font-family:'Nanum Gothic','맑은고딕',Malgun Gothic,dotum,'돋음',arial,sans-serif; font-size:14px; color:#666; min-width:320px;}
 ol, ul {list-style:none;}
-ul:after {clear:both;display:block;content:"";}
+ul:after {clear:both; display:block; content:"";}
 blockquote, q {quotes:none;}
-blockquote:before, blockquote:after,q:before, q:after {content:'';content:none;}
-table {border-collapse:collapse;border-spacing:0;width:100%;}
+blockquote:before, blockquote:after,q:before, q:after {content:''; content:none;}
+table {border-collapse:collapse; border-spacing:0; width:100%;}
 /* html, body {height:100%;} */
-button  {border-radius:2px;border:none;box-sizing:border-box;vertical-align:middle;font-size:13px;font-family:'Nanum Gothic','맑은고딕',Malgun Gothic,dotum,'돋음',arial,sans-serif;cursor:pointer;background:transparent;border-radius:0;}
+button  {border-radius:2px; border:none; box-sizing:border-box; vertical-align:middle; font-size:13px; font-family:'Nanum Gothic','맑은고딕',Malgun Gothic,dotum,'돋음',arial,sans-serif; cursor:pointer; background:transparent; border-radius:0;}
 /* button:hover {background:#66532b;}
 button:hover:not(:disabled) {background:#66532b;}
 button:disabled {background:#bfbbb2;color:#fff;} */
@@ -36,15 +36,15 @@ a:link
 a:visited,
 a:hover,
 a:active,
-a:focus {color:#666;text-decoration:none;}
+a:focus {color:#666; text-decoration:none;}
 
 .hidden,
 caption,
-legend {overflow:hidden;width:1px;height:1px;margin:-1px 0 0 -1px;font-size:0;line-height:0;text-indent:-9999px}
-.blind {clear:both;position:absolute;top:auto;left:0;overflow:hidden;width:1px;height:1px;padding:0;margin:0;font-size:0;line-height:0}
-.blind:after {display:none}
+legend {overflow:hidden; width:1px; height:1px; margin:-1px 0 0 -1px; font-size:0; line-height:0; text-indent:-9999px;}
+.blind {clear:both; position:absolute; top:auto; left:0; overflow:hidden; width:1px; height:1px; padding:0; margin:0; font-size:0; line-height:0}
+.blind:after {display:none;}
 
-img {vertical-align:top;width:100%;}
+img {vertical-align:top; width:100%;}
 em {font-style:normal;}
 
 /* ==========================================================================
@@ -82,8 +82,9 @@ em {font-style:normal;}
 /* ==========================================================================
    메인메뉴
   ========================================================================== */
-.header .menu { float: right; margin: 24px auto 0; font-size: 18px; font-weight: bold; color: #222;}
-.header .menu .menu_list li {float: left; margin-left: 3px;}
+.header .menu { float: right; margin: 24px auto 0;}
+.header .menu .menu_list li {float: left; margin-left: 3px; font-size: 18px; font-weight: bold; color: #222;}
+.header .menu .menu_list li a:hover {color: #3a45de; border-bottom: 3px solid #3a45de; border-radius: 3px;;}
 .header .menu .menu_list li:first-child {margin-left: 0;}
 .header .menu .menu_list li a {padding: 12px;}
 
@@ -107,7 +108,7 @@ em {font-style:normal;}
 .content .nav_area .nav .nav_list > li .home {width: 14px;}
 .content .nav_area .nav .nav_list > li:hover {background: #2c83e0;}
 .content .nav_area .nav .nav_list > li > a:hover::after {transform: rotateZ(-180deg);}
-.content .nav_area .nav .nav_list .on .subnav {background: #2c83e0; opacity: 0;}
-.content .nav_area .nav .nav_list > li:hover .subnav {opacity: 1; transition: all ease .6s;}
+.content .nav_area .nav .nav_list .on .subnav {display: none; background: #2c83e0; opacity: 0;}
+.content .nav_area .nav .nav_list > li:hover .subnav {display: block; opacity: 1; transition: all ease .6s;}
 .content .nav_area .nav .nav_list .on .subnav > li {display: block; border: 1px solid rgba(177,177,176,.27); border-top: 0; border-bottom: 0;}
 .content .nav_area .nav .nav_list .on .subnav > li > a {display: block; padding: 22px 50px 15px 21px; font-size: 16px; color: #fff; text-align: left;}
