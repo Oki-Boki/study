@@ -26,10 +26,11 @@ blockquote, q {quotes:none;}
 blockquote:before, blockquote:after,q:before, q:after {content:''; content:none;}
 table {border-collapse:collapse; border-spacing:0; width:100%;}
 /* html, body {height:100%;} */
-button  {border-radius:2px; border:none; box-sizing:border-box; vertical-align:middle; font-size:13px; font-family:'Nanum Gothic','맑은고딕',Malgun Gothic,dotum,'돋음',arial,sans-serif; cursor:pointer; background:transparent; border-radius:0;}
+button  {margin:0;padding:0;border-radius:2px; border:none; box-sizing:border-box; vertical-align:middle; font-size:13px; font-family:'Nanum Gothic','맑은고딕',Malgun Gothic,dotum,'돋음',arial,sans-serif; cursor:pointer; background:transparent; border-radius:0;outline:none;}
 /* button:hover {background:#66532b;}
 button:hover:not(:disabled) {background:#66532b;}
 button:disabled {background:#bfbbb2;color:#fff;} */
+button > span {position:relative;}
 
 a,
 a:link
@@ -51,7 +52,7 @@ em {font-style:normal;}
 	03. style
   * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
    ========================================================================== */
-.wrap {position: relative;}
+.wrap {position: relative; min-width: 1200px;}
 
 .header {position: relative; width: 1200px; margin: 0 auto;}
 .header::after {content: ''; display: block; clear: both;}
@@ -66,49 +67,64 @@ em {font-style:normal;}
   ========================================================================== */
 .header .util_menu {float: right; position: relative; margin-top: 12px; font-size: 12px; line-height: 30px;}
 .header .util_menu::after {content: ''; display: block; clear: both;}
-
-.header .util_menu .util_list {margin-left: 20px; float: left;}
-.header .util_menu .util_list:first-child {margin-left: 0;}
-.header .util_menu .util_list  p {float: left;}
-.header .util_menu .util_list .fontsize {display: inline-block; margin: 6px 0 0 6px;}
-.header .util_menu .util_list .fontsize a {display: inline-block; width: 21px; height: 21px; cursor: pointer;}
-.header .util_menu .util_list .fontsize a:active {background: #b1b0ab;}
-.header .util_menu .util_list.list02 a {display: inline-block; margin-left: 12px;}
-.header .util_menu .util_list.list02 a:first-child {margin-left: 0;}
-.header .util_menu .util_list.list02 a::before {content: '|'; display: block; position: absolute; margin: -2px 0 0 -10px;}
-.header .util_menu .util_list.list02 a:first-child::before {display: none;}
-.header .util_menu .icon {display: inline-block; width: 34px; height: 33px; padding: 0;}
+.header .util_menu > div {margin-left: 20px; float: left;}
+.header .util_menu > div:first-child {margin-left: 0;}
+.header .util_fontsize .tit {display: inline-block; vertical-align: middle;}
+.header .util_fontsize button:active {background: #b1b0ab;}
+.header .util_list a {display: inline-block; margin-left: 12px; vertical-align: middle;}
+.header .util_list a:first-child {margin-left: 0;}
+.header .util_list a::before {content: '|'; display: block; position: absolute; margin: -2px 0 0 -10px;}
+.header .util_list a:first-child::before {display: none;}
+.header .icon {display: inline-block; width: 34px; height: 33px; padding: 0;}
 
 /* ==========================================================================
    메인메뉴
   ========================================================================== */
-.header .menu { float: right; margin: 24px auto 0;}
+.header .menu { float: right; margin-top: 10px;}
 .header .menu .menu_list li {float: left; margin-left: 3px; font-size: 18px; font-weight: bold; color: #222;}
-.header .menu .menu_list li a:hover {color: #3a45de; border-bottom: 3px solid #3a45de; border-radius: 3px;;}
 .header .menu .menu_list li:first-child {margin-left: 0;}
-.header .menu .menu_list li a {padding: 12px;}
+.header .menu .menu_list li a {display:block;padding: 12px;border-bottom: 3px solid #fff;}
+.header .menu .menu_list li a:hover {color: #3a45de; border-bottom: 3px solid #3a45de; border-radius: 3px;}
 
 /* ==========================================================================
    container
   ========================================================================== */
 .container {position: relative;}
-.content .nav_area {position: relative; width: 1920px; height: 245px; margin: 25px auto 0; background: url(../images/sub_visual01.jpg) 0 0 no-repeat;}
-.content .nav_area h2 {padding-top: 120px; text-align: center; font-size: 45px; font-weight: bold; color: #fff;}
-.content .nav_area .nav {position: absolute; top: 0; width: 100%; height: 53px; background: rgba(0,59,193,.5);}
+.breadcrumb_area {position: relative; height: 245px; margin: 25px auto 0; background: url(../images/sub_visual01.jpg) center 0 no-repeat;}
+.breadcrumb_area h2 {padding-top: 120px; text-align: center; font-size: 45px; font-weight: bold; color: #fff;}
+.breadcrumb_area .breadcrumb {position: absolute; top: 0; width: 100%; height: 53px; background: rgba(0,59,193,.5);}
 
-.content .nav_area .nav .nav_list {display: table; width: 1200px; margin: 0 auto;}
-.content .nav_area .nav .nav_list::after {content: ''; display: block; clear: both;}
-.content .nav_area .nav .nav_list > li {display: table-cell; float: left; position: relative; height: 53px; text-align: center; border-left: 1px solid rgba(177,177,176,.27);}
-.content .nav_area .nav .nav_list > li > a {display: block; padding: 22px 50px 15px 21px; font-size: 16px; color: #fff;}
-.content .nav_area .nav .nav_list > li:first-child > a {width: 56px; padding: 22px 21px 15px;}
-.content .nav_area .nav .nav_list > li:last-child {border-right: 1px solid rgba(177,177,176,.27);}
-.content .nav_area .nav .nav_list > li > a::after {content: ''; display: inline-block; position: absolute; right: 15px; top: 22px; width: 18px; height: 12px; background: url(../images/icon/arr_down_02.png) 0 0 no-repeat; transition: all ease .4s;}
+.breadcrumb_area .breadcrumb .breadcrumb_list {display: table; width: 1200px; margin: 0 auto;}
+.breadcrumb_area .breadcrumb .breadcrumb_list::after {content: ''; display: block; clear: both;}
+.breadcrumb_area .breadcrumb .breadcrumb_list > li {display: table-cell; float: left; position: relative; height: 53px; line-height: 53px; text-align: center; vertical-align: middle;}
+.breadcrumb_area .breadcrumb .breadcrumb_list > li > a {display: block; padding: 0 50px 0 21px; font-size: 16px; color: #fff;border-left: 1px solid rgba(177,177,176,.27);}
+.breadcrumb_area .breadcrumb .breadcrumb_list > li:first-child > a {width: 56px; padding: 22px 21px 15px;}
+.breadcrumb_area .breadcrumb .breadcrumb_list > li:last-child > a {border-right: 1px solid rgba(177,177,176,.27);}
+.breadcrumb_area .breadcrumb .breadcrumb_list > li > a::after {content: ''; display: inline-block; position: absolute; right: 15px; top: 22px; width: 18px; height: 12px; background: url(../images/icon/arr_down_02.png) 0 0 no-repeat; transition: all ease .4s;}
 
-.content .nav_area .nav .nav_list > li:first-child > a::after {display: none;}
-.content .nav_area .nav .nav_list > li .home {width: 14px;}
-.content .nav_area .nav .nav_list > li:hover {background: #2c83e0;}
-.content .nav_area .nav .nav_list > li > a:hover::after {transform: rotateZ(-180deg);}
-.content .nav_area .nav .nav_list .on .subnav {display: none; background: #2c83e0; opacity: 0;}
-.content .nav_area .nav .nav_list > li:hover .subnav {display: block; opacity: 1; transition: all ease .6s;}
-.content .nav_area .nav .nav_list .on .subnav > li {display: block; border: 1px solid rgba(177,177,176,.27); border-top: 0; border-bottom: 0;}
-.content .nav_area .nav .nav_list .on .subnav > li > a {display: block; padding: 22px 50px 15px 21px; font-size: 16px; color: #fff; text-align: left;}
+.breadcrumb_area .breadcrumb .breadcrumb_list > li:first-child > a::after {display: none;}
+.breadcrumb_area .breadcrumb .breadcrumb_list > li .home {width: 14px;}
+.breadcrumb_area .breadcrumb .breadcrumb_list > li:hover > a {background: #2c83e0;}
+.breadcrumb_area .breadcrumb .breadcrumb_list > li:hover > a::after {transform: rotateZ(-180deg);}
+.breadcrumb_area .breadcrumb .breadcrumb_list .sub_breadcrumb {display: none; background: #2c83e0; opacity: 0;border: 1px solid rgba(177,177,176,.27); border-top: 0;}
+.breadcrumb_area .breadcrumb .breadcrumb_list .sub_breadcrumb > li {display: block;}
+.breadcrumb_area .breadcrumb .breadcrumb_list .sub_breadcrumb > li > a {display: block; padding: 22px 50px 15px 21px; font-size: 16px; color: #fff; text-align: left;}
+.breadcrumb_area .breadcrumb .breadcrumb_list > li:hover .sub_breadcrumb {display: block; opacity: 1; transition: all ease .6s;}
+
+h3.content_tit {width: 1200px; padding: 50px 0 40px; margin: 0 auto; border-bottom: 1px solid #e5e5e5; font-size: 32px; font-weight: bold; line-height: 32px; color: #333;}
+h3.content_tit span {display: block; font-size: 15px; font-weight: normal; color: #808080;}
+
+.content {width: 1200px; margin: 0 auto; padding-top: 40px;}
+.investigate h4.content_tit {float: left; width: 290px; font-size: 24px; font-weight: 520; line-height: 30px; color: #333;}
+.investigate::after {content: ''; display: block; clear: both;}
+.investigate_section {float: left; width: calc(100% - 290px);font-size:0;}
+.investigate_section .invest_select .radio {display: inline-block; width: 218px; height: 50px; margin-left: 9px; padding-top: 16px; text-align: center; border: 1px solid #d9d9d9; box-sizing: border-box;font-size:14px;}
+.investigate_section .invest_select .radio:nth-child(-n+5) {margin-left: 0;}
+.investigate_section .invest_select .radio.half {width: 445px; margin-top: 10px;}
+.investigate_section .invest_select input[type="radio"] {display:none;}
+.investigate_section .invest_select input[type="radio"] + label {display:inline-block;}
+
+
+
+
+

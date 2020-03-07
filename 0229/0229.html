@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<d lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,58 +9,100 @@
 <body>
     <div class="wrap">
         <header class="header">
-            <h1 class="logo"><a href="#"><img src="images/common/logo.png" alt="중앙환경분쟁조정위원회"></a></h1>
+            <h1 class="logo"><a href="javascript:;"><img src="images/common/logo.png" alt="중앙환경분쟁조정위원회"></a></h1>
 
             <div class="util_menu">
-                <div class="util_list">
-                    <p>글자크기</p>
-                    <div class="fontsize">
-                        <a><img src="images/icon/fontsize_up_02.png" alt="글자크기 확대"></a>
-                        <a><img src="images/icon/fontsize_down_02.png" alt="글자크기 축소"></a>
-                    </div>
+                <div class="util_fontsize">
+                    <span class="tit">글자크기</span>
+                    <button type="button"><span><img src="images/icon/fontsize_up_02.png" alt="글자크기 확대"></span></button>
+                    <button type="button"><span><img src="images/icon/fontsize_down_02.png" alt="글자크기 축소"></span></button>
                 </div>
-                <div class="util_list list02">
+                <div class="util_list">
                     <a href="">로그인</a>
                     <a href="">이용안내</a>
                 </div>
-                <div class="util_list">
-                    <a href="#" class="icon"><img src="images/icon/icon_blog.png" alt="블로그"></a>
-                    <button class="icon"><img src="images/icon/icon_search.png" alt="검색"></button>
+                <div class="util_icon">
+                    <a href="javascript:;" class="icon"><img src="images/icon/icon_blog.png" alt="블로그"></a>
+                    <button type="button" class="icon"><img src="images/icon/icon_search.png" alt="검색"></button>
                 </div>
             </div>
 
             <div class="menu">
                 <ul class="menu_list">
-                    <li><a href="#">신청조건판단</a></li>
-                    <li><a href="#">유사사례찾기</a></li>
-                    <li><a href="#">분쟁조정신청</a></li>
-                    <li><a href="#">문제해결가이드</a></li>
-                    <li><a href="#">알림/자료</a></li>
-                    <li><a href="#">우리함께나눔</a></li>
-                    <li><a href="#">위원회소개</a></li>
+                    <li><a href="javascript:;">신청조건판단</a></li>
+                    <li><a href="javascript:;">유사사례찾기</a></li>
+                    <li><a href="javascript:;">분쟁조정신청</a></li>
+                    <li><a href="javascript:;">문제해결가이드</a></li>
+                    <li><a href="javascript:;">알림/자료</a></li>
+                    <li><a href="javascript:;">우리함께나눔</a></li>
+                    <li><a href="javascript:;">위원회소개</a></li>
                 </ul>
             </div>
         </header>
 
         <div class="container">
+            <nav class="breadcrumb_area">
+                <h2>신청조건판단</h2>
+                <div class="breadcrumb">
+                    <ul class="breadcrumb_list">
+                        <li><a href="javascript:;" class="home"><img src="images/icon/icon_home.png" alt="홈"></a></li>
+                        <li class=""><a href="javascript:;">분쟁조정신청</a></li>
+                        <li class="">
+                            <a href="javascript:;">분쟁조정신청/서류제출</a>
+                            <ul class="sub_breadcrumb">
+                                <li><a href="javascript:;">메뉴나오기1</a></li>
+                                <li><a href="javascript:;">메뉴나오기2</a></li>
+                                <li><a href="javascript:;">메뉴나오기3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
             <div class="content">
-                <nav class="nav_area">
-                    <h2>신청조건판단</h2>
-                    <div class="nav">
-                        <ul class="nav_list">
-                            <li><a href="#" class="home"><img src="images/icon/icon_home.png" alt="홈"></a></li>
-                            <li class=""><a href="#">분쟁조정신청</a></li>
-                            <li class="on">
-                                <a href="#">분쟁조정신청/서류제출</a>
-                                <ul class="subnav">
-                                    <li><a href="#">메뉴나오기1</a></li>
-                                    <li><a href="#">메뉴나오기2</a></li>
-                                    <li><a href="#">메뉴나오기3</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                <h3 class="content_tit">
+                    신청조건판단
+                    <span>환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.</span>
+                </h3>
+
+                <div class="investigate">
+                    <h4 class="content_tit">환경피해여부<br>확인</h4>
+                    <div class="investigate_section">
+                        <div class="invest_select">
+                            
+                            <span class="radio">
+                                <input type="radio" id="verify" name="환경피해여부 확인" value="소음과 진동피해">
+                                <label for="verify">소음과 진동피해</label>
+                            </span>
+
+                            <span class="radio">
+                                <input type="radio" id="verify" name="환경피해여부 확인" value="먼지피해">
+                                <label for="verify">먼지피해</label>
+                            </span>
+
+                            <span class="radio">
+                                <input type="radio" id="verify" name="환경피해여부 확인" value="일조방해 피해">
+                                <label for="verify">일조방해 피해</label>
+                            </span>
+
+                            <span class="radio">
+                                <input type="radio" id="verify" name="환경피해여부 확인" value="지하수 수위저하로 인한 피해">
+                                <label for="verify">지하수 수위저하로 인한 피해</label>
+                            </span>
+
+                            <span class="radio half">
+                                <input type="radio" id="verify" name="환경피해여부 확인" value="대기오염·수질오염·토양오염 등으로 인한 피해">
+                                <label for="verify">대기오염·수질오염·토양오염 등으로 인한 피해</label>
+                            </span>
+
+                            <span class="radio half">
+                                <input type="radio" id="verify" name="환경피해여부 확인" value="해당사항이 없습니다.">
+                                <label for="verify">해당사항이 없습니다.</label>
+                            </span>
+                        </div>
+
                     </div>
-                </nav>
+                </div>
             </div>
         </div>
 
