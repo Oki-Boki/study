@@ -14,8 +14,8 @@
             <div class="util_menu">
                 <div class="util_fontsize">
                     <span class="tit">글자크기</span>
-                    <button type="button"><span><img src="images/icon/fontsize_up_02.png" alt="글자크기 확대"></span></button>
-                    <button type="button"><span><img src="images/icon/fontsize_down_02.png" alt="글자크기 축소"></span></button>
+                    <button type="button" class="fontsize_up"><span class="blind">글자크기 확대</span></button>
+                    <button type="button" class="fontsize_down"><span class="blind">글자크기 축소</span></button>
                 </div>
                 <div class="util_list">
                     <a href="">로그인</a>
@@ -41,7 +41,7 @@
         </header>
 
         <div class="container">
-            <nav class="breadcrumb_area">
+            <div class="breadcrumb_area">
                 <h2>신청조건판단</h2>
                 <div class="breadcrumb">
                     <ul class="breadcrumb_list">
@@ -57,7 +57,7 @@
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </div>
 
             <div class="content">
                 <h3 class="content_tit">
@@ -68,42 +68,124 @@
                 <div class="investigate">
                     <h4 class="content_tit">환경피해여부<br>확인</h4>
                     <div class="investigate_section">
-                        <div class="invest_select">
-                            
-                            <span class="radio">
-                                <input type="radio" id="verify" name="환경피해여부 확인" value="소음과 진동피해">
-                                <label for="verify">소음과 진동피해</label>
-                            </span>
+                        <ul class="invest_select">
+                            <li class="radio">
+                                <div>
+                                    <input type="radio" id="verify" name="환경피해여부 확인" value="소음과 진동피해">
+                                    <label for="verify">소음과 진동피해</label>
+                                </div>
+                            </li>
 
-                            <span class="radio">
-                                <input type="radio" id="verify" name="환경피해여부 확인" value="먼지피해">
-                                <label for="verify">먼지피해</label>
-                            </span>
+                            <li class="radio">
+                                <div>
+                                    <input type="radio" id="verify" name="환경피해여부 확인" value="먼지피해">
+                                    <label for="verify">먼지피해</label>
+                                </div>
+                            </li>
 
-                            <span class="radio">
-                                <input type="radio" id="verify" name="환경피해여부 확인" value="일조방해 피해">
-                                <label for="verify">일조방해 피해</label>
-                            </span>
+                            <li class="radio">
+                                <div>
+                                    <input type="radio" id="verify" name="환경피해여부 확인" value="일조방해 피해">
+                                    <label for="verify">일조방해 피해</label>
+                                </div>
+                            </li>
 
-                            <span class="radio">
-                                <input type="radio" id="verify" name="환경피해여부 확인" value="지하수 수위저하로 인한 피해">
-                                <label for="verify">지하수 수위저하로 인한 피해</label>
-                            </span>
+                            <li class="radio">
+                                <div>
+                                    <input type="radio" id="verify" name="환경피해여부 확인" value="지하수 수위저하로 인한 피해">
+                                    <label for="verify">지하수 수위저하로 인한 피해</label>
+                                </div>
+                            </li>
 
-                            <span class="radio half">
-                                <input type="radio" id="verify" name="환경피해여부 확인" value="대기오염·수질오염·토양오염 등으로 인한 피해">
-                                <label for="verify">대기오염·수질오염·토양오염 등으로 인한 피해</label>
-                            </span>
+                            <li class="radio half">
+                                <div>
+                                    <input type="radio" id="verify" name="환경피해여부 확인" value="대기오염·수질오염·토양오염 등으로 인한 피해">
+                                    <label for="verify">대기오염·수질오염·토양오염 등으로 인한 피해</label>
+                                </div>
+                            </li>
 
-                            <span class="radio half">
-                                <input type="radio" id="verify" name="환경피해여부 확인" value="해당사항이 없습니다.">
-                                <label for="verify">해당사항이 없습니다.</label>
-                            </span>
+                            <li class="radio half">
+                                <div>
+                                    <input type="radio" id="verify" name="환경피해여부 확인" value="해당사항이 없습니다.">
+                                    <label for="verify">해당사항이 없습니다.</label>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="invest_content">
+                            <p>
+                            환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.
+                            환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.
+                            환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.
+                            환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.
+                            환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.
+                            환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.
+                            </p>
                         </div>
-
+                    </div>
+                </div>
+                
+                <div class="investigate">
+                    <h4 class="content_tit">환경피해여부<br>확인</h4>
+                    <div class="investigate_section">
+                        <ul class="invest_select">
+                            <li class="radio">
+                                <div>
+                                    <input type="radio" id="verify" name="환경피해여부 확인" value="소음과 진동피해">
+                                    <label for="verify">소음과 진동피해</label>
+                                </div>
+                            </li>
+    
+                            <li class="radio">
+                                <div>
+                                    <input type="radio" id="verify" name="환경피해여부 확인" value="먼지피해">
+                                    <label for="verify">먼지피해</label>
+                                </div>
+                            </li>
+    
+                            <li class="radio">
+                                <div>
+                                    <input type="radio" id="verify" name="환경피해여부 확인" value="일조방해 피해">
+                                    <label for="verify">일조방해 피해</label>
+                                </div>
+                            </li>
+    
+                            <li class="radio">
+                                <div>
+                                    <input type="radio" id="verify" name="환경피해여부 확인" value="지하수 수위저하로 인한 피해">
+                                    <label for="verify">지하수 수위저하로 인한 피해</label>
+                                </div>
+                            </li>
+    
+                            <li class="radio half">
+                                <div>
+                                    <input type="radio" id="verify" name="환경피해여부 확인" value="대기오염·수질오염·토양오염 등으로 인한 피해">
+                                    <label for="verify">대기오염·수질오염·토양오염 등으로 인한 피해</label>
+                                </div>
+                            </li>
+    
+                            <li class="radio half">
+                                <div>
+                                    <input type="radio" id="verify" name="환경피해여부 확인" value="해당사항이 없습니다.">
+                                    <label for="verify">해당사항이 없습니다.</label>
+                                </div>
+                            </li>
+                        </ul>
+    
+                        <div class="invest_content">
+                            <p>
+                            환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.
+                            환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.
+                            환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.
+                            환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.
+                            환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.
+                            환경피해로 인한 분쟁조정신청 대상 및 자격조건 여부를 간단히 확인하실 수 있습니다.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
         <footer></footer>
