@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>하이마트 이벤트 EC</title>
+	<link rel="shortcut icon" href="http://static2.e-himart.co.kr/contents/system/storeimage/20151012104054_HMS_Favicon2.ico" />
+	<!-- link rel="shortcut icon" href="http://static1.e-himart.co.kr/contents/system/storeimage/20150811095233_favicon.ico" />  -->
+	<link type="text/css" rel="stylesheet" href="http://static2.e-himart.co.kr/resources/layout/css/common.css" /><!-- 공통 CSS -->
+	<link type="text/css" rel="stylesheet" href="http://static2.e-himart.co.kr/resources/layout/css/detail.css" />
+	<link type="text/css" rel="stylesheet" href="http://static2.e-himart.co.kr/resources/layout/css/display.css" />
+	<link type="text/css" rel="stylesheet" href="http://static2.e-himart.co.kr/resources/layout/css/event_wide.css" />
+	<link type="text/css" rel="stylesheet" href="http://static1.e-himart.co.kr/resources/layout/css/jquery-ui.min.css" />
+
+	<script src="http://static2.e-himart.co.kr/resources/layout/js/jquery-1.11.2.min.js"></script>
+	<script src="http://static1.e-himart.co.kr/resources/layout/js/jquery.form.min.js"></script>
+	<script src="http://static2.e-himart.co.kr/resources/layout/js/jquery.easing.1.3.js"></script>
+	<script src="http://static1.e-himart.co.kr/resources/layout/js/jquery-ui.js"></script>
+	<script src="http://static2.e-himart.co.kr/resources/layout/js/display.js"></script><!-- 공통 JS -->
+	<script src="http://static1.e-himart.co.kr/resources/layout/js/respond.js"></script><!-- 공통 JS -->
+	<script src="http://static2.e-himart.co.kr/resources/layout/js/layerPop.js"></script>
+	<script src="http://static1.e-himart.co.kr/resources/layout/js/validator.js"></script>
+	<script src="http://static2.e-himart.co.kr/resources/layout/js/jquery.cookie.js"></script>
+	<script src="http://static1.e-himart.co.kr/resources/layout/js/handlebars.runtime-v3.0.3.js"></script>
+	<script src="http://static2.e-himart.co.kr/resources/domain/common/message_hm.js" ></script>
+
+	<style type="text/css">
+		/* reset */
+		.wrap {position: relative; margin: 0 auto; text-align: center; box-sizing: border-box;}
+
+		/* 혜택 */
+		.benefit {background: #29adad;}
+		.benefit a {display: block;}
+		.benefit_list {margin: 0 auto; width: 750px; height: 297px; padding-top: 46px;}
+		.benefit_list::after {content: ''; display: block; clear: both;}
+		.benefit_list li {float: left; position: relative; width: calc(33% - 4px);}
+		.benefit_list li a::before {content: ''; display: block; position: absolute; left: 0; top: 112px; width: 4px; height: 70px; background: url('images/benefit_deco.png') no-repeat;}
+		.benefit_list li:first-child a::before {display: none;} 
+		.benefit_list li a::after {content: ''; display: block; width: 124px; height: 124px; margin: 24px auto 0; background: url('images/benefit_icon.png') no-repeat;}
+		.benefit_list li:nth-child(2) a::after {background-position-x: -128px;}
+		.benefit_list li:last-child a::after {background-position-x: -256px;}
+		.benefit_list li p {font-size: 28px; font-weight: 100; color: #fff;}
+
+		/* 선물상자 */
+			/* 선물상자_타이틀 */
+			.event_giftbox {background: #009090;}
+			.event_giftbox .event_tit {position: relative; top: 0; width: 750px; height: 284px; margin: 0 auto; background: url('images/tit_category01.jpg') no-repeat;}
+			.event_giftbox .event_tit h2 {display: inline-block; margin-top: 110px; font-size: 30px;  font-weight: 500; color: #fffeaf;}
+			.event_giftbox .event_tit h2 strong {font-size: 50px; color: #fff;}
+			/* 선물상자_선물 */
+			.event_giftbox .giftbox {position: relative; width: 750px; margin: 0 auto;}
+			.event_giftbox .giftbox::after {content: ''; display: block; position: absolute; bottom: 0px; width: 750px; height: 272px; background: url('images/box_float.png') no-repeat;}
+			.event_giftbox .giftbox .box_list {position: relative; width: 660px; height: 1115px; margin: 28px auto 0; padding-bottom: 330px; background: url('images/box_center.jpg') repeat-y center;}
+			.event_giftbox .giftbox .box_list::before {content: ''; display: block; position: absolute; top: -28px; width: 660px; height: 28px; background: url('images/box_top.png') no-repeat;}
+			.event_giftbox .giftbox .box_list::after {content: ''; display: block; clear: both;}
+
+			.event_giftbox .giftbox .box_list li {float: left; width: 267px; margin: 50px 42px 42px;}
+			.event_giftbox .giftbox .box_list li p {margin-top: 20px; font-size: 22px; font-weight: bold;}
+			.event_giftbox .giftbox .box_list li:nth-child(2n) {margin-left: 0;}
+			.event_giftbox .giftbox .box_list li:nth-child(n+3) {margin-top: 0;}
+			.event_giftbox .giftbox .box_list li input[type="radio"] {display: none;}
+			.event_giftbox .giftbox .box_list li input[type="radio"] + label {cursor: pointer;}
+			.event_giftbox .giftbox .box_list li input[type="radio"] + label span {display: inline-block; width: 16px; height: 16px; margin-bottom: 10px; border-radius: 10px; background: #58626b;}
+			.event_giftbox .giftbox .box_list li input[type="radio"]:checked + label span {width: 8px; height: 8px; border: 4px solid #58626b; border-radius: 10px; background: #56d7ed;}
+	</style>
+
+</head>
+<body>
+	<div class="wrap">
+		<header></header>			
+		<div class="container">
+			<!-- 혜택 -->
+			<div class="benefit">
+				<ul class="benefit_list">
+					<li>
+						<a href=""><p>행사카드<br><strong>청구할인</strong></p></a>
+					</li>
+					<li>
+						<a href=""><p>금액대별<br><strong>L.POINT적립</strong></p></a>
+					</li>
+					<li>
+						<a href=""><p>APP L.pay<br><strong>결재 시 적립</strong></p></a>
+					</li>
+				</ul>
+
+			</div>
+			<!--// 혜택 -->
+
+			<!-- 선물상자 -->
+			<div class="event_giftbox">
+				<div class="event_tit"><h2>아직도 망설이는 당신을 위한<br><strong>여심공략 대표 위시상품</strong></h2></div>
+				<div class="giftbox">
+					<form>
+						<ul class="box_list">
+							<li>
+								<input type="radio" name="gift" value="다이슨 에어랩" id="gift01" checked>
+								<label for="gift01">
+									<span></span>
+									<img src="images/prd01.png" alt="다이슨 에어랩">
+									<p>다이슨 에어랩</p>
+								</label>
+							</li>
+							<li>
+								<input type="radio" name="gift" id="gift02">
+								<label for="gift02">
+									<span></span>
+									<img src="images/prd02.png" alt="갤럭시 워치">
+									<p>갤럭시 워치</p>
+								</label>
+								
+							</li>
+							<li>
+								<input type="radio" name="gift" id="gift03">
+								<label for="gift03">
+									<span></span>
+									<img src="images/prd03.png" alt="LED 마스크">
+									<p>LED 마스크</p>
+								</label>
+							</li>
+							<li>
+								<input type="radio" name="gift" id="gift04">
+								<label for="gift04">
+									<span></span>
+									<img src="images/prd04.png" alt="갈바닉">
+									<p>갈바닉</p>
+								</label>
+							</li>
+							<li>
+								<input type="radio" name="gift" id="gift05">
+								<label for="gift05">
+									<span></span>
+									<img src="images/prd05.png" alt="다이슨 드라이기">
+									<p>다이슨 드라이기</p>
+								</label>
+							</li>
+							<li>
+								<input type="radio" name="gift" id="gift06">
+								<label for="gift06">
+									<span></span>
+									<img src="images/prd06.png" alt="갤럭시 S20">
+									<p>갤럭시 S20</p>
+								</label>
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>
+			<!-- // 선물상자 -->
+		</div>
+		<footer></footer>
+	</div>
+
+</body>
