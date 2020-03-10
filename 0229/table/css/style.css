@@ -64,7 +64,13 @@ em {font-style:normal;}
 .container .container_tit > span {font-size: 24px; font-weight: 300; line-height: 30px; color: #fff;}
 
 .container .content {display: block; position: relative; width: 702px; margin: 0 auto; background: #0e4b36; border-radius: 15px 15px 0 0;}
-.container .content h3 {float: left; width: 50%; height: 110px; line-height: 110px;; font-size: 35px; font-weight: 550; text-align: center; vertical-align: middle; color: #fff; border-radius: 15px 0 0;}
+.container .content h3 {float: left; width: 50%; height: 110px; line-height: 110px;; font-size: 30px; font-weight: 550; text-align: center; vertical-align: middle; color: #fff; border-radius: 15px 0 0;}
 .container .content h3.on {background: #fff; color: #0e4b36;}
+.container .content .section {display: inline-block; padding: 50px 30px 70px; background: #fff;}
+.container .content .section .section_tit {font-size: 40px; font-weight: 400; color: #5ba78d;}
+table {margin-top: 30px; border-radius: 5px; background: #f0f0f0; border: 0;}
+table th {height: 70px; vertical-align: middle; border-radius: 5px 5px 0 0; color: #fff; background: #1f8763; font-size: 28px;}
+table tbody {margin: 15px 26px; display: inline-block;}
+table tr td {padding: 24px 0; color: #3d3d3d; font-size: 22px; font-weight: 500;}
+table tr td.session {vertical-align: middle; color: #323232; font-size: 25px;}
 
-table, th, td {border: 1px solid black; border-collapse: collapse;}
