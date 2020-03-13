@@ -126,13 +126,15 @@ h3.content_tit span {display: block; font-size: 15px; font-weight: normal; color
 .investigate_section .invest_select .radio {display: inline-block; width: calc(100% / 4); height: 50px; padding-left: 9px; line-height: 50px; cursor:pointer;}
 
 .investigate_section .invest_select .radio div {vertical-align: middle; text-align: center; border: 1px solid #d9d9d9; box-sizing: border-box; font-size: 14px;}
-.investigate_section .invest_select .radio div:hover {color: #fff; background: #65a5ea;}
+.investigate_section .invest_select .radio div:hover {color: #fff; background: #05b9c9;}
 .investigate_section .invest_select .radio.half {width: calc(100% / 2); margin-top: 10px;}
 .investigate_section .invest_select input[type="radio"] {display: none;}
 .investigate_section .invest_select input[type="radio"] + label {display: inline-block; cursor: pointer;}
 
 
-.investigate_section .invest_content {margin-top: 50px; padding: 20px; background: #f1f1f1;}
-.investigate_section .invest_content p {height: 200px; overflow: auto; font-size: 14px; line-height: 50px; color: #333; background: #fff;}
-
+.investigate_section .invest_content {height: 406px; margin-top: 20px; padding: 34px; background: #f1f1f1;}
+.investigate_section .invest_content .invest_content_txt {height: 340px; padding: 20px 0 0 20px; overflow: auto; font-size: 14px; line-height: 24px; color: #6b6b6b; background: #fff;}
+.invest_content .invest_content_txt .invest_content_list li {margin-bottom: 30px;}
+.invest_content .invest_content_txt .invest_content_list li b {font-size: 16px; line-height: 30px; color: #333;}
+.invest_content .invest_content_txt .invest_content_list li p::before {content: ""; display: inline-block; width: 5px; height: 1px; margin-right: 8px; vertical-align: middle; background: #6b6b6b;}
 
