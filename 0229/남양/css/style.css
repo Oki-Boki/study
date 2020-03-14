@@ -1,0 +1,90 @@
+
+/* ==========================================================================
+	02. reset
+  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
+   ========================================================================== */
+html, body, header, footer, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; box-sizing:border-box; word-break:keep-all;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1; font-family:'Nanum Gothic','맑은고딕',Malgun Gothic,dotum,'돋음',arial,sans-serif; font-size:14px; color:#666; min-width:320px;}
+ol, ul {list-style:none;}
+ul:after {clear:both; display:block; content:"";}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after {content:''; content:none;}
+table {border-collapse:collapse; border-spacing:0; width:100%;}
+/* html, body {height:100%;} */
+button  {margin:0;padding:0;border-radius:2px; border:none; box-sizing:border-box; vertical-align:middle; font-size:13px; font-family:'Nanum Gothic','맑은고딕',Malgun Gothic,dotum,'돋음',arial,sans-serif; cursor:pointer; background:transparent; border-radius:0;outline:none;}
+/* button:hover {background:#66532b;}
+button:hover:not(:disabled) {background:#66532b;}
+button:disabled {background:#bfbbb2;color:#fff;} */
+button > span {position:relative;}
+
+a,
+a:link
+a:visited,
+a:hover,
+a:active,
+a:focus {color:#666; text-decoration:none;}
+
+.hidden,
+caption,
+legend {overflow:hidden; width:1px; height:1px; margin:-1px 0 0 -1px; font-size:0; line-height:0; text-indent:-9999px;}
+.blind {clear:both; position:absolute; top:auto; left:0; overflow:hidden; width:1px; height:1px; padding:0; margin:0; font-size:0; line-height:0}
+.blind:after {display:none;}
+
+img {vertical-align:top; width:100%;}
+em {font-style:normal;}
+
+/* ==========================================================================
+	03. style
+  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
+   ========================================================================== */
+.wrap {position: relative;}
+
+.header {position: relative; width: 1120px; margin: 0 auto;}
+.header::after {content:""; display: block; clear: both;}
+
+/* ==========================================================================
+   로고
+  ========================================================================== */
+.header .logo {position: absolute; top: 39px; left: 104px; width: 87px; height: 35px;}
+.header .logo a {display: block;}
+/* ==========================================================================
+   유틸메뉴
+  ========================================================================== */
+.util_menu {margin-top: 9px; text-align: right; line-height: 18px; color: #444444;}
+.util_menu::after {content:""; display: block; clear: both;}
+
+.util_menu a {height: 18px; line-height: 18px; padding-left: 20px; vertical-align: middle;}
+.util_menu .util_menu_share::before {content: ""; display: inline-block; width:1px; height: 9px; margin-right: 16px; background: #aaaaaa;}
+.util_menu .util_menu_i::after {content: ""; display: inline-block; width:18px; height: 18px; margin: -5px 0 0 8px; background: url(../images/icon/sprite.png) 0 0 no-repeat; vertical-align: middle; cursor:pointer;}
+.util_menu .util_menu_i span {color: #e50963;}
+
+/* ==========================================================================
+   메인메뉴
+  ========================================================================== */
+
+.menu_wrap {margin-left: 234px; display: inline-block;}
+.menu_wrap .menu_list li {float:left; font-size: 20px; font-weight: bold; line-height: 20px; padding: 25px;}
+.menu_wrap .menu_list::after {content:""; display: block; clear: both;}
+
+.category {display: inline-block; width: 60px; height: 60px; margin-top: 8px; background: #ec1f2f url(../images/icon/ico_btn_category.png) 0 0 no-repeat;}
+
+.util_menu_icon {display: inline-block; text-align: right;}
+.util_menu_icon .search {width: 28px; height: 27px; background: url(../images/icon/sprite.png) -19px -4px no-repeat;}
+.util_menu_icon .shopping_basket {display: inline-block; width: 28px; height: 27px; margin-left: 20px; background: url(../images/icon/sprite.png) -19px -4px no-repeat;}
+
+
