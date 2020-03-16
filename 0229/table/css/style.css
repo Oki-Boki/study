@@ -58,42 +58,52 @@ em {font-style:normal;}
    container
   ========================================================================== */
 .container {position: relative; width: 1008px; margin: 0 auto; padding-bottom: 100px; background: #22b77b;}
-.container .container_tit {position: relative; width: 100%; height: 706px; padding-top: 110px; text-align: center; background: url(../images/bg_visual.jpg) center 0 no-repeat;}
-.container .container_tit h2 {font-size: 80px; font-weight: 500; color: #fff; line-height: 130px; letter-spacing: -6px;}
-.container .container_tit h2 span {font-weight: 700; color: #fff200;}
-.container .container_tit > span {font-size: 24px; font-weight: 300; line-height: 30px; color: #fff;}
+.header_wrap {position: relative; width: 100%; height: 706px; padding-top: 110px; text-align: center; background: url(../images/bg_visual.jpg) center 0 no-repeat;}
+.header_wrap h2 {font-size: 80px; font-weight: 500; color: #fff; line-height: 130px; letter-spacing: -6px;}
+.header_wrap h2 span {font-weight: 700; color: #fff200;}
+.header_wrap p {font-size: 24px; font-weight: 300; line-height: 30px; color: #fff;}
 
 .container .content {display: block; position: relative; width: 702px; margin: 0 auto; background: #0e4b36; color: #fff; border-radius: 15px;}
 .container .content.on {background: #fff; color: #0e4b36; z-index: 99;}
-.container .content.content02 {position: absolute; top: 706px; left: 50%; transform: translateX(-50%); z-index: 9;}
-.container .content .content_tit {width: 100%; border-radius: 15px 15px 0 0; background: #0e4b36;}
-.container .content.on .content_tit h3 {width: 50%; background: #fff; color: #0e4b36;}
-.container .content .content_tit::after {content: ""; display: block; clear: both;}
-.container .content .content_tit h3 {float: left; width: 100%; height: 110px; line-height: 110px;; font-size: 30px; font-weight: 550; text-align: center; vertical-align: middle; color: #fff; border-radius: 15px 0 0;}
 
-.container .content.on .benefit {display: block; padding: 50px 30px 70px; border-radius: 15px; background: #fff;}
-.container .content .benefit .benefit_tit {font-size: 40px; font-weight: 400; color: #5ba78d;}
-.container .content .benefit table {margin-top: 30px; border-radius: 5px; background: #f0f0f0; border: 0;}
-.container .content .benefit table:nth-child(2n+1) {margin-top: 70px;}
-.container .content .benefit table thead .table_tit {height: 70px; vertical-align: middle; border-radius: 5px 5px 0 0; color: #fff; background: #1f8763; font-size: 28px;}
+.content_tit_wrap {width: 702px; margin: 0 auto; border-radius: 15px 15px 0 0; color: #fff; text-align: center; background: #0e4b36;}
+.content_tit_wrap li {float: left; width: calc(100% / 2); padding: 38px 0; font-size: 35px; font-weight: 550;}
+.content_tit_wrap li.on {color: #0e4b36; border-radius: 15px 0 0 0; background: #fff;}
+.content_tit_wrap li:last-child.on {border-radius: 0 15px 0 0;} 
+.content_tit_wrap ::after {content: ""; display: block; clear: both;}
 
-.container .content .benefit table tbody {margin: 15px 26px; display: inline-block;}
-.container .content .benefit table tbody tr {border-bottom: 2px solid #fff;}
-.container .content .benefit table tbody tr:last-child {border: 0;}
-.container .content .benefit table tbody tr th.session {padding-right: 30px; vertical-align: middle; color: #3d3d3d; font-size: 25px;}
-.container .content .benefit table tbody tr td {display: block; margin: 15px 0; border-left: 2px solid #fff; color: #323232; font-size: 20px; line-height: 30px; font-weight: 550; letter-spacing: -2px;}
-.container .content .benefit table tbody tr:first-child td {margin-top: 0;} 
-.container .content .benefit table tbody tr:last-child td {margin-bottom: 0;}
-.container .content .benefit table tbody tr td.session_include {display: block; margin-top: 0; padding-top: 0;}
-.container .content .benefit table tbody tr td div {padding: 10px 0 10px 20px;}
-.container .content .benefit table tbody tr td div span,
-.container .content .benefit table tbody tr td div ul {color: #898989; line-height: 28px; letter-spacing: -1px;}
-.container .content .benefit table tbody tr td div ul li {position: relative; margin-left: 10px;}
-.container .content .benefit table tbody tr td div ul li::before {content: ""; display: block; position: absolute; top: 14px; left: -10px; width: 3px; height: 3px; background: #898989;}
+.benefit_card_wrap {width: 702px; margin: 0 auto; border-radius: 0 0 15px 15px; display: block; padding: 50px 30px 70px; background: #fff;}
+.benefit_card_wrap .benefit_card_tit {font-size: 40px; font-weight: 400; line-height: 50px; color: #5ba78d;}
+.benefit_card_wrap .benefit_card {margin-top: 30px; border-radius: 5px; background: #f0f0f0; border: 0;}
+.benefit_card_wrap .benefit_card:last-child {margin-top: 70px;}
+.benefit_card table {width: 100%; text-align: center;}
+.benefit_card table thead th {height: 70px; vertical-align: middle; border-radius: 8px 8px 0 0; color: #fff; background: #1f8763; font-size: 28px; box-sizing: border-box;}
 
-.container .content .benefit .notice {margin-top: 40px; color: #4f4f4f; font-size: 20px; line-height: 30px; font-weight: 500;}
-.container .content .benefit .notice li {position: relative; margin-left: 24px;}
-.container .content .benefit .notice li::before {content: "※"; display: block; position: absolute; top: 0; left: -24px; width: 16px; height: 17px; color: #898989;}
-.container .content .benefit .notice li::after {content: ""; display: block; clear: both;}
-.container .content .benefit .notice li .ars {float: left;}
-.container .content .benefit .notice li .ars_num {display: block; padding-left: 84px;}
+.benefit_card table tbody {display: block; width: 590px; margin: 15px 26px;}
+.benefit_card table tbody tr {border-bottom: 2px solid #fff;}
+.benefit_card table tbody tr:last-child {border: 0;}
+.benefit_card table tbody td {text-align: left;}
+.benefit_card table tbody tr th {padding-right: 26px; vertical-align: middle; text-align: center; color: #3d3d3d; font-size: 24px;}
+.benefit_card table tbody tr td {display: block; margin: 15px 0; border-left: 2px solid #fff; color: #323232; font-size: 20px; line-height: 30px; font-weight: 550; letter-spacing: -2px;}
+
+.benefit_card table tbody tr td div {padding: 10px 0 10px 20px;}
+.benefit_card table tbody tr td div span,
+.benefit_card table tbody tr td div ul {color: #898989; line-height: 28px; letter-spacing: -1px;}
+.benefit_card table tbody tr td div ul li {position: relative; margin-left: 10px;}
+.benefit_card table tbody tr td div ul li::before {content: ""; display: block; position: absolute; top: 14px; left: -10px; width: 3px; height: 3px; background: #898989;}
+
+.benefit_card_wrap .notice_wrap {margin-top: 40px; color: #4f4f4f; font-size: 20px; line-height: 30px; font-weight: 500;}
+.benefit_card_wrap .notice_wrap li {position: relative; margin-left: 24px;}
+.benefit_card_wrap .notice_wrap li::before {content: "※"; display: block; position: absolute; top: 0; left: -24px; width: 16px; height: 17px; color: #898989;}
+.benefit_card_wrap .notice_wrap li::after {content: ""; display: block; clear: both;}
+.benefit_card_wrap .notice_wrap li .ars {float: left;}
+.benefit_card_wrap .notice_wrap li .ars_num {display: block; padding-left: 84px;}
+
+
+.benefit_payment li {display: block; margin-top: 20px; height: 260px; line-height: 260px; padding-left: 280px; background: url(../images/ico_payment01.png) 0 0 no-repeat;}
+
+.benefit_payment li:last-child {margin-top: 50px; background: url(../images/ico_payment02.png) 0 0 no-repeat;}
+.benefit_payment li div {display: inline-block; vertical-align: middle;}
+.benefit_payment p {font-size: 20px; color: #555; line-height: 28px;}
+.benefit_payment p strong {font-size: 40px; color: #222; line-height: 60px;}
+.benefit_payment p b {color: #222;}
