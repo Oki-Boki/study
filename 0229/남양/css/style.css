@@ -60,7 +60,7 @@ em {font-style:normal;}
 /* ==========================================================================
    로고
   ========================================================================== */
-.header .logo {position: absolute; top: 39px; left: 104px; width: 87px; height: 35px;}
+.header .logo {position: absolute; top: 43px; left: 104px; width: 83px; height: 35px;}
 .header .logo a {display: block;}
 /* ==========================================================================
    유틸메뉴
@@ -77,14 +77,15 @@ em {font-style:normal;}
    메인메뉴
   ========================================================================== */
 
-.menu_wrap {margin-left: 234px; display: inline-block;}
+.menu_wrap {margin-left: 140px; display: inline-block;}
 .menu_wrap .menu_list li {float:left; font-size: 20px; font-weight: bold; line-height: 20px; padding: 25px;}
 .menu_wrap .menu_list::after {content:""; display: block; clear: both;}
 
 .category {display: inline-block; width: 60px; height: 60px; margin-top: 8px; background: #ec1f2f url(../images/icon/ico_btn_category.png) 0 0 no-repeat;}
 
-.util_menu_icon {display: inline-block; text-align: right;}
-.util_menu_icon .search {width: 28px; height: 27px; background: url(../images/icon/sprite.png) -19px -4px no-repeat;}
-.util_menu_icon .shopping_basket {display: inline-block; width: 28px; height: 27px; margin-left: 20px; background: url(../images/icon/sprite.png) -19px -4px no-repeat;}
-
-
+.util_menu_icon {display: block; position: relative; top: 0; right: 0; height: 70px; line-height: 70px; text-align: right;}
+.util_menu_icon a {margin-left: 10px;}
+.util_menu_icon .search {display: inline-block; width: 28px; height: 27px; vertical-align: middle; background: url(../images/icon/sprite.png) -19px -4px no-repeat;}
+.util_menu_icon .shopping_basket {display: inline-block; width: 28px; height: 27px; margin-left: 20px; vertical-align: middle; background: url(../images/icon/sprite.png) -59px -4px no-repeat;}
+.util_menu_icon .viewed_products {display: inline-block; width: 28px; height: 27px; margin-left: 20px; vertical-align: middle; background: url(../images/icon/sprite.png) -102px -4px no-repeat;}
+.util_menu_icon .login {display: inline-block; width: 28px; height: 27px; margin-left: 20px; vertical-align: middle; background: url(../images/icon/sprite.png) -884px -4px no-repeat;}
