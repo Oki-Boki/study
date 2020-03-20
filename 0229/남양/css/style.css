@@ -53,22 +53,25 @@ em {font-style:normal;}
   * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
    ========================================================================== */
 .wrap {position: relative;}
+.header {border-bottom: 1px solid #f1f1f1; font-size: 0; box-sizing: border-box;}
 
-.header {position: relative; width: 1120px; margin: 0 auto;}
-.header::after {content:""; display: block; clear: both;}
+.header_wrap,
+.container {position: relative; width: 1120px; margin: 0 auto;}
+.header_wrap::after {content:""; display: block; clear: both;}
 
 /* ==========================================================================
    로고
   ========================================================================== */
-.header .logo {position: absolute; top: 43px; left: 104px; width: 83px; height: 35px;}
-.header .logo a {display: block;}
+.header_wrap .logo {position: absolute; top: 43px; left: 104px; width: 83px; height: 35px;}
+.header_wrap .logo a {display: block;}
+
 /* ==========================================================================
    유틸메뉴
   ========================================================================== */
 .util_menu {margin-top: 9px; text-align: right; line-height: 18px; color: #444444;}
 .util_menu::after {content:""; display: block; clear: both;}
 
-.util_menu a {height: 18px; line-height: 18px; padding-left: 20px; vertical-align: middle;}
+.util_menu a {height: 18px; line-height: 18px; padding-left: 20px; font-size: 14px; vertical-align: middle;}
 .util_menu .util_menu_share::before {content: ""; display: inline-block; width:1px; height: 9px; margin-right: 16px; background: #aaaaaa;}
 .util_menu .util_menu_i::after {content: ""; display: inline-block; width:18px; height: 18px; margin: -5px 0 0 8px; background: url(../images/icon/sprite.png) 0 0 no-repeat; vertical-align: middle; cursor:pointer;}
 .util_menu .util_menu_i span {color: #e50963;}
@@ -76,16 +79,40 @@ em {font-style:normal;}
 /* ==========================================================================
    메인메뉴
   ========================================================================== */
-
-.menu_wrap {margin-left: 140px; display: inline-block;}
-.menu_wrap .menu_list li {float:left; font-size: 20px; font-weight: bold; line-height: 20px; padding: 25px;}
+.menu_wrap {display: inline-block; margin: 0 73px 0 140px;}
+.menu_wrap .menu_list li {float: left; font-size: 20px; font-weight: bold; line-height: 30px; margin-top: 8px; padding: 25px; cursor:pointer;}
 .menu_wrap .menu_list::after {content:""; display: block; clear: both;}
 
 .category {display: inline-block; width: 60px; height: 60px; margin-top: 8px; background: #ec1f2f url(../images/icon/ico_btn_category.png) 0 0 no-repeat;}
 
-.util_menu_icon {display: block; position: relative; top: 0; right: 0; height: 70px; line-height: 70px; text-align: right;}
+.util_menu_icon {display: inline-block; position: absolute; top: 54px; height: 28px; line-height: 24px;}
 .util_menu_icon a {margin-left: 10px;}
-.util_menu_icon .search {display: inline-block; width: 28px; height: 27px; vertical-align: middle; background: url(../images/icon/sprite.png) -19px -4px no-repeat;}
-.util_menu_icon .shopping_basket {display: inline-block; width: 28px; height: 27px; margin-left: 20px; vertical-align: middle; background: url(../images/icon/sprite.png) -59px -4px no-repeat;}
-.util_menu_icon .viewed_products {display: inline-block; width: 28px; height: 27px; margin-left: 20px; vertical-align: middle; background: url(../images/icon/sprite.png) -102px -4px no-repeat;}
+.util_menu_icon .search {display: inline-block; width: 28px; height: 28px; vertical-align: middle; background: url(../images/icon/sprite.png) -19px -4px no-repeat;}
+.util_menu_icon .shopping_basket {display: inline-block; width: 28px; height: 28px; margin-left: 20px; vertical-align: middle; background: url(../images/icon/sprite.png) -59px -4px no-repeat;}
+.util_menu_icon .viewed_products {display: inline-block; width: 28px; height: 28px; margin-left: 20px; vertical-align: middle; background: url(../images/icon/sprite.png) -102px -4px no-repeat;}
 .util_menu_icon .login {display: inline-block; width: 28px; height: 27px; margin-left: 20px; vertical-align: middle; background: url(../images/icon/sprite.png) -884px -4px no-repeat;}
+
+/* ==========================================================================
+   메인메뉴
+  ========================================================================== */
+.container {margin-top: 30px;}
+.breadcrumb_wrap {color: #cccccc; font-size: 12px;}
+.breadcrumb_wrap .breadcrumb_list::after {content:""; display: block; clear: both;}
+.breadcrumb_wrap .breadcrumb_list li {float: left; line-height: 16px;}
+.breadcrumb_wrap .breadcrumb_list li:first-child::before {content: ""; display: inline-block; width: 12px; height: 11px; margin-right: 5px; background: url(../images/icon/sprite.png) -131px 0 no-repeat;}
+.breadcrumb_wrap .breadcrumb_list li::before {content: ""; display: inline-block; width: 5px; height: 9px; margin: 0 5px 3px; line-height: 16px; vertical-align: middle; background: url(../images/common/btn_location_arrow.png) 0 0 no-repeat;}
+
+.content {margin-top: 60px;}
+.content_tit_list {border-bottom: 2px solid #000;}
+.content_tit_list::after {content:""; display: block; clear: both;}
+.content_tit_list li {float: left; width: calc(100% / 3); font-size: 16px; line-height: 20px; border-top: 1px solid #ebebeb; border-right: 1px solid #ebebeb; padding: 20px 0; color: #000; text-align: center;}
+.content_tit_list li:first-child {border-left: 1px solid #ebebeb;}
+.content_tit_list li.on {border: 1px solid #000; color: #fff; font-weight: 500; background: #000;}
+
+.goods_list {margin: 40px 0 100px;}
+.goods_list li {float: left; width: calc(100% / 4);}
+.goods_list li a {display: block; margin: 8px 8px 0 0; padding: 50px 22px 26px; border: 1px solid #ededed;}
+.goods_list li:nth-child(4n) a {margin-right: 0;}
+.goods_list li:nth-child(-n+4) a {margin-top: 0;}
+.goods_list li a img {padding-bottom: 55px}
+
