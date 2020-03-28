@@ -1,0 +1,133 @@
+
+/* ==========================================================================
+	02. reset
+  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
+   ========================================================================== */
+html, body, header, footer, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; box-sizing:border-box; word-break:keep-all;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1; font-family:'Nanum Gothic','맑은고딕',Malgun Gothic,dotum,'돋음',arial,sans-serif; font-size:14px; color:#666; min-width:320px;}
+ol, ul {list-style:none;}
+ul:after {clear:both; display:block; content:"";}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after {content:''; content:none;}
+table {border-collapse:collapse; border-spacing:0; width:100%;}
+/* html, body {height:100%;} */
+button  {margin:0;padding:0;border-radius:2px; border:none; box-sizing:border-box; vertical-align:middle; font-size:13px; font-family:'Nanum Gothic','맑은고딕',Malgun Gothic,dotum,'돋음',arial,sans-serif; cursor:pointer; background:transparent; border-radius:0;outline:none;}
+/* button:hover {background:#66532b;}
+button:hover:not(:disabled) {background:#66532b;}
+button:disabled {background:#bfbbb2;color:#fff;} */
+button > span {position:relative;}
+
+a,
+a:link
+a:visited,
+a:hover,
+a:active,
+a:focus {color:#666; text-decoration:none;}
+
+.hidden,
+caption,
+legend {overflow:hidden; width:1px; height:1px; margin:-1px 0 0 -1px; font-size:0; line-height:0; text-indent:-9999px;}
+.blind {clear:both; position:absolute; top:auto; left:0; overflow:hidden; width:1px; height:1px; padding:0; margin:0; font-size:0; line-height:0}
+.blind:after {display:none;}
+
+img {vertical-align:top; width:100%;}
+em {font-style:normal;}
+
+/* ==========================================================================
+	03. style
+  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
+   ========================================================================== */
+.wrap {position: relative;}
+.header {border-bottom: 1px solid #f1f1f1; font-size: 0; box-sizing: border-box;}
+
+.header_wrap,
+.content,
+.breadcrumb_wrap {position: relative; width: 1120px; margin: 0 auto;}
+.header_wrap::after {content:""; display: block; clear: both;}
+
+ul.col2 li {float: left; width: calc(100% / 2);}
+ul.col3 li {float: left; width: calc(100% / 3);}
+ul.col4 li {float: left; width: calc(100% / 4);}
+
+/* ==========================================================================
+   로고
+  ========================================================================== */
+.header_wrap .logo {position: absolute; top: 55px; left: 100px; width: 83px; height: 35px;}
+.header_wrap .logo a {display: block;}
+
+/* ==========================================================================
+   유틸메뉴
+  ========================================================================== */
+.util_menu {padding-top: 9px; text-align: right; line-height: 18px; color: #444444;}
+.util_menu::after {content:""; display: block; clear: both;}
+
+.util_menu a {height: 18px; line-height: 18px; padding-left: 20px; font-size: 14px; vertical-align: middle;}
+.util_menu .util_menu_share::before {content: ""; display: inline-block; width:1px; height: 9px; margin-right: 16px; background: #aaaaaa;}
+.util_menu .util_menu_i::after {content: ""; display: inline-block; width:18px; height: 18px; margin: -5px 0 0 8px; background: url(../images/icon/sprite.png) 0 0 no-repeat; vertical-align: middle; cursor:pointer;}
+.util_menu .util_menu_i span {color: #e50963;}
+
+/* ==========================================================================
+   메인메뉴
+  ========================================================================== */
+.menu_wrap {display: inline-block; margin: 2px 73px 0 140px;}
+.menu_wrap .menu_list li {float: left; font-size: 20px; font-weight: bold; line-height: 30px; padding: 26px; cursor: pointer;}
+.menu_wrap .menu_list::after {content:""; display: block; clear: both;}
+
+.category {display: inline-block; width: 60px; height: 60px; background: #ec1f2f url(../images/icon/ico_btn_category.png) 0 0 no-repeat;}
+
+/* 유틸메뉴 */
+.util_menu_icon {display: inline-block; position: absolute; top: 54px; right: 0; height: 28px; line-height: 24px;}
+
+.util_menu_icon .icon {display: inline-block; width: 28px; height: 28px; vertical-align: middle; margin-left: 22px; background: url(../images/icon/sprite.png) no-repeat;}
+.util_menu_icon .search {margin-left: 0; background-position: -19px -4px;}
+.util_menu_icon .cart {background-position: -59px -4px;}
+.util_menu_icon .viewed {background-position: -884px -4px;}
+.util_menu_icon .my {background-position: -102px -4px;}
+
+/* ==========================================================================
+   메인메뉴
+  ========================================================================== */
+  /* 네비게이션 메뉴 */
+.breadcrumb_wrap {color: #cccccc; font-size: 12px;}
+.breadcrumb_wrap .breadcrumb_list::after {content:""; display: block; clear: both;}
+.breadcrumb_wrap .breadcrumb_list li {float: left; line-height: 16px;}
+.breadcrumb_wrap .breadcrumb_list li:first-child::before {content: ""; display: inline-block; width: 12px; height: 11px; margin-right: 5px; background: url(../images/icon/sprite.png) -131px 0 no-repeat;}
+.breadcrumb_wrap .breadcrumb_list li::before {content: ""; display: inline-block; width: 5px; height: 9px; margin: 0 5px 3px; line-height: 16px; vertical-align: middle; background: url(../images/common/btn_location_arrow.png) 0 0 no-repeat;}
+/* // 네비게이션 메뉴 */
+
+.container {padding-top: 30px;}
+.content {padding-top: 50px;}
+.content_tit {font-size: 30px; font-weight: 550; color: #000;}
+
+/* ==========================================================================
+   상품 타이틀
+  ========================================================================== */
+.brand_tab {padding-top: 30px; }
+.brand_tab .brand_tab_list::after {content:""; display: block; clear: both;}
+.brand_tab .brand_tab_list li {float:left; line-height: 55px; padding: 0 100px; border-top: 1px solid #ebebeb; border-left: 1px solid #ebebeb; border-right: 1px solid #fff; border-bottom: 1px solid #000; box-sizing: border-box; cursor: pointer;}
+.brand_tab .brand_tab_list li:last-child {border-right: 1px solid #ebebeb;}
+.brand_tab .brand_tab_list li button { font-size: 16px; font-weight: 550px; }
+.brand_tab .brand_tab_list li:hover {border-top: 1px solid #000; border-right: 1px solid #000; border-left: 1px solid #000; border-bottom: 1px solid #fff; box-sizing: border-box;}
+
+
+.brand_sub_tab {padding-top: 30px;}
+.brand_sub_tab .brand_sub_tab_list li {float:left; width: calc(100% / 6); line-height: 56px; text-align: center; border-top: 1px solid #ebebeb; border-left: 1px solid #ebebeb; border-bottom: 1px solid #ebebeb; box-sizing: border-box; cursor: pointer;}
+.brand_sub_tab .brand_sub_tab_list li:last-child {border-right: 1px solid #ebebeb;}
+.brand_sub_tab .brand_sub_tab_list li button {font-size: 14px; font-weight: 300px;}
+.brand_sub_tab .brand_sub_tab_list li:hover {background: #000;}
+.brand_sub_tab .brand_sub_tab_list li:hover button {outline: ;}
