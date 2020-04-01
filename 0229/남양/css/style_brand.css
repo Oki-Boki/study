@@ -84,7 +84,7 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 /* ==========================================================================
    메인메뉴
   ========================================================================== */
-.menu_wrap {display: inline-block; margin: 2px 73px 0 140px;}
+.menu_wrap {display: inline-block; margin: 4px 73px 0 140px;}
 .menu_wrap .menu_list li {float: left; font-size: 20px; font-weight: bold; line-height: 30px; padding: 26px; cursor: pointer;}
 .menu_wrap .menu_list::after {content:""; display: block; clear: both;}
 
@@ -131,3 +131,5 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .brand_sub_tab .brand_sub_tab_list li button {font-size: 14px; font-weight: 300px;}
 .brand_sub_tab .brand_sub_tab_list li:hover {background: #000;}
 .brand_sub_tab .brand_sub_tab_list li:hover button {outline: ;}
+
+
