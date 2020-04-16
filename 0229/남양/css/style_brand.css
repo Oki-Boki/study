@@ -179,7 +179,7 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .footer_top_area .footer_content .footer_sub {color: #7e7e7e;}
 .footer_top_area .footer_content p:last-child {line-height: 23px; margin-top: 30px; color: #444;}
 .footer_top_area .footer_content .footer_down::after {content: ""; display: inline-block; width: 15px; height: 15px; margin: 0 5px 3px; line-height: 15px; vertical-align: middle; background: url(../images/icon/sprite.png) -131px -14px no-repeat;}
-.footer_top_area .footer_content .footer_num {font-size: 22px; font-weight: 500;}
+.footer_top_area .footer_content .footer_tel {font-size: 22px; font-weight: 500;}
 .footer_top_area .footer_customer_service .footer_tit a {padding-right: 10px;}
 .footer_top_area .footer_customer_service .footer_tit::after {content: ""; display: inline-block; width: 8px; height: 14px; margin-top: -6px; vertical-align: middle; background: url(../images/icon/sprite.png) -23px -470px no-repeat; cursor: pointer;}
 
