@@ -112,12 +112,13 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .content_movies .box_office::after {content: ""; display: block; width: 68px; height: 2px; margin: 6px auto 0; border-bottom: 1px solid rgba(255,255,255,0.5); box-sizing: border-box;}
 .content_movies .movies_list {padding: 20px 0 50px;}
 .content_movies .movies_list:after{content: ""; display: block; clear: both;}
-.content_movies .movies_list li {float: left; width: 245px; margin-left: 40px; border-radius: 8px; box-sizing: border-box; overflow: hidden;}
+.content_movies .movies_list li {float: left; width: 245px; margin-left: 40px;}
 .content_movies .movies_list li:first-child {margin-left: 0;}
+.content_movies .movies_list li > a {display: block; border-radius: 8px; box-sizing: border-box; overflow: hidden;}
 
 .movies_btn {padding-top: 10px;}
 .movies_btn .like {display: inline-block; width: 80px; height: 36px; border: 1px solid #535353; border-radius: 5px; background: #141314; color: #fff; font-size: 14px;}
-.movies_btn .like:before {content: ''; display: inline-block; width: 17px; height: 15px; line-height: 36px; margin-right: 6px; vertical-align: top; background: url(../images/icon/ico-heart-toggle-main.png) 0 0 no-repeat;}
+.movies_btn .like:before {content: ''; display: inline-block; width: 17px; height: 15px; line-height: 36px; margin: 1px 6px 0 0; vertical-align: top; background: url(../images/icon/ico-heart-toggle-main.png) 0 0 no-repeat;}
 .movies_btn .reservation {display: inline-block; width: 160px; height: 36px; line-height: 36px; border-radius: 5px; vertical-align: top; background: #037b94; color: #fff; font-size: 14px;}
 
 
