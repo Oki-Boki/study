@@ -52,8 +52,6 @@ em {font-style:normal;}
 	03. style
   * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
    ========================================================================== */
-.wrap {position: relative;}
-.header {border-bottom: 1px solid #f1f1f1; font-size: 0; box-sizing: border-box;}
 .wrap {position: relative; background: #122239;}
 .header {border-bottom: 1px solid #3e3e41; font-size: 0; box-sizing: border-box; background: rgba(12,15,22,0.6);}
 
@@ -63,7 +61,6 @@ em {font-style:normal;}
 .breadcrumb_wrap {position: relative; width: 1110px; margin: 0 auto;}
 .header_wrap::after {content:""; display: block; clear: both;}
 
-.header_wrap {background: #0a0d11;}
 
 ul.col2 li {float: left; width: calc(100% / 2);}
 ul.col3 li {float: left; width: calc(100% / 3);}
@@ -95,6 +92,7 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .menu_wrap .menu_list li {display: inline-block; padding: 10px 20px; margin-right: 20px; font-size: 18px; font-weight: 400; letter-spacing: -2px; line-height: 36px; vertical-align: middle; text-align: left; cursor: pointer;}
 .menu_wrap .menu_list li a {padding-bottom: 14px; border-bottom: 2px solid rgba(12,15,22,0.6); color: #fff;}
 .menu_wrap .menu_list li:hover a {border-bottom: 2px solid #fff; box-sizing: border-box;}
+
 .menu_wrap .menu_list::after {content:""; display: block; clear: both;}
 .menu_wrap .menu_list.menu_list_right {float: right;}
 .menu_wrap .menu_list.menu_list_right li {display: inline-block; text-align: right;}
@@ -106,7 +104,6 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .util_menu_icon {display: inline-block; height: 28px;}
 .util_menu_icon .icon {display: inline-block; width: 36px; height: 36px; margin: 0 8px; line-height: 36px; vertical-align: middle; background: url(../images/icon/ico-schedule-white.png) 0 0 no-repeat;}
 .util_menu_icon .icon.my_mega {display: inline-block; width: 18px; height: 21px; margin: 0 8px; line-height: 36px; vertical-align: middle; background: url(../images/icon/ico-mymega-white.png) 0 0 no-repeat;}
-
 
 .container {position: relative; width: 1110px; margin: 0 auto; background: #222;}
 .content {padding: 78px 0 100px;}
@@ -124,10 +121,8 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .movies_btn .reservation {display: inline-block; width: 160px; height: 36px; line-height: 36px; border-radius: 5px; vertical-align: top; background: #037b94; color: #fff; font-size: 14px;}
 
 
+
 /* .bg_wrap {position: absolute; width: 1110px; height: auto; margin: -89px auto 0; overflow: hidden;}
 .bg_pattern {position: absolute; width: 100%; height: 100%; background: url(../images/bg-movie-detail-pattern.png) 0 0 repeat; z-index: 5;}
 .bg {display: block; width: 100%; height: 100%; z-index: 3; filter: blur(20px);} */
-
-
-
 
