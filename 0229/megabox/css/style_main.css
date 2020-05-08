@@ -75,13 +75,13 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 /* ==========================================================================
    유틸메뉴
   ========================================================================== */
-.util_menu {display: inline-block; width: 50%; padding-top: 9px; text-align: left; line-height: 18px; color: #888;}
-.util_menu button {color: #888;}
+.util_menu {display: inline-block; width: 50%; padding-top: 9px; text-align: left; line-height: 18px;}
+.util_menu button {font-size: 14px; color: #888; border-bottom: 1px solid #0e1724;}
 .util_menu.util_menu_right {text-align: right;}
 .util_menu::after {content:""; display: block; clear: both;}
 
-.util_menu a {height: 18px; line-height: 18px; margin-left: 20px; font-size: 14px; vertical-align: middle;}
-.util_menu a:hover {border-bottom: 1px solid #888;}
+.util_menu a {height: 18px; line-height: 18px; margin-left: 20px; font-size: 14px; vertical-align: middle; color: #888;}
+.util_menu a:hover, .util_menu button:hover {border-bottom: 1px solid #888;}
 
 /* ==========================================================================
    메인메뉴
@@ -117,14 +117,17 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .content_movies .movies_list li > a {display: block; height: 352px; border-radius: 8px; box-sizing: border-box; overflow: hidden;}
 
 .movies_list .movie_num {position: absolute; top: 0; left: 0; padding: 12px 0 0 18px; width: 100%; height: 150px; color: #fff; font-size: 30px; text-align: left; font-style: italic; text-shadow: 2px 2px 4px #000; background: url(../images/bg-main-movie-rank.png) 0 0 no-repeat;}
-.movies_list .movie_info_wrap {position: absolute; top: 0; left: 0; padding: 25px 30px 0 25px; width: 100%; height: 352px; border-radius: 8px; color: #fff; font-size: 14px; font-weight: bold; line-height: 22px; text-align: left; letter-spacing: -1px; background: rgba(0,0,0,0.75);}
+.movies_list .movie_info_wrap {position: absolute; top: 0; left: 0; padding: 30px 20px; width: 100%; height: 352px; border-radius: 8px; color: #fff; font-size: 14px; font-weight: bold; line-height: 22px; text-align: left; letter-spacing: -1px; background: rgba(0,0,0,0.75);}
 .movies_list .movie_info_wrap {opacity: 0;}
-.movies_list .movie_info_wrap .movie_summary {word-break: break-all;}
+.movies_list .movie_info_wrap .movie_summary {height: 88%; word-break: break-all;}
 .movies_list li > a:hover .movie_info_wrap {opacity: 1; transition: 0.3s;}
+.movies_list .movie_info_wrap .movie_review {padding-top: 16px; border-top: 1px solid #3c3c3c; text-align: center;}
+.movies_list .movie_info_wrap .movie_review .movie_score {margin-left: 20px; font-size: 22px; color: #59bec9;}
 
 .movies_btn {padding-top: 10px;}
 .movies_btn .like {display: inline-block; width: 80px; height: 36px; border: 1px solid #535353; border-radius: 5px; background: #141314; color: #fff; font-size: 14px;}
-.movies_btn .like:before {content: ''; display: inline-block; width: 17px; height: 15px; line-height: 36px; margin: 1px 6px 0 0; vertical-align: top; background: url(../images/icon/ico-heart-toggle-main.png) 0 0 no-repeat;}
+.movies_btn .like:before {content: ''; display: inline-block; width: 17px; height: 15px; line-height: 36px; margin: 1px 6px 0 0; vertical-align: top; background: url(../images/icon/ico-heart-toggle-main.png) no-repeat; background-position: 0 0;}
+.movies_btn .like:active:before {background-position: -17px 0;}
 .movies_btn .reservation {display: inline-block; width: 160px; height: 36px; line-height: 36px; border-radius: 5px; vertical-align: top; background: #037b94; color: #fff; font-size: 14px;}
 
 
