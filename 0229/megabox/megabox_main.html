@@ -48,14 +48,59 @@
                 <!-- 메인메뉴 -->
                 <nav class="menu_wrap">
                     <ul class="menu_list menu_list_left">
-                        <li><a href="javascript:;">영화</a></li>
-                        <li><a href="javascript:;">예매</a></li>
-                        <li><a href="javascript:;">극장</a></li>
+                        <li>
+                            <a href="javascript:;">영화</a>
+                            <div class="sub_menu_list">
+                                <ul>
+                                    <li>전체영화</li>
+                                    <li>큐레이션</li>
+                                    <li>무비포스트</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:;">예매</a>
+                            <div class="sub_menu_list">
+                                <ul>
+                                    <li>빠른예매</li>
+                                    <li>상영시간표</li>
+                                    <li>더 부티크 프라이빗 예매</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:;">극장</a>
+                            <div class="sub_menu_list">
+                                <ul>
+                                    <li>전체극장</li>
+                                    <li>특별관</li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                     <ul class="menu_list menu_list_right">
-                        <li><a href="javascript:;">이벤트</a></li>
-                        <li><a href="javascript:;">스토어</a></li>
-                        <li><a href="javascript:;">혜택</a></li>
+                        <li>
+                            <a href="javascript:;">이벤트</a>
+                            <div class="sub_menu_list">
+                                <ul>
+                                    <li>진행중 이벤트</li>
+                                    <li>지난 이벤트</li>
+                                    <li>당첨자 발표</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:;">스토어</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">혜택</a>
+                            <div class="sub_menu_list">
+                                <ul>
+                                    <li>메가박스 맴버십</li>
+                                    <li>제휴/할인</li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
                 <!--// 메인메뉴 -->
@@ -79,6 +124,7 @@
             <div class="content">
                 <div class="content_movies">
                     <p class="box_office">박스오피스</p>
+                    <a href="javascript:;" ><span>더 많은 영화보기</span></a>
                     <ul class="movies_list">
                         <li>
                             <a href="javascript:;" title="영화상세보기">
@@ -155,6 +201,24 @@
                                 <button type="button" class="like">4.3k</button>
                                 <a href="https://www.megabox.co.kr/booking" class="reservation">예매</a>
                             </div>
+                        </li>
+                    </ul>
+
+                    <ul class="movies_util_list">
+                        <li>
+                            <div class="movies_search_wrap">
+                                <input type="text" id="on_movie_title" autocomplete="off" name="movie_title" placeholder="영화명을 입력해 주세요" title="영화 검색" class="movies_search">
+                                <a href="javascript:;" class="movies_search_icon"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="상영시간표 보기"><span>상영시간표</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="박스오피스 보기"><span>박스오피스</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" title="빠른예매 보기"><span>빠른예매</span></a>
                         </li>
                     </ul>
                 </div>
