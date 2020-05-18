@@ -102,6 +102,8 @@ ul.col4 li {float: left; width: calc(100% / 4);}
   ========================================================================== */
 .menu_wrap {display: inline-block; width: 824px; margin: 0 52px 0 64px;}
 .menu_wrap::after {content:""; display: block; clear: both;}
+/* .menu_wrap {display: inline-block; width: 824px; margin: 0 52px 0 64px;}
+  .menu_wrap::after {content:""; display: block; clear: both;}
   .menu_wrap .menu_list {display: inline-block;}
   .menu_wrap .menu_list li {position:relative;display: inline-block; padding: 10px 20px; margin-right: 20px; font-size: 18px; font-weight: 400; letter-spacing: -2px; line-height: 36px; vertical-align: middle; text-align: left; cursor: pointer;}
   .menu_wrap .menu_list li a {padding-bottom: 14px; border-bottom: 2px solid rgba(12,15,22,0.6); color: #fff;}
