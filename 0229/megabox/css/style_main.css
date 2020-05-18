@@ -1,7 +1,6 @@
-
 @charset "UTF-8";
+
 /* ==========================================================================
-	02. reset
    reset
   * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
    ========================================================================== */
@@ -51,8 +50,6 @@ img {vertical-align:top; width:100%;}
 em {font-style:normal;}
 
 /* ==========================================================================
-	03. style
-  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
 	 layout
    ========================================================================== */
 .wrap {position: relative; background: #122239;}
@@ -86,13 +83,9 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 /* ==========================================================================
    유틸메뉴
   ========================================================================== */
-.util_menu {display: inline-block; width: 50%; padding-top: 9px; text-align: left; line-height: 18px;}
 .util_menu {width: 50%; padding-top: 9px; line-height: 18px;}
 .util_menu button {font-size: 14px; color: #888; border-bottom: 1px solid #0e1724;}
-.util_menu.util_menu_right {text-align: right;}
 .util_menu::after {content:""; display: block; clear: both;}
-
-.util_menu a {height: 18px; line-height: 18px; margin-left: 20px; font-size: 14px; vertical-align: middle; color: #888;}
 .util_menu a {line-height: 18px; margin-left: 20px; font-size: 14px; vertical-align: middle; color: #888;}
 .util_menu.util_menu_left a:first-child {margin-left: 0;}
 .util_menu a:hover, .util_menu button:hover {border-bottom: 1px solid #888;}
@@ -100,9 +93,7 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 /* ==========================================================================
    메인메뉴
   ========================================================================== */
-.menu_wrap {display: inline-block; width: 824px; margin: 0 52px 0 64px;}
-.menu_wrap::after {content:""; display: block; clear: both;}
-/* .menu_wrap {display: inline-block; width: 824px; margin: 0 52px 0 64px;}
+  /* .menu_wrap {display: inline-block; width: 824px; margin: 0 52px 0 64px;}
   .menu_wrap::after {content:""; display: block; clear: both;}
   .menu_wrap .menu_list {display: inline-block;}
   .menu_wrap .menu_list li {position:relative;display: inline-block; padding: 10px 20px; margin-right: 20px; font-size: 18px; font-weight: 400; letter-spacing: -2px; line-height: 36px; vertical-align: middle; text-align: left; cursor: pointer;}
@@ -116,34 +107,22 @@ ul.col4 li {float: left; width: calc(100% / 4);}
   .menu_wrap .menu_list.menu_list_right li:last-child {margin-right: 0;}
   .menu_wrap .sub_menu_list {position: absolute;} */
 
+
 .menu_wrap {width: 824px; margin: 0 auto;}
+
 .menu_wrap .menu_list {display: inline-block;}
 .menu_wrap .menu_list li {position: relative; display: inline-block; padding: 10px 20px; margin-right: 20px; font-size: 18px; font-weight: 400; letter-spacing: -2px; line-height: 36px; vertical-align: middle; text-align: left; cursor: pointer;}
 .menu_wrap .menu_list li a {padding-bottom: 14px; border-bottom: 2px solid rgba(12,15,22,0.6); color: #fff;}
 .menu_wrap .menu_list li:hover a {border-bottom: 2px solid #fff; box-sizing: border-box;}
+
 .menu_wrap .menu_list:after {content:""; display: block; clear: both;}
 .menu_wrap .menu_list li:last-child {margin-right: 0;}
 .menu_wrap .menu_list li:nth-child(4) {margin-left: 260px;}
 .menu_wrap .sub_menu_list {position: absolute; display: none;}
 
-.menu_wrap .menu_list::after {content:""; display: block; clear: both;}
-.menu_wrap .menu_list.menu_list_right {float: right;}
-.menu_wrap .menu_list.menu_list_right li {display: inline-block; text-align: right;}
-.menu_wrap .menu_list.menu_list_left li:last-child,
-.menu_wrap .menu_list.menu_list_right li:last-child {margin-right: 0;}
-
-.menu_wrap .sub_menu_list {}
 .category {position: absolute; left: 0; top: 47px; width: 24px; height: 18px; margin: 0 8px; line-height: 36px; vertical-align: middle; background: url(../images/icon/ico-sitemap-white.png) 0 0 no-repeat; cursor: pointer;}
 .search {position: absolute; left: 40px; top: 47px; width: 18px; height: 18px; margin: 0 8px; line-height: 36px; vertical-align: middle; background: url(../images/icon/ico-search-white.png) 0 0 no-repeat; cursor: pointer;}
 
-
-
-.category {display: inline-block; width: 24px; height: 18px; margin: 0 8px; line-height: 36px; vertical-align: middle; background: url(../images/icon/ico-sitemap-white.png) 0 0 no-repeat; cursor: pointer;}
-.search {display: inline-block; width: 18px; height: 18px; margin: 0 8px; line-height: 36px; vertical-align: middle; background: url(../images/icon/ico-search-white.png) 0 0 no-repeat; cursor: pointer;}
-
-
-/* 유틸메뉴 */
-.util_menu_icon {display: inline-block; height: 28px;}
 /* ==========================================================================
    유틸메뉴
   ========================================================================== */
@@ -151,31 +130,24 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .util_menu_icon .icon {display: inline-block; width: 36px; height: 36px; margin: 0 8px; line-height: 36px; vertical-align: middle; background: url(../images/icon/ico-schedule-white.png) 0 0 no-repeat;}
 .util_menu_icon .icon.my_mega {display: inline-block; width: 18px; height: 21px; margin: 0 8px; line-height: 36px; vertical-align: middle; background: url(../images/icon/ico-mymega-white.png) 0 0 no-repeat;}
 
-.container {position: relative; width: 1110px; margin: 0 auto;}
-.content {padding-bottom: 100px;}
-.content_movies {margin: 0 auto; padding-top: 78px; text-align: center; color: #fff; background: #222;}
 /* ==========================================================================
    content
   ========================================================================== */
 .content_movies {margin: 0 auto; padding-top: 78px; text-align: center; color: #fff; /*background: #222;*/}
 .content_movies .box_office {font-size: 18px; color: #fff; letter-spacing: -2px;}
 .content_movies .box_office::after {content: ""; display: block; width: 68px; height: 2px; margin: 6px auto 0; border-bottom: 1px solid rgba(255,255,255,0.5); box-sizing: border-box;}
-
 .more_movies {display: block; color: #aaa;}
 .more_movies:after {content: ''; display: inline-block; width: 16px; height: 16px; margin-left: 8px; vertical-align: top; background: url(../images/icon/ico-more-cross-gray.png) 0 0 no-repeat;}
-
 .content_movies .movies_list {padding: 20px 0 50px;}
 .content_movies .movies_list:after{content: ""; display: block; clear: both;}
 .content_movies .movies_list li {float: left; position: relative; width: 245px; margin-left: 40px;}
 .content_movies .movies_list li:first-child {margin-left: 0;}
 .content_movies .movies_list li > a {display: block; height: 352px; border-radius: 8px; box-sizing: border-box; overflow: hidden;}
 
-.movies_list .movie_num {position: absolute; top: 0; left: 0; padding: 12px 0 0 18px; width: 100%; height: 150px; color: #fff; font-size: 30px; text-align: left; font-style: italic; text-shadow: 2px 2px 4px #000; background: url(../images/bg-main-movie-rank.png) 0 0 no-repeat;}
 .movies_list .movie_num {position: absolute; top: 0; left: 0; padding: 12px 0 0 18px; width: 100%; height: 150px; border-radius: 8px; overflow: ;; color: #fff; font-size: 30px; text-align: left; font-style: italic; text-shadow: 2px 2px 4px #000; background: url(../images/bg-main-movie-rank.png) 0 0 no-repeat;}
 .movies_list .movie_info_wrap {position: absolute; top: 0; left: 0; padding: 30px 20px; width: 100%; height: 352px; border-radius: 8px; color: #fff; font-size: 14px; font-weight: bold; line-height: 22px; text-align: left; letter-spacing: -1px; background: rgba(0,0,0,0.75);}
 .movies_list .movie_info_wrap {opacity: 0;}
 .movies_list .movie_info_wrap .movie_summary {height: 88%; word-break: break-all;}
-.movies_list li > a:hover .movie_info_wrap {opacity: 1; transition: 0.3s;}
 .movies_list .movie_info_wrap .movie_review {padding-top: 16px; border-top: 1px solid #3c3c3c; text-align: center;}
 .movies_list .movie_info_wrap .movie_review .movie_score {margin-left: 20px; font-size: 22px; color: #59bec9;}
 .movies_list li > a:hover .movie_info_wrap {opacity: 1; transition: 0.3s;}
@@ -206,4 +178,3 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 /* .bg_wrap {position: absolute; width: 1110px; height: auto; margin: -89px auto 0; overflow: hidden;}
 .bg_pattern {position: absolute; width: 100%; height: 100%; background: url(../images/bg-movie-detail-pattern.png) 0 0 repeat; z-index: 5;}
 .bg {display: block; width: 100%; height: 100%; z-index: 3; filter: blur(20px);} */
-
