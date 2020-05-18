@@ -1,6 +1,7 @@
 
 /* ==========================================================================
 	02. reset
+   reset
   * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
    ========================================================================== */
 html, body, header, footer, div, span, applet, object, iframe,
@@ -51,6 +52,7 @@ em {font-style:normal;}
 /* ==========================================================================
 	03. style
   * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
+	 layout
    ========================================================================== */
 .wrap {position: relative; background: #122239;}
 .header {border-bottom: 1px solid #3e3e41; font-size: 0; box-sizing: border-box; background: rgba(12,15,22,0.6);}
