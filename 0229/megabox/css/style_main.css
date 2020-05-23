@@ -52,17 +52,16 @@ em {font-style:normal;}
 /* ==========================================================================
 	 layout
    ========================================================================== */
-.wrap {position: relative; background: #121c29;}
-.header {background: rgba(12,15,22,0.6);}
+.wrap {position: relative;}
 
-.header_wrap,
-.content,
 .breadcrumb_wrap {position: relative; width: 1100px; margin: 0 auto;}
-.breadcrumb_wrap {position: relative; width: 1110px; margin: 0 auto;}
 .header_wrap::after {content:""; display: block; clear: both;}
 
-.container {position: relative; width: 1110px; margin: 0 auto;}
-.content {padding-bottom: 100px;}
+.content {position: relative; padding-bottom: 100px;}
+.section {position: relative; padding: 50px 0 70px;}
+.inner {position: relative; width: 1100px; margin: 0 auto;}
+
+h2 {font-size: 30px; line-height: 33px; font-weight: normal; color: #fff;}
 
 .alignL {text-align: left;}
 .alignC {text-align: center;}
@@ -77,7 +76,9 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 /* ==========================================================================
    헤더
   ========================================================================== */
-.header:after {content: ''; display: block; position: absolute; width: 100%; border-bottom: 1px solid #3e3e41; box-sizing: border-box;}
+.header {background: #121c29;}
+.header_wrap {position: relative; background: rgba(12,15,22,0.4);}
+.header_wrap:after {content: ''; display: block; position: absolute; bottom: 0; width: 100%; border-bottom: 1px solid #3e3e41; box-sizing: border-box; overflow: hidden;}
 
 /* ==========================================================================
    로고
@@ -113,18 +114,19 @@ ul.col4 li {float: left; width: calc(100% / 4);}
   .menu_wrap .sub_menu_list {position: absolute;} */
 
 
-.menu_wrap {display: inline-block; width: 100%; margin: 0 auto; font-size: 0;}
+.menu_wrap {display: inline-block; position: relative; width: 100%; margin: 0 auto; font-size: 0;}
 .menu_wrap .menu_list {display: block; width: 824px; margin: 0 auto;}
 .menu_wrap .menu_list>li {position: relative; display: inline-block; padding: 10px 20px; margin-left: 20px; font-size: 18px; font-weight: 400; letter-spacing: -2px; line-height: 36px; vertical-align: middle; cursor: pointer;}
-.menu_wrap .menu_list>li a {padding-bottom: 14px; border-bottom: 2px solid rgba(12,15,22,0.6); color: #fff; letter-spacing: 0px;}
-.menu_wrap .menu_list>li:hover a {border-bottom: 2px solid #fff; box-sizing: border-box;}
+.menu_wrap .menu_list>li a {padding-bottom: 13px; border-bottom: 2px solid rgba(12,15,22,0.6); color: #fff; letter-spacing: 0px;}
+.menu_wrap .menu_list>li:hover a {border-bottom: 2px solid #fff; box-sizing: border-box; z-index: 9;}
+.menu_wrap .menu_list>li:nth-child(5):hover a {border-bottom: 0;}
 .menu_wrap .menu_list:after {content:""; display: block; clear: both;}
 .menu_wrap .menu_list>li:nth-child(4) {margin-left: 232px;}
-
 .menu_wrap .menu_list>li:hover .sub_menu_list {display: block;}
 
-.menu_wrap .sub_menu_list {display: none; position: absolute; width: 1100px; margin-top: 20px; font-size: 16px; color: #fff;}
-.menu_wrap .sub_menu_list li {float: left; padding-right: 20px;}
+.menu_wrap .sub_menu_list {display: none; position: absolute; top: 60px; left: 50%; width: 500px; font-size: 16px; color: #fff;transform: translateX(-50%); z-index: 9;}
+/* .menu_wrap .sub_menu_list li {float: left; padding-right: 20px;} */
+.menu_wrap .sub_menu_list li {display:inline-block; padding-right: 20px;}
 .menu_wrap .sub_menu_list li:last-child {padding-right: 0;}
 .menu_wrap .sub_menu_list:after {content:""; display: block; clear: both;}
 .category {position: absolute; left: 0; top: 47px; cursor: pointer;}
@@ -134,77 +136,74 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 /* ==========================================================================
    유틸메뉴
   ========================================================================== */
-
 .util_menu_icon.screening_schedule {position: absolute; top: 38px; right: 30px; width: 36px; height: 36px; line-height: 36px; vertical-align: middle; background: url(../images/icon/ico-schedule-white.png) 0 0 no-repeat;}
 .util_menu_icon.my_mega {position: absolute; top: 44px; right: 0; width: 18px; height: 21px; line-height: 36px; vertical-align: middle; background: url(../images/icon/ico-mymega-white.png) 0 0 no-repeat;}
 
 /* ==========================================================================
    content
   ========================================================================== */
-.content_movies {margin: 0 auto; padding-top: 78px; text-align: center; color: #fff; /*background: #222;*/}
-.content_movies .box_office {font-size: 18px; color: #fff; letter-spacing: -2px;}
-.content_movies .box_office::after {content: ""; display: block; width: 68px; height: 2px; margin: 6px auto 0; border-bottom: 1px solid rgba(255,255,255,0.5); box-sizing: border-box;}
+.content_title:after {content: ''; display: block; clear: both;}
+.content_movies {margin: 0 auto; text-align: center; color: #fff; background: #121c29;}
+.content_title {}
 
-.more_movies {display: block; position: absolute; top: 94px; right: 0; color: #aaa;}
-.more_movies span:hover {border-bottom: 1px solid #aaa;}
-.more_movies:after {content: ''; display: inline-block; width: 16px; height: 16px; margin-left: 8px; vertical-align: top; background: url(../images/icon/ico-more-cross-gray.png) 0 0 no-repeat;}
+/* 박스오피스 */
 
+/* 더 많은 영화보기 */
+.content_movies .more_view {display: inline-block; margin-top: 17px; color: #aaa;}
+.content_movies .more_view.more_view_movies span:hover {border-bottom: 1px solid #aaa;}
+.content_movies .more_view.more_view_movies:after {content: ''; display: inline-block; width: 16px; height: 16px; margin-left: 8px; vertical-align: top; background: url(../images/icon/ico-more-cross-gray.png) 0 0 no-repeat;}
+
+/* 박스오피스 리스트 */
 .content_movies .movies_list {padding: 20px 0 50px;}
 .content_movies .movies_list:after{content: ""; display: block; clear: both;}
 .content_movies .movies_list li {float: left; position: relative; width: 245px; margin-left: 40px;}
 .content_movies .movies_list li:first-child {margin-left: 0;}
 .content_movies .movies_list li > a {display: block; height: 352px; border-radius: 8px; box-sizing: border-box; overflow: hidden;}
 
-.movies_list .movie_num {position: absolute; top: 0; left: 0; padding: 12px 0 0 18px; width: 100%; height: 150px; border-radius: 8px; overflow: ;; color: #fff; font-size: 30px; text-align: left; font-style: italic; text-shadow: 2px 2px 4px #000; background: url(../images/bg-main-movie-rank.png) 0 0 no-repeat;}
-.movies_list .movie_info_wrap {position: absolute; top: 0; left: 0; padding: 30px 20px; width: 100%; height: 352px; border-radius: 8px; color: #fff; font-size: 14px; font-weight: bold; line-height: 22px; text-align: left; letter-spacing: -1px; background: rgba(0,0,0,0.75);}
-.movies_list .movie_info_wrap {opacity: 0;}
-.movies_list .movie_info_wrap .movie_summary {height: 88%; word-break: break-all;}
-.movies_list .movie_info_wrap .movie_review {padding-top: 16px; border-top: 1px solid #3c3c3c; text-align: center;}
-.movies_list .movie_info_wrap .movie_review .movie_score {margin-left: 20px; font-size: 22px; color: #59bec9;}
-.movies_list li > a:hover .movie_info_wrap {opacity: 1; transition: 0.3s;}
+/* 영화정보 */
+.content_movies .movies_list .movie_num {position: absolute; top: 0; left: 0; padding: 12px 0 0 18px; width: 100%; height: 150px; border-radius: 8px; overflow: ;; color: #fff; font-size: 30px; text-align: left; font-style: italic; text-shadow: 2px 2px 4px #000; background: url(../images/bg-main-movie-rank.png) 0 0 no-repeat;}
+.content_movies .movies_list .movie_info_wrap {position: absolute; top: 0; left: 0; padding: 30px 20px; width: 100%; height: 352px; border-radius: 8px; color: #fff; font-size: 14px; font-weight: bold; line-height: 22px; text-align: left; letter-spacing: -1px; background: rgba(0,0,0,0.75);}
+.content_movies .movies_list .movie_info_wrap {opacity: 0;}
+.content_movies .movies_list .movie_info_wrap .movie_summary {height: 88%; word-break: break-all;}
+.content_movies .movies_list .movie_info_wrap .movie_review {padding-top: 16px; border-top: 1px solid #3c3c3c; text-align: center;}
+.content_movies .movies_list .movie_info_wrap .movie_review .movie_score {margin-left: 20px; font-size: 22px; color: #59bec9;}
+.content_movies .movies_list li > a:hover .movie_info_wrap {opacity: 1; transition: 0.3s;}
 
-.movies_btn {padding-top: 10px;}
-.movies_btn .like {display: inline-block; width: 80px; height: 36px; border: 1px solid #535353; border-radius: 5px; background: #141314; color: #fff; font-size: 14px;}
-.movies_btn .like:before {content: ''; display: inline-block; width: 17px; height: 15px; line-height: 36px; margin: 1px 6px 0 0; vertical-align: top; background: url(../images/icon/ico-heart-toggle-main.png) no-repeat; background-position: 0 0;}
-.movies_btn .like:active:before {background-position: -17px 0;}
-.movies_btn .reservation {display: inline-block; width: 160px; height: 36px; line-height: 36px; border-radius: 5px; vertical-align: top; background: #037b94; color: #fff; font-size: 14px;}
+/* 영화 좋아요/예매버튼 */
+.content_movies .movies_btn {padding-top: 10px;}
+.content_movies .movies_btn .like {display: inline-block; width: 80px; height: 36px; border: 1px solid #535353; border-radius: 5px; background: #141314; color: #fff; font-size: 14px;}
+.content_movies .movies_btn .like:before {content: ''; display: inline-block; width: 17px; height: 15px; line-height: 36px; margin: 1px 6px 0 0; vertical-align: top; background: url(../images/icon/ico-heart-toggle-main.png) no-repeat; background-position: 0 0;}
+.content_movies .movies_btn .like:active:before {background-position: -17px 0;}
+.content_movies .movies_btn .reservation {display: inline-block; width: 160px; height: 36px; line-height: 36px; border-radius: 5px; vertical-align: top; background: #037b94; color: #fff; font-size: 14px;}
 
-.movies_util_list {color: #aaaaaa; background: rgba(0,0,0,0.2); font-size: 14px;}
-.movies_util_list:after {content: ''; display: block; clear: both;}
-.movies_util_list li {float: left; position: relative; width: calc(100% / 4); height: 75px; padding: 0 87px; vertical-align: middle; line-height: 75px;}
-.movies_util_list li:first-child {padding: 0 37px;}
-.movies_util_list li:before {content: ''; display: inline-block; position: absolute; left: 0; top: 23px; width: 1px; height: 30px; vertical-align: middle; line-height: 75px; background: #423e3e;}
-.movies_util_list li:first-child:before {content: ''; display: none;}
-
-.movies_util_list li .movies_search_wrap input::-ms-clear {display: none;}
-.movies_util_list li .movies_search {position: relative; width: 200px; height: 26px; padding-left: 10px; border: none; border-bottom: 1px solid #423e3e; background: none; outline-style: unset; color: #aaa; line-height: 26px;}
-.movies_util_list li .movies_search_icon {content: ''; display: block; position: absolute; top: 28px; right: 43px; width: 18px; height: 18px; background: url(../images/icon/ico-search-white.png) 0 0 no-repeat;}
-.movies_util_list li a {position: relative; color: #fff;}
-.movies_util_list li:nth-child(n+2) a:hover span {border-bottom: 1px solid #fff;}
-
-.movies_util_list li a:before {content: ''; display: block; position: absolute; top: -4px; left: 0; width: 24px; height: 26px; background: url(../images/icon/ico-schedule-main.png) 0 0 no-repeat;}
-.movies_util_list li:nth-child(3) a:before {top: -4px; left: 0; width: 26px; height: 24px; background: url(../images/icon/ico-boxoffice-main.png) 0 0 no-repeat;}
-.movies_util_list li:last-child a:before {top: -4px; left: 0; width: 29px; height: 25px; background: url(../images/icon/ico-quick-reserve-main.png) 0 0 no-repeat;}
-.movies_util_list li:first-child a:before {content: ''; display: none;}
-.movies_util_list li span {margin-left: 36px;}
+/* 영화유틸메뉴 */
+.content_movies .movies_util_list {color: #aaaaaa; background: rgba(0,0,0,0.2); font-size: 14px;}
+.content_movies .movies_util_list:after {content: ''; display: block; clear: both;}
+.content_movies .movies_util_list li {float: left; position: relative; width: calc(100% / 4); height: 75px; padding: 0 87px; vertical-align: middle; line-height: 75px;}
+.content_movies .movies_util_list li:first-child {padding: 0 37px;}
+.content_movies .movies_util_list li:before {content: ''; display: inline-block; position: absolute; left: 0; top: 23px; width: 1px; height: 30px; vertical-align: middle; line-height: 75px; background: #423e3e;}
+.content_movies .movies_util_list li:first-child:before {content: ''; display: none;}
+.content_movies .movies_util_list li .movies_search_wrap input::-ms-clear {display: none;}
+.content_movies .movies_util_list li .movies_search {position: relative; width: 200px; height: 26px; padding-left: 10px; border: none; border-bottom: 1px solid #423e3e; background: none; outline-style: unset; color: #aaa; line-height: 26px;}
+.content_movies .movies_util_list li .movies_search_icon {content: ''; display: block; position: absolute; top: 28px; right: 43px; width: 18px; height: 18px; background: url(../images/icon/ico-search-white.png) 0 0 no-repeat;}
+.content_movies .movies_util_list li a {position: relative; color: #fff;}
+.content_movies .movies_util_list li:nth-child(n+2) a:hover span {border-bottom: 1px solid #fff;}
+.content_movies .movies_util_list li a:before {content: ''; display: block; position: absolute; top: -4px; left: 0; width: 24px; height: 26px; background: url(../images/icon/ico-schedule-main.png) 0 0 no-repeat;}
+.content_movies .movies_util_list li:nth-child(3) a:before {top: -4px; left: 0; width: 26px; height: 24px; background: url(../images/icon/ico-boxoffice-main.png) 0 0 no-repeat;}
+.content_movies .movies_util_list li:last-child a:before {top: -4px; left: 0; width: 29px; height: 25px; background: url(../images/icon/ico-quick-reserve-main.png) 0 0 no-repeat;}
+.content_movies .movies_util_list li:first-child a:before {content: ''; display: none;}
+.content_movies .movies_util_list li span {margin-left: 36px;}
 /* .bg_wrap {position: absolute; width: 1110px; height: auto; margin: -89px auto 0; overflow: hidden;}
 .bg_pattern {position: absolute; width: 100%; height: 100%; background: url(../images/bg-movie-detail-pattern.png) 0 0 repeat; z-index: 5;}
 .bg {display: block; width: 100%; height: 100%; z-index: 3; filter: blur(20px);} */
 
+/* 스크롤 다운 */
+.content_movies .scroll_down {position: relative; top: 0; width: 16px; height: 24px; border: 2px solid #c0c1c7; border-radius: 10px; margin: 33px auto 0; animation: scroll_down 1s ease-in Infinite Alternate;}
+.content_movies .scroll_down:after {content: ''; position: absolute; left: 50%; transform: translateX(-50%); top: 6px; display: inline-block; width: 2px; height: 5px; background: #c0c1c7;}
+@keyframes scroll_down {0% {top: 0px;} 100% {top: 20px;}}
 
-.content_more_view {display: block; position: relative; top: 0; width: 16px; height: 24px; border: 2px solid #c0c1c7; border-radius: 10px; margin: 33px auto 0; animation: more_view 1s ease-in Infinite Alternate;}
-.content_more_view:after {content: ''; position: absolute; left: 50%; transform: translateX(-50%); top: 6px; display: inline-block; width: 2px; height: 5px; background: #c0c1c7;}
-@keyframes more_view {
-   0% {
-       top:0px;
-   }
-   100% {
-       top: 20px;
-   }
+/* 혜택 */
+.content_benefit h2 {color: #351f66;}
+.content_benefit .more_view.more_view_benefit:after {content: ''; display: inline-block; width: 16px; height: 16px; margin-left: 8px; vertical-align: top; background: url(../images/icon/btn-more-cross-purple.png) 0 0 no-repeat;}
 
-}
-
-
-
-
-
+.content_benefit .benefit_list {display: block;}
