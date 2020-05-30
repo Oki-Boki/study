@@ -208,29 +208,57 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 
 /* 혜택 */
 .content_benefit h2 {color: #351f66;}
-.content_benefit:after {content: ''; display: block; width: 100%; height: 400px; margin-top: 430px; background: #503396;}
+.content_benefit:after {content: ''; display: block; width: 100%; height: 640px; margin-top: -600px; background: #503396;}
+ /* 이벤트 영역 */
+.content_benefit .event_wrap .event_slide {float: left; overflow: hidden; width: 685px;}
+.content_benefit .event_wrap:after {content: ''; display: block; clear: both;}
+.content_benefit .event_wrap .event_slide_list {display: block; position: relative;  margin: 0; top: 0; left: 0; text-align: left; font-size: 0; width: 10000px; overflow: hidden;}
+.content_benefit .event_wrap .event_slide_list li {float: left;}
+.content_benefit .event_wrap .event_slide_list li .list_text {float: left; width: 300px; padding-top: 30px;}
+.content_benefit .event_wrap .event_slide_list li .list_text p {font-size: 14px; line-height: 22px; color: #666;}
+.content_benefit .event_wrap .event_slide_list li .list_text .list_tit {font-size: 20px; line-height: 24px; color: #222;}
+.content_benefit .event_wrap .event_slide_list li .list_text strong {display: block; padding: 5px 0 20px; font-size: 40px; line-height: 44px; letter-spacing: -4px;}
+.content_benefit .event_wrap .event_slide_list li:first-child .list_text strong {color: #3e3d79;}
+.content_benefit .event_wrap .event_slide_list li:nth-child(2) .list_text strong {color: #444341;}
+.content_benefit .event_wrap .event_slide_list li:nth-child(3) .list_text strong {color: #254b3c;}
+.content_benefit .event_wrap .event_slide_list li:nth-child(4) .list_text strong {color: #b50102;}
+.content_benefit .event_wrap .event_slide_list li .list_img {float: left; width: 385px; height: 325px;}
 
-.content_benefit .benefit_slide {float: left; overflow: hidden; width: 685px;}
-.content_benefit .benefit_slide:after {content: ''; display: block; clear: both;}
-.content_benefit .benefit_slide_list {display: block; position: relative;  margin: 0; top: 0; left: 0; text-align: left; font-size: 0; width: 10000px; overflow: hidden;}
-.content_benefit .benefit_slide_list li {float: left;}
-.content_benefit .benefit_slide_list li .list_text {width: 300px; padding-top: 30px;}
-.content_benefit .benefit_slide_list li .list_text p {font-size: 14px; line-height: 22px; color: #666;}
-.content_benefit .benefit_slide_list li .list_text .list_tit {font-size: 20px; line-height: 24px; color: #222;}
-.content_benefit .benefit_slide_list li .list_text strong {display: block; padding: 5px 0 20px; font-size: 40px; line-height: 44px; letter-spacing: -4px;}
-.content_benefit .benefit_slide_list li:first-child .list_text strong {color: #3e3d79;}
-.content_benefit .benefit_slide_list li:nth-child(2) .list_text strong {color: #444341;}
-.content_benefit .benefit_slide_list li:nth-child(3) .list_text strong {color: #254b3c;}
-.content_benefit .benefit_slide_list li:nth-child(4) .list_text strong {color: #b50102;}
-.content_benefit .benefit_slide_list li a {float: left;}
-.content_benefit .benefit_slide_list li .list_img {width: 385px; height: 325px; }
+.content_benefit .event_wrap .slide_bar {display: block; position: absolute; top: 300px; width: 190px; height: 2px; background-color: #ebebeb;}
+.content_benefit .event_wrap .slide_bar .on {width: 35px; background: #503396;}
 
-/* 보험광고 */
-.content_benefit .benefit_insurance {float: left; width: 415px; height: 530px; border-radius: 6px; overflow: hidden; background: url(../images/benefit/benefit_insurance01.jpg) 0 0 no-repeat;}
-.content_benefit .benefit_insurance:after {content: ''; display: block; clear: both;}
+ /* 이벤트 배너 */
+.content_benefit .event_wrap .event_banner {float: left; width: 444px; height: 204px; border-radius: 6px; -webkit-box-shadow: 10px 10px 13px 1px rgba(0,0,0,.3); -moz-box-shadow: 10px 10px 13px 1px rgba(0,0,0,.3); box-shadow: 10px 10px 13px 1px rgba(0,0,0,.3); overflow: hidden;}
+.content_benefit .event_wrap .event_banner.event_banner02 {width: 204px; margin-left: 20px;}
+.content_benefit .event_wrap .event_bannerad {width: 415px; height: 530px; border-radius: 6px; overflow: hidden; background: url(../images/benefit/benefit_insurance01.jpg) 0 0 no-repeat;}
+.content_benefit .event_wrap .event_banner a {display: block;}
 
-.content_benefit .banner_list {display: inline-block; position: absolute; top: 358px; left: 0;}
-.content_benefit .banner_list:after {content: ''; display: block; clear: both;}
-.content_benefit .banner_list .list_item {float: left; width: 444px; height: 204px; border-radius: 6px; overflow: hidden;}
-.content_benefit .banner_list .list_item:last-child {width: 204px; margin-left: 20px;}
-.content_benefit .banner_list .list_item a {display: block;}
+ /* 혜택영역 */
+.content_benefit .benefit_wrap {display: block; font-size: 14px;}
+.content_benefit .benefit_wrap a {display: block; color: #fff; text-align: center;}
+.content_benefit .benefit_wrap P {color: #fff;}
+.content_benefit .benefit_wrap .user_menu, .content_benefit .benefit_wrap .grand_open {padding: 50px 0;}
+.content_benefit .benefit_wrap .user_menu_list li {float: left; width: calc(100% / 5); text-align: center;}
+.content_benefit .benefit_wrap .user_menu_list li:first-child a {margin-left: 0;}
+.content_benefit .benefit_wrap .user_menu_list li a {margin-left: 30px;}
+.content_benefit .benefit_wrap .user_menu_list li a:before {content: ''; display: block; width: 49px; height: 46px; margin: 0 auto 20px;}
+.content_benefit .benefit_wrap .user_menu_list li.user_viplounge a:before {background: url(../images/icon/ico-vip-main.png) 0 0 no-repeat;}
+.content_benefit .benefit_wrap .user_menu_list li.user_membership a:before {width: 36px; background: url(../images/icon/ico-membership-main.png) 0 0 no-repeat;}
+.content_benefit .benefit_wrap .user_menu_list li.user_discount_card a:before {background: url(../images/icon/ico-card-main.png) 0 0 no-repeat;}
+.content_benefit .benefit_wrap .user_menu_list li.user_event a:before {width: 44px; background: url(../images/icon/ico-event-main.png) 0 0 no-repeat;}
+.content_benefit .benefit_wrap .user_menu_list li.user_store a:before {width: 46px; background: url(../images/icon/ico-store-main.png) 0 0 no-repeat;}
+
+.content_benefit .benefit_wrap .grand_open {border-top: 1px solid #5c419d;}
+.content_benefit .benefit_wrap .grand_open .grand_open_tit strong {display: inline-block; margin-top: 15px; font-size: 28px;}
+.content_benefit .benefit_wrap .grand_open .grand_open_list {display: block; padding: 0 0 0 350px;}
+.content_benefit .benefit_wrap .grand_open .grand_open_list li {width: 204px; height: 204px; border-radius: 50%; background: rgba(0,0,0,.5) url(../images/benefit/bg-theater-new.jpg) 0 0 no-repeat; text-align: center;}
+.content_benefit .benefit_wrap .grand_open .grand_open_list li:hover {background: #fff;}
+.content_benefit .benefit_wrap .grand_open .grand_open_list li:hover p {color: #01738b;}
+.content_benefit .benefit_wrap .grand_open .grand_open_list li a {padding: 44px 0; vertical-align: middle;}
+.content_benefit .benefit_wrap .grand_open .grand_open_list li a .new_open {display: inline-block; width: 76px; height: 25px; padding-top: 0; line-height: 25px; vertical-align: middle; color: #fff; background: #01738b;}
+.content_benefit .benefit_wrap .grand_open .grand_open_list li a p {padding-top: 14px;}
+.content_benefit .benefit_wrap .grand_open .grand_open_list strong {font-size: 22px;}
+
+
+
+
