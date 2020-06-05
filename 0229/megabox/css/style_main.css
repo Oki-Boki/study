@@ -58,8 +58,8 @@ em {font-style:normal;}
 .header_wrap::after {content:""; display: block; clear: both;}
 
 .content {position: relative; padding-bottom: 100px;}
-.section {position: relative; padding: 50px 0 70px;}
-.inner {position: relative; width: 1100px; margin: 0 auto;}
+.section {position: relative;}
+.inner {position: relative; width: 1100px; margin: 0 auto; padding: 50px 0 70px;}
 
 h2 {font-size: 30px; line-height: 33px; font-weight: normal;}
 
@@ -80,7 +80,7 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .header {background: #121c29;}
 .header_wrap {position: relative; background: rgba(12,15,22,0.4);}
 .header_wrap:after {content: ''; display: block; position: absolute; bottom: 0; width: 100%; border-bottom: 1px solid #3e3e41; box-sizing: border-box; overflow: hidden;}
-
+.header_wrap .inner {padding: 0;}
 /* ==========================================================================
    로고
   ========================================================================== */
@@ -90,7 +90,7 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 /* ==========================================================================
    유틸메뉴
   ========================================================================== */
-.util_menu {width: 50%; padding-top: 9px; line-height: 18px; font-size: 0;}
+.util_menu {width: 50%; padding-top: 15px; line-height: 18px; font-size: 0;}
 .util_menu button {font-size: 14px; color: #888; border-bottom: 1px solid #0e1724;}
 .util_menu a {line-height: 18px; margin-left: 20px; font-size: 14px; vertical-align: middle; color: #888;}
 .util_menu.util_menu_left a:first-child {margin-left: 0;}
@@ -145,12 +145,13 @@ ul.col4 li {float: left; width: calc(100% / 4);}
   ========================================================================== */
 .content_title:after {content: ''; display: block; clear: both;}
 .content_movies {margin: 0 auto; text-align: center; color: #fff; background: #121c29;}
-.content_movies > h2 {color: #fff;}
+.content_movies .inner {padding-bottom: 90px;}
+.content_movies h2 {color: #fff;}
 
 /* 박스오피스 */
 
 /* 더 많은 컨텐츠 보기 */
-.content > .section .more_view {position: absolute; top: 0; right: 0; margin-top: 17px; color: #aaa;}
+.content > .section .more_view {position: absolute; top: 50px; right: 0; margin-top: 17px; color: #aaa;}
 .content > .section .more_view:after{content: ""; display: block; clear: both;}
 .content > .section .more_view.more_view_movies span:hover {border-bottom: 1px solid #aaa;}
 .content > .section .more_view.more_view_movies:after {content: ''; display: inline-block; width: 16px; height: 16px; margin-left: 8px; vertical-align: top; background: url(../images/icon/ico-more-cross-gray.png) 0 0 no-repeat;}
@@ -202,18 +203,19 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .bg {display: block; width: 100%; height: 100%; z-index: 3; filter: blur(20px);} */
 
 /* 스크롤 다운 */
-.content_movies .scroll_down {position: relative; top: 0; width: 16px; height: 24px; border: 2px solid #c0c1c7; border-radius: 10px; margin: 33px auto 0; animation: scroll_down 1s ease-in Infinite Alternate;}
+.content_movies .scroll_down {position: relative; top: -80px; width: 16px; height: 24px; border: 2px solid #c0c1c7; border-radius: 10px; margin: 33px auto 0; animation: scroll_down 0.8s ease-in Infinite Alternate;}
 .content_movies .scroll_down:after {content: ''; position: absolute; left: 50%; transform: translateX(-50%); top: 6px; display: inline-block; width: 2px; height: 5px; background: #c0c1c7;}
-@keyframes scroll_down {0% {top: 0px;} 100% {top: 15px;}}
+@keyframes scroll_down {0% {top: -80px;} 100% {top: -70px;}}
 
 /* 혜택 */
 .content_benefit h2 {color: #351f66;}
-.content_benefit:after {content: ''; display: block; width: 100%; height: 640px; margin-top: -600px; background: #503396;}
+.content_benefit:after {content: ''; display: block; width: 100%; height: 640px; margin-top: -750px; background: #503396;}
  /* 이벤트 영역 */
+ /* 이벤트 슬라이드 영역 */
 .content_benefit .event_wrap .event_slide {float: left; overflow: hidden; width: 685px;}
 .content_benefit .event_wrap:after {content: ''; display: block; clear: both;}
 .content_benefit .event_wrap .event_slide_list {display: block; position: relative;  margin: 0; top: 0; left: 0; text-align: left; font-size: 0; width: 10000px; overflow: hidden;}
-.content_benefit .event_wrap .event_slide_list li {float: left;}
+.content_benefit .event_wrap .event_slide_list li {float: left; width: 686px;}
 .content_benefit .event_wrap .event_slide_list li .list_text {float: left; width: 300px; padding-top: 30px;}
 .content_benefit .event_wrap .event_slide_list li .list_text p {font-size: 14px; line-height: 22px; color: #666;}
 .content_benefit .event_wrap .event_slide_list li .list_text .list_tit {font-size: 20px; line-height: 24px; color: #222;}
@@ -227,14 +229,15 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .content_benefit .event_wrap .slide_bar {display: block; position: absolute; top: 300px; width: 190px; height: 2px; background-color: #ebebeb;}
 .content_benefit .event_wrap .slide_bar .on {width: 35px; background: #503396;}
 
- /* 이벤트 배너 */
+ /* 이벤트 배너 영역 */
 .content_benefit .event_wrap .event_banner {float: left; width: 444px; height: 204px; border-radius: 6px; -webkit-box-shadow: 10px 10px 13px 1px rgba(0,0,0,.3); -moz-box-shadow: 10px 10px 13px 1px rgba(0,0,0,.3); box-shadow: 10px 10px 13px 1px rgba(0,0,0,.3); overflow: hidden;}
 .content_benefit .event_wrap .event_banner.event_banner02 {width: 204px; margin-left: 20px;}
 .content_benefit .event_wrap .event_bannerad {width: 415px; height: 530px; border-radius: 6px; overflow: hidden; background: url(../images/benefit/benefit_insurance01.jpg) 0 0 no-repeat;}
 .content_benefit .event_wrap .event_banner a {display: block;}
 
  /* 혜택영역 */
-.content_benefit .benefit_wrap {display: block; font-size: 14px;}
+.content_benefit .benefit_wrap {display: block; padding: 50px 0 0; font-size: 14px;}
+.content_benefit .benefit_wrap:after {content: ''; display: block; clear: both;}
 .content_benefit .benefit_wrap a {display: block; color: #fff; text-align: center;}
 .content_benefit .benefit_wrap P {color: #fff;}
 .content_benefit .benefit_wrap .user_menu, .content_benefit .benefit_wrap .grand_open {padding: 50px 0;}
@@ -259,6 +262,7 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .content_benefit .benefit_wrap .grand_open .grand_open_list li a p {padding-top: 14px;}
 .content_benefit .benefit_wrap .grand_open .grand_open_list strong {font-size: 22px;}
 
-
+.content_curation {background: #252451;}
+.content_curation h2 {color: #fff;}
 
 
