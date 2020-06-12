@@ -209,7 +209,7 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 
 /* 혜택 */
 .content_benefit h2 {color: #351f66;}
-.content_benefit:after {content: ''; display: block; width: 100%; height: 640px; margin-top: -750px; background: #503396;}
+.content_benefit:after {content: ''; display: block; width: 100%; height: 600px; margin-top: -710px; padding-bottom: 70px; background: #503396;}
  /* 이벤트 영역 */
  /* 이벤트 슬라이드 영역 */
 .content_benefit .event_wrap .event_slide {float: left; overflow: hidden; width: 685px;}
@@ -252,12 +252,13 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .content_benefit .benefit_wrap .user_menu_list li.user_store a:before {width: 46px; background: url(../images/icon/ico-store-main.png) 0 0 no-repeat;}
 
 .content_benefit .benefit_wrap .grand_open {border-top: 1px solid #5c419d;}
+.content_benefit .benefit_wrap .grand_open:after {content: ''; display: block; clear: both;}
 .content_benefit .benefit_wrap .grand_open .grand_open_tit strong {display: inline-block; margin-top: 15px; font-size: 28px;}
-.content_benefit .benefit_wrap .grand_open .grand_open_list {display: block; padding: 0 0 0 350px;}
-.content_benefit .benefit_wrap .grand_open .grand_open_list li {width: 204px; height: 204px; border-radius: 50%; background: rgba(0,0,0,.5) url(../images/benefit/bg-theater-new.jpg) 0 0 no-repeat; text-align: center;}
-.content_benefit .benefit_wrap .grand_open .grand_open_list li:hover {background: #fff;}
+.content_benefit .benefit_wrap .grand_open .grand_open_list {display: block; padding: 0 0 0 360px;}
+.content_benefit .benefit_wrap .grand_open .grand_open_list li {float: left; width: 204px; height: 204px; margin-right: 40px; border-radius: 204px; -webkit-box-shadow: 8px 8px 10px 1px rgba(0,0,0,.3); -moz-box-shadow: 8px 8px 10px 1px rgba(0,0,0,.3); box-shadow: 8px 8px 10px 1px rgba(0,0,0,.3); overflow: hidden; background: url(../images/benefit/bg-theater-new.jpg) 0 0 no-repeat; text-align: center;}
+.content_benefit .benefit_wrap .grand_open .grand_open_list li:hover, .content_benefit .benefit_wrap .grand_open .grand_open_list li:hover a {background: #fff;}
 .content_benefit .benefit_wrap .grand_open .grand_open_list li:hover p {color: #01738b;}
-.content_benefit .benefit_wrap .grand_open .grand_open_list li a {padding: 44px 0; vertical-align: middle;}
+.content_benefit .benefit_wrap .grand_open .grand_open_list li a {background: rgba(0,0,0,0.4); border-radius: 204px; padding: 44px 0; vertical-align: middle;}
 .content_benefit .benefit_wrap .grand_open .grand_open_list li a .new_open {display: inline-block; width: 76px; height: 25px; padding-top: 0; line-height: 25px; vertical-align: middle; color: #fff; background: #01738b;}
 .content_benefit .benefit_wrap .grand_open .grand_open_list li a p {padding-top: 14px;}
 .content_benefit .benefit_wrap .grand_open .grand_open_list strong {font-size: 22px;}
