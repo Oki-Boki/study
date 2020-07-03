@@ -339,13 +339,28 @@ ul.col4 li {float: left; width: calc(100% / 4);}
    footer
   ========================================================================== */
 .footer {background: #f8f8fa;}
+.footer_wrap {position: relative;}
 .footer_wrap .inner {padding: 30px 0 70px;}
-.footer_wrap .footer_logo {display: block; position: relative; left: 0; top: 80px; width: 150px; height: 50px;}
-.footer_wrap .footer_util_menu {display: inline-block;}
-.footer_wrap .footer_util_menu a {float: left; font-size: 14px; color: #666;}
-
-
-
-
-
+.footer_wrap .footer_logo {position: absolute; left: 0; top: 90px; width: 150px; height: 50px;}
+.footer_wrap .footer_logo a {display: block;}
+.footer_wrap .footer_util_menu {padding-bottom: 30px;}
+.footer_wrap .footer_util_menu a {float: left; padding-left: 10px; font-size: 14px; line-height: 30px; color: #666;}
+.footer_wrap .footer_util_menu a:first-child {padding-left: 0;}
+.footer_wrap .footer_util_menu a span {color: #000;}
+.footer_wrap .footer_util_menu:after {content: ''; display: block; clear: both;}
+.footer_wrap .footer_search {color: #666; font-size: 14px; line-height: 20px; padding: 4px 20px; border: 1px solid #d8d9db; border-radius: 50px;}
+.footer_wrap .footer_search:before {content: ''; display: inline-block; width: 15px; height: 15px; vertical-align: -2px; padding-right: 8px; background: url(../images/icon/ico-footer-search.png) 0 0 no-repeat;}
+.footer_wrap .footer_info {padding: 0 230px 0 170px;}
+.footer_wrap .footer_info p {font-size: 14px; line-height: 18px; color: #444;}
+.footer_wrap .footer_sns {position: absolute; right: 0; top: 90px;}
+.footer_wrap .footer_sns:after {content: ''; display: block; clear: both;}
+.footer_wrap .footer_sns li {float: left; padding-left: 10px;}
+.footer_wrap .footer_sns li:first-child {padding-left: 0;}
+.footer_wrap .footer_sns li:before {content: ''; display: inline-block; width: 32px; height: 30px;}
+.footer_wrap .footer_sns li:nth-child(1):before {background: url(../images/icon/ico-twitter.png) 0 0 no-repeat;}
+.footer_wrap .footer_sns li:nth-child(2):before {background: url(../images/icon/ico-facebook.png) 0 0 no-repeat;}
+.footer_wrap .footer_sns li:nth-child(3):before {background: url(../images/icon/ico-instagram.png) 0 0 no-repeat;}
+.footer_wrap .footer_sns li:nth-child(4):before {background: url(../images/icon/ico-googleplay.png) 0 0 no-repeat;}
+.footer_wrap .footer_sns li:nth-child(5):before {background: url(../images/icon/ico-appstore.png) 0 0 no-repeat;}
+.footer_wrap .footer_sns li:after {content: ''; display: block; clear: both;}
 
