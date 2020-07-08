@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style_main.css">
+    <script src="js/jquery-3.4.1.slim.js"></script>
+    <script src="js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="header_wrap">
+                <div class="inner">
+                    <!-- 로고 -->
+                    <h1 class="logo"><a href="javascript:;"><img src="images/icon/logo-white.png" alt="메가박스로고"></a></h1>
+                    <!--// 로고 -->
+
+                    <!-- 유틸메뉴 -->
+                    <div class="util_menu util_menu_left floatL">
+                        <a href="javascript:;">VIP LOUNGE</a>
+                        <a href="javascript:;">멤버십</a>
+                        <a href="javascript:;">고객센터</a>
+                    </div>
+                    <div class="util_menu util_menu_right floatR alignR">
+                        <button type="button">로그인</button>
+                        <a href="javascript:;">회원가입</a>
+                        <a href="javascript:;">빠른예매</a>
+                    </div>
+                    <!--// 유틸메뉴 -->
+
+                    <!-- 카테고리 -->
+                    <div class="category">
+                        <button type="button" title="카테고리" class="category_icon blind">카테고리</button>
+                    </div>
+                    <!--// 카테고리 -->
+
+                    <!-- 검색 -->
+                    <div class="search">
+                        <button type="button" title="검색" class="search_icon blind">검색</button>
+                        <!-- <ul class="sequence_tab">
+                            <li>예매율순</li>
+                            <li>누적관객순</li>
+                            <li>메가스코어순</li>
+                        </ul> -->
+
+                    </div>
+                    <!--// 검색 -->
+
+                    <!-- 메인메뉴 -->
+                    <nav class="menu_wrap">
+                        <ul class="menu_list alignC">
+                            <li>
+                                <a href="javascript:;">영화</a>
+                                <div class="sub_menu_list">
+                                    <ul>
+                                        <li>전체영화</li>
+                                        <li>큐레이션</li>
+                                        <li>무비포스트</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">예매</a>
+                                <div class="sub_menu_list">
+                                    <ul>
+                                        <li>빠른예매</li>
+                                        <li>상영시간표</li>
+                                        <li>더 부티크 프라이빗 예매</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">극장</a>
+                                <div class="sub_menu_list">
+                                    <ul>
+                                        <li>전체극장</li>
+                                        <li>특별관</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">이벤트</a>
+                                <div class="sub_menu_list">
+                                    <ul>
+                                        <li>진행중 이벤트</li>
+                                        <li>지난 이벤트</li>
+                                        <li>당첨자 발표</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;">스토어</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">혜택</a>
+                                <div class="sub_menu_list">
+                                    <ul>
+                                        <li>메가박스 맴버십</li>
+                                        <li>제휴/할인</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--// 메인메뉴 -->
+
+                    <!-- 유틸 아이콘 메뉴 -->
+                    <button type="button" title="상영시간표" class="util_menu_icon screening_schedule"><span class="blind">상영시간표</span></button>
+                    <a href="javascript:;" title="나의 메가박스" class="util_menu_icon my_mega"><span class="blind">나의 메가박스</span></a>
+                    <!--// 유틸 아이콘 메뉴 -->
+                </div>
+                <!-- 카테고리_리스트 -->
+                <div class="category_wrap" style="display: none;">
+                    <div class="inner">
+                        <h2 class="alignL">SITEMAP</h2>
+                        <ul class="category_list">
+                            <li>
+                                <strong>영화</strong>
+                                <a href="javascript:;">전체영화</a>
+                                <a href="javascript:;">큐레이션</a>
+                                <a href="javascript:;">영화제</a>
+                                <a href="javascript:;">무비포스트</a>
+                            </li>
+                            <li>
+                                <strong>예매</strong>
+                                <a href="javascript:;">빠른예매</a>
+                                <a href="javascript:;">상영시간표</a>
+                                <a href="javascript:;">더 부티크 프라이빗 예매</a>
+                            </li>
+                            <li>
+                                <strong>극장</strong>
+                                <a href="javascript:;">전체극장</a>
+                                <a href="javascript:;">특별관</a>
+                            </li>
+                            <li>
+                                <strong>이벤트</strong>
+                                <a href="javascript:;">진행중 이벤트</a>
+                                <a href="javascript:;">지난 이벤트</a>
+                                <a href="javascript:;">당첨자발표</a>
+                            </li>
+                            <li>
+                                <strong>스토어</strong>
+                                <a href="javascript:;">새로운 상품</a>
+                                <a href="javascript:;">메가티켓</a>
+                                <a href="javascript:;">메가찬스</a>
+                                <a href="javascript:;">팝콘/음료/굿즈</a>
+                            </li>
+                            <li>
+                                <strong>나의 메가박스</strong>
+                                <a href="javascript:;">나의 메가박스 홈</a>
+                                <a href="javascript:;">예메/구매내역</a>
+                                <a href="javascript:;">영화관람권</a>
+                                <a href="javascript:;">스토어교환권</a>
+                                <a href="javascript:;">할인/제휴쿠폰</a>
+                                <a href="javascript:;">멤버십 포인트</a>
+                                <a href="javascript:;">나의 무비스토리</a>
+                                <a href="javascript:;">나의 이벤트 응모내역</a>
+                                <a href="javascript:;">나의 문의내역</a>
+                                <a href="javascript:;">자주쓰는 할인 카드</a>
+                                <a href="javascript:;">회원정보</a>
+                            </li>
+                            <li>
+                                <strong>혜택</strong>
+                                <a href="javascript:;">멤버십 혜택</a>
+                                <a href="javascript:;">VIP LOUNGE</a>
+                                <a href="javascript:;">제휴/할인</a>
+                            </li>
+                            <li>
+                                <strong>고객센터</strong>
+                                <a href="javascript:;">고객센터 홈</a>
+                                <a href="javascript:;">자주묻는질문</a>
+                                <a href="javascript:;">공지사항</a>
+                                <a href="javascript:;">1:1문의</a>
+                                <a href="javascript:;">단체/대관문의</a>
+                                <a href="javascript:;">분실물문의</a>
+                            </li>
+                            <li>
+                                <strong>회사소개</strong>
+                                <a href="javascript:;">메가박스소개</a>
+                                <a href="javascript:;">사회공헌</a>
+                                <a href="javascript:;">홍보자료</a>
+                                <a href="javascript:;">제휴/부대사업문의</a>
+                                <a href="javascript:;">온라인제보센터</a>
+                                <a href="javascript:;">IR자료</a>
+                                <a href="javascript:;">인재채용</a>
+                                <a href="javascript:;">윤리경영</a>
+                            </li>
+                            <li>
+                                <strong>이용정책</strong>
+                                <a href="javascript:;">이용약관</a>
+                                <a href="javascript:;">개인정보처리방침</a>
+                                <a href="javascript:;">스크린수배정에관한기준</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- // 카테고리_리스트 -->
+
+                <!-- 검색_리스트 -->
+                <div class="search_wrap" style="display: block;">
+                    <div class="inner">
+                        <div class="search_tab">
+                            <ul class="search_tab_list">
+                                <li class="on"><button type="button">예매율 순</button></li>
+                                <li class=""><button type="button">메가박스 관객순</button></li>
+                            </ul>
+                        </div>
+                        <div class="reserve_img_list_wrap">
+                            <ul class="reserve_img_list">
+                                <li><img src="images/search_movies/IMRLp64rBXADlKOBW8GecnH6f4ggmFcG_316.jpg" alt="반도"></li>
+                            </ul>
+                        </div>
+                        <div class="search_list_wrap">
+                            <ul class="reserve_list">
+                                <li><em>1</em><a href="javascript:;">반도</a></li>
+                                <li><em>2</em><a href="javascript:;">밤쉘:세상을 바꾼 폭탄선언</a></li>
+                                <li><em>3</em><a href="javascript:;">#살아있다</a></li>
+                                <li><em>4</em><a href="javascript:;">[시네도슨트] 빈센트 반 고흐 미술관&크롤러 뮐러 미술관</a></li>
+                                <li><em>5</em><a href="javascript:;">킹 오브 프리즘 올 스타즈 -프리즘 쇼☆베스트10-</a></li>
+                            </ul>
+                        </div>
+                        <!--<div class="search_list_wrap"> 
+                            <ul class="audience_list">
+                            <li>
+                                <a href="javascript:;">전체영화</a>
+                                <a href="javascript:;">큐레이션</a>
+                                <a href="javascript:;">영화제</a>
+                                <a href="javascript:;">무비포스트</a>
+                            </li>
+                        </ul>
+                    </div> -->
+                        <div class="search_box_wrap">
+                            <input type="text" id="on_movie_title" autocomplete="off" name="movie_title" placeholder="영화명을 입력해 주세요" title="영화 검색" class="search_box">
+                            <a href="javascript:;" class="search_box_icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 검색_리스트 -->
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="bg"></div>
+            <!-- <div class="bg_wrap">
+                <div class="bg_pattern"></div>
+                <img src="images/movies/movie_bg.jpg" alt="" class="bg">
+            </div> -->
+            <div class="content">
+                <!-- 박스오피스 -->
+                <div class="section content_movies">
+                    <div class="inner">
+                        <h2 class="alignL">박스오피스</h2>
+                        <ul class="movies_list">
+                            <li>
+                                <a href="javascript:;" title="영화상세보기">
+                                    <img src="images/movies/movie01.jpg" alt="">
+                                    <span class="movie_num">1</span>
+                                    <div class="movie_info_wrap">
+                                        <p class="movie_summary">
+                                            팝,록,클래식,컨트리,펑크,테크노,K-POP까지</br>
+                                            세상의 모든 음악이 쏟아진다!</br>
+                                            노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.</br> 
+                                            어느날 '파피'는 자신들 외에도
+                                        </p>
+                                        <p class="movie_review">관람평<span class="movie_score">9.1</span></p>
+                                    </div>
+                                </a>
+                                <div class="movies_btn">
+                                    <button type="button" class="like">4.3k</button>
+                                    <a href="https://www.megabox.co.kr/booking" class="reservation">예매</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" title="영화상세보기">
+                                    <img src="images/movies/movie02.jpg" alt="">
+                                    <span class="movie_num">2</span>
+                                    <div class="movie_info_wrap">
+                                        <p class="movie_summary">
+                                            팝,록,클래식,컨트리,펑크,테크노,K-POP까지</br>
+                                            세상의 모든 음악이 쏟아진다!</br>
+                                            노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.</br> 
+                                            어느날 '파피'는 자신들 외에도
+                                        </p>
+                                        <p class="movie_review">관람평<span class="movie_score">9.1</span></p>
+                                    </div>
+                                </a>
+                                <div class="movies_btn">
+                                    <button type="button" class="like">4.3k</button>
+                                    <a href="https://www.megabox.co.kr/booking" class="reservation">예매</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" title="영화상세보기">
+                                    <img src="images/movies/movie03.jpg" alt="">
+                                    <span class="movie_num">3</span>
+                                    <div class="movie_info_wrap">
+                                        <p class="movie_summary">
+                                            팝,록,클래식,컨트리,펑크,테크노,K-POP까지</br>
+                                            세상의 모든 음악이 쏟아진다!</br>
+                                            노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.</br> 
+                                            어느날 '파피'는 자신들 외에도
+                                        </p>
+                                        <p class="movie_review">관람평<span class="movie_score">9.1</span></p>
+                                    </div>
+                                </a>
+                                <div class="movies_btn">
+                                    <button type="button" class="like">4.3k</button>
+                                    <a href="https://www.megabox.co.kr/booking" class="reservation">예매</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" title="영화상세보기">
+                                    <img src="images/movies/movie04.jpg" alt="">
+                                    <span class="movie_num">4</span>
+                                    <div class="movie_info_wrap">
+                                        <p class="movie_summary">
+                                            팝,록,클래식,컨트리,펑크,테크노,K-POP까지</br>
+                                            세상의 모든 음악이 쏟아진다!</br>
+                                            노래와 춤을 즐기며 평화로운 나날을 보내던 팝 트롤 '파피'와 '브랜치' 그리고 친구들.</br> 
+                                            어느날 '파피'는 자신들 외에도
+                                        </p>
+                                        <p class="movie_review">관람평<span class="movie_score">9.1</span></p>
+                                    </div>
+                                </a>
+                                <div class="movies_btn">
+                                    <button type="button" class="like">4.3k</button>
+                                    <a href="https://www.megabox.co.kr/booking" class="reservation">예매</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="movies_util_list">
+                            <li>
+                                <div class="movies_search_wrap">
+                                    <input type="text" id="on_movie_title" autocomplete="off" name="movie_title" placeholder="영화명을 입력해 주세요" title="영화 검색" class="movies_search">
+                                    <a href="javascript:;" class="movies_search_icon"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" title="상영시간표 보기"><span>상영시간표</span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" title="박스오피스 보기"><span>박스오피스</span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" title="빠른예매 보기"><span>빠른예매</span></a>
+                            </li>
+                        </ul>
+                        <a class="more_view more_view_movies floatR" href="javascript:;"><span>더 많은 영화보기</span></a>
+                    </div>
+                    <!-- 스크롤 다운 -->
+                    <div class="scroll_down blind">스크롤 다운</div>
+                    <!-- // 스크롤 다운 -->
+                </div>
+                
+                <!-- // 박스오피스 -->
+
+
+                <!-- 혜택 -->
+                <div class="section content_benefit">
+                    <div class="inner">
+                        <h2 class="alignL">혜택</h2>
+                        <div class="event_wrap">
+                            <div class="event_slide">
+                                <ul class="event_slide_list">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="list_text">
+                                                <p class="list_tit fontW_b">메가박스 특별기획전</p>
+                                                <p><strong>20TH CENTURY<br>FOX REPLAY</strong></p>
+                                                <p class="fontW_b">다시 보고 싶은 폭스 영화를 만나는<br>20세기 폭스 리플레이</p>
+                                            </div>
+                                            <div class="list_img"><img src="images/benefit/benefit_movie01.jpg" alt=""></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="list_text">
+                                                <p class="list_tit fontW_b">메가박스 오리지널 티켓</p>
+                                                <p><strong>ORIGINAL<br>TICKET</strong>special</p>
+                                                <p class="fontW_b">&#60;기생충:흑백판&#62; 을<br>20세기 폭스 리플레이</p>
+                                            </div>
+                                            <div class="list_img"><img src="images/benefit/benefit_movie02.jpg" alt=""></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="list_text">
+                                                <p class="list_tit fontW_b">메가박스 특별기획전</p>
+                                                <p><strong>HERO<br>REPLAY</strong></p>
+                                                <p class="fontW_b">다시 보고 싶은 히어로 영화를 만나는<br>히어로 리플레이</p>
+                                            </div>
+                                            <div class="list_img"><img src="images/benefit/benefit_movie03.jpg" alt=""></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="list_text">
+                                                <p class="list_tit fontW_b">메가박스 특별기획전</p>
+                                                <p><strong>20TH CENTURY<br>FOX REPLAY</strong></p>
+                                                <p class="fontW_b">다시 보고 싶은 폭스 영화를 만나는<br>20세기 폭스 리플레이</p>
+                                            </div>
+                                            <div class="list_img"><img src="images/benefit/benefit_movie04.jpg" alt=""></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="event_slide_bar"><span class="on"></span></div>
+                            </div>
+                            <div class="event_banner_wrap">
+                                <div class="event_banner"><a href="javascript:;"><img src="images/benefit/benefit_banner01.jpg" alt="목금토일 영화 6천원 할인"></a></div>
+                                <div class="event_banner event_banner02"><a href="javascript:;"><img src="images/benefit/benefit_banner02.jpg" alt="만원의 행복"></a></div>
+                                <div class="event_bannerad"><a href="javascript:;" target="_blank"><span class="blind">현대해상다이렉트</span></a></div>
+                            </div>
+                        </div>
+                        <div class="benefit_wrap">
+                            <div class="user_menu">
+                                <ul class="user_menu_list">
+                                    <li class="user_viplounge">
+                                        <a href="javascript:;">VIP LOUNGE</a>
+                                    </li>
+                                    <li class="user_membership">
+                                        <a href="javascript:;">멤버십</a>
+                                    </li>
+                                    <li class="user_discount_card">
+                                        <a href="javascript:;">할인카드안내</a>
+                                    </li>
+                                    <li class="user_event">
+                                        <a href="javascript:;">이벤트</a>
+                                    </li>
+                                    <li class="user_store">
+                                        <a href="javascript:;">스토어</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="grand_open">
+                                <div class="grand_open_tit floatL">
+                                    <p>LIFE THEATER MEGABOX</p>
+                                    <strong><p>GRAND<br>OPENING</p></strong>
+                                </div>
+                                <ul class="grand_open_list">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <P class="new_open">신규오픈</P>
+                                            <P>경기</P>
+                                            <strong><p>용인기흥</p></strong>
+                                            <p>2020.05.14</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <P class="new_open">신규오픈</P>
+                                            <P>대전/충청/세종</P>
+                                            <strong><p>세종청사점</p></strong>
+                                            <p>2020.06.14</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <P class="new_open">신규오픈</P>
+                                            <P>부산/대구/경상</P>
+                                            <strong><p>창원내서점</p></strong>
+                                            <p>2020.08.14</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a class="more_view more_view_benefit floatR" href="javascript:;"><span class="blind">더 많은 혜택보기</span></a>
+                    </div>
+                </div>
+                <!-- // 혜택 -->
+
+                <!-- 큐레이션 -->
+                <div class="section content_curation">
+                    <div class="inner">
+                        <h2 class="alignL">큐레이션</h2>
+                        <div class="curation_wrap">
+                            <div class="curation_representative floatL">
+                                <a class="curation_representative_movie" href="javascript:;"><img src="images/curation/curation_movie01.gif" alt="콜 미 바이 유어 네임"></a>
+                                <div class="movies_btn">
+                                    <a href="javascript:;" class="like">상세정보</a>
+                                    <a href="https://www.megabox.co.kr/booking" class="reservation">예매</a>
+                                </div>
+                            </div>
+                            <div class="film_society_wrap">
+                                <div class="film_society_txt">
+                                    <p class="sub_tit">필름소사이어티</p>
+                                    <p class="tit">콜 미 바이 유어 네임</p>
+                                    <p class="txt">
+                                        네 이름으로 날 불러줘<br><br>
+                                        내 이름으로 널 부를게<br><br>
+                                        1983년 이탈리아, 열 일곱 소년 Elio(티모시 살라메)는<br>
+                                        아름다운 햇살이 내리쬐는 가족 별장에서 여름이 끝나기만을 기다리고 있다<br><br>
+                                        어느 오후, 스물 넷 청년Oliver(아미 해머)가<br>
+                                    </p>
+                                </div>
+                                <ul class="film_society_list">
+                                    <li>
+                                        <a class="curation_representative_movie" href="javascript:;">
+                                            <img src="images/curation/curation_movie02.jpg" alt="">
+                                            <p class="tit">[시네도슨트] 루브르 박물관</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="curation_representative_movie" href="javascript:;">
+                                            <img src="images/curation/curation_movie03.jpg" alt="">
+                                            <p class="tit">패왕별희 디 오리지널</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="curation_representative_movie" href="javascript:;">
+                                            <img src="images/curation/curation_movie04.jpg" alt="">
+                                            <p class="tit">전망좋은 방</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="curation_representative_movie" href="javascript:;">
+                                            <img src="images/curation/curation_movie05.jpg" alt="">
+                                            <p class="tit">카페 벨에포크</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a class="more_view more_view_curation floatR" href="javascript:;">큐레이션 더보기</span></a>
+                    </div>
+                </div>
+                <!-- // 큐레이션 -->
+
+                <!-- 메가박스 안내 -->
+                <div class="section content_announce">
+                    <div class="inner">
+                        <div class="announce_wrap">
+                            <h2 class="alignL">메가박스 안내</h2>
+                            <div class="announce_list">
+                                <a href="javascript:;"><img src="images/announce/bg-main-megainfo-boutique.png" alt="부티크 페이지"></a>
+                                <a href="javascript:;"><img src="images/announce/bg-main-megainfo-mx.png" alt="MX 페이지"></a>
+                                <a href="javascript:;"><img src="images/announce/bg-main-megainfo-comfort.png" alt="COMFORT 페이지"></a>
+                                <a href="javascript:;"><img src="images/announce/bg-main-megainfo-kids.png" alt="MEGA KIDS BOX 페이지"></a>
+                                <a href="javascript:;"><img src="images/announce/bg-main-megainfo-first.png" alt="THE FIRST CLUB 페이지"></a>
+                            </div>
+                        </div>
+                        <!-- 공지사항 -->
+                        <div class="notice_wrap">
+                            <p class="branch">지점</p>
+                            <p class="txt"><a href="javascript:;"><span>[코엑스]</span>[코엑스] 스타필드 코엑스몰 행사 진행에 따른 주차 안내 (6/25~28)</a></p>
+                            <p class="date">2020.06.17</p>
+                            <p class="more"><a href="javascript:;">더보기</a></p>
+                        </div>
+                        <!-- // 공지사항 -->
+                        <!-- 고객센터 -->
+                        <div class="customer_wrap">
+                            <ul class="customer_list">
+                                <li><a href="javascript:;"><p class="tit">고객센터</p></a></li>
+                                <li><a href="javascript:;"><p class="tit">자주 묻는 질문</p></a></li>
+                                <li><a href="javascript:;"><p class="tit">1:1 문의</p></a></li>
+                                <li><a href="javascript:;"><p class="tit">단체/대관문의</p></a></li>
+                                <li><a href="javascript:;"><p class="tit">분실물 문의/접수</p></a></li>
+                                <li><a href="javascript:;"><p class="tit">더 부티크 프라이빗<br>대관예매</p></a></li>
+                            </ul>
+                        </div>
+                        <!-- // 고객센터 -->
+                    </div>
+                </div>
+                <!-- // 메가박스 안내 -->
+
+                <!-- 배너 -->
+                <div class="section content_banner">
+                    <div class="inner">
+                        <a href="javascript:;"><img src="images/movies/banner_movie.jpg" alt="온워드 단 하루의 기적 예매 GO!"></a>
+                    </div>
+                </div>
+                <!-- // 배너 -->
+
+
+                <!-- 공지사항 -->
+                <!-- <div class="section content_notice">
+                    <div class="inner">
+                        <div class="notice_wrap">
+                            <p class="branch">지점</p>
+                            <p class="txt"><a href="javascript:;"><span>[코엑스]</span>[코엑스] 스타필드 코엑스몰 행사 진행에 따른 주차 안내 (6/25~28)</a></p>
+                            <p class="date">2020.06.17</p>
+                            <p class="more"><a href="javascript:;">더보기</a></p>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- // 공지사항 -->
+
+                <!-- 고객센터 -->
+                <!-- <div class="section content_customer">
+                    <div class="inner">
+                        <ul class="customer_list">
+                            <li><a class="curation_representative_movie" href="javascript:;"><p class="tit">고객센터</p></a></li>
+                            <li><a class="curation_representative_movie" href="javascript:;"><p class="tit">자주 묻는 질문</p></a></li>
+                            <li><a class="curation_representative_movie" href="javascript:;"><p class="tit">1:1 문의</p></a></li>
+                            <li><a class="curation_representative_movie" href="javascript:;"><p class="tit">단체/대관문의</p></a></li>
+                            <li><a class="curation_representative_movie" href="javascript:;"><p class="tit">분실물 문의/접수</p></a></li>
+                            <li><a class="curation_representative_movie" href="javascript:;"><p class="tit">더 부티크 프라이빗<br>대관예매</p></a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <!-- // 고객센터 -->
+
+                
+
+            </div> 
+        </div>
+
+        <footer class="footer">
+            <div class="footer_wrap">
+                <div class="inner">
+                    <!-- 로고 -->
+                    <h1 class="footer_logo"><a href="javascript:;"><img src="images/icon/logo-opacity.png" alt="메가박스로고"></a></h1>
+                    <!--// 로고 -->
+                    <!-- footer 유틸메뉴 -->
+                    <div class="footer_util_menu">
+                        <a href="javascript:;">회사소개</a>
+                        <a href="javascript:;">인재채용</a>
+                        <a href="javascript:;">사회공헌</a>
+                        <a href="javascript:;">제휴/광고/부대사업문의</a>
+                        <a href="javascript:;">이용약관</a>
+                        <a href="javascript:;"><span>개인정보처리방침</span></a>
+                        <a href="javascript:;">윤리경영</a>
+                        <button type="button" class="footer_search floatR">극장찾기</button>
+                    </div>
+                    <!-- footer 유틸메뉴 -->
+                    <div class="footer_info">
+                        <p>서울특별시 성동구 왕십리로 50, 6층(성수동 1가, 메가박스스퀘어) ARS 1544-0070</p>
+                        <p>대표자명 김진선 · 개인정보보호책임자 조상연 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 제 833호</p>
+                        <p>COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
+                    </div>
+                    <ul class="footer_sns floatR">
+                        <li><a href="javascript:;"><span class="blind">트위터</span></a></li>
+                        <li><a href="javascript:;"><span class="blind">페이스북</span></a></li>
+                        <li><a href="javascript:;"><span class="blind">인스타그램</span></a></li>
+                        <li><a href="javascript:;"><span class="blind">구글플레이</span></a></li>
+                        <li><a href="javascript:;"><span class="blind">앱스토어</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
