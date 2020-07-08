@@ -61,7 +61,7 @@ em {font-style:normal;}
 .section {position: relative;}
 .inner {position: relative; width: 1100px; margin: 0 auto; padding: 50px 0 70px;}
 
-h2 {font-size: 30px; line-height: 33px; letter-spacing: -3px; font-weight: 540;}
+h2 {font-size: 30px; line-height: 44px; letter-spacing: -3px; font-weight: 540;}
 
 .alignL {text-align: left;}
 .alignC {text-align: center;}
@@ -199,14 +199,10 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 /* 박스오피스 */
 
 /* 더 많은 컨텐츠 보기 */
-.content > .section .more_view {position: absolute; top: 50px; right: 0; margin-top: 17px; font-size: 16px; color: #aaa;}
-.content > .section .more_view:after{content: ""; display: block; clear: both;}
-.content > .section .more_view.more_view_movies span:hover,
-.content > .section .more_view.more_view_curation span:hover {border-bottom: 1px solid #aaa;}
-.content > .section .more_view.more_view_movies:after,
-.content > .section .more_view.more_view_curation:after {content: ''; display: inline-block; width: 16px; height: 16px; margin-left: 8px; vertical-align: top; background: url(../images/icon/ico-more-cross-gray.png) 0 0 no-repeat;}
-.content > .section .more_view.more_view_benefit {margin-top: 6px;}
-.content > .section .more_view.more_view_benefit:after {content: ''; display: inline-block; width: 16px; height: 16px;  background: url(../images/icon/btn-more-cross-purple.png) 0 0 no-repeat;}
+.content > .section .more_view {position: absolute; top: 50px; right: 0; margin-top: 14px; font-size: 16px; color: #aaa;}
+.content > .section .more_view:after{content: ""; display: inline-block; clear: both; width: 16px; height: 16px; margin-left: 8px; vertical-align: bottom; background: url(../images/icon/ico-more-cross-gray.png) 0 0 no-repeat;}
+.content > .section .more_view span:hover {border-bottom: 1px solid #aaa;}
+.content > .section.content_benefit .more_view:after {background: url(../images/icon/btn-more-cross-purple.png) 0 0 no-repeat;}
 
 /* 박스오피스 리스트 */
 .content_movies .movies_list {padding: 20px 0 50px;}
@@ -225,11 +221,11 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .content_movies .movies_list li > a:hover .movie_info_wrap {opacity: 1; transition: 0.3s;}
 
 /* 영화 좋아요/예매버튼 */
-.content_movies .movies_list .movies_btn {padding-top: 10px;}
+.content_movies .movies_list .movies_btn {padding-top: 10px; font-size: 0;}
 .content_movies .movies_list .movies_btn .like {display: inline-block; width: 80px; height: 36px; border: 1px solid #535353; border-radius: 5px; background: #141314; color: #fff; font-size: 14px;}
 .content_movies .movies_list .movies_btn .like:before {content: ''; display: inline-block; width: 17px; height: 15px; line-height: 36px; margin: 1px 6px 0 0; vertical-align: top; background: url(../images/icon/ico-heart-toggle-main.png) no-repeat; background-position: 0 0;}
 .content_movies .movies_list .movies_btn .like:active:before {background-position: -17px 0;}
-.content_movies .movies_list .movies_btn .reservation {display: inline-block; width: 160px; height: 36px; line-height: 36px; border-radius: 5px; vertical-align: top; background: #037b94; color: #fff; font-size: 14px;}
+.content_movies .movies_list .movies_btn .reservation {display: inline-block; width: 160px; height: 36px; line-height: 36px; margin-left: 5px; border-radius: 5px; vertical-align: top; background: #037b94; color: #fff; font-size: 14px;}
 
 /* 영화유틸메뉴 */
 .content_movies .movies_util_list {color: #aaaaaa; background: rgba(0,0,0,0.2); font-size: 14px;}
@@ -263,8 +259,9 @@ ul.col4 li {float: left; width: calc(100% / 4);}
  /* 이벤트 영역 */
  /* 이벤트 슬라이드 영역 */
 .content_benefit .event_wrap .event_slide {float: left; overflow: hidden; width: 685px;}
-.content_benefit .event_wrap:after {content: ''; display: block; clear: both;}
+.content_benefit .event_wrap .event_slide:after {content: ''; display: block; clear: both;}
 .content_benefit .event_wrap .event_slide_list {display: block; position: relative;  margin: 0; top: 0; left: 0; text-align: left; font-size: 0; width: 10000px; overflow: hidden;}
+.content_benefit .event_wrap .event_slide_list:after {content: ''; display: block; clear: both;}
 .content_benefit .event_wrap .event_slide_list li {float: left; width: 686px;}
 .content_benefit .event_wrap .event_slide_list li .list_text {float: left; width: 300px; padding-top: 30px;}
 .content_benefit .event_wrap .event_slide_list li .list_text p {font-size: 14px; line-height: 22px; color: #666;}
@@ -280,31 +277,34 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .content_benefit .event_wrap .slide_bar .on {width: 35px; background: #503396;}
 
  /* 이벤트 배너 영역 */
+.content_benefit .event_wrap .event_banner_wrap {display: inline-block; position: relative; padding-right: 430px;}
 .content_benefit .event_wrap .event_banner {float: left; width: 444px; height: 204px; border-radius: 6px; -webkit-box-shadow: 10px 10px 13px 1px rgba(0,0,0,.3); -moz-box-shadow: 10px 10px 13px 1px rgba(0,0,0,.3); box-shadow: 10px 10px 13px 1px rgba(0,0,0,.3); overflow: hidden;}
 .content_benefit .event_wrap .event_banner.event_banner02 {width: 204px; margin-left: 20px;}
-.content_benefit .event_wrap .event_bannerad {width: 415px; height: 530px; border-radius: 6px; overflow: hidden; background: url(../images/benefit/benefit_insurance01.jpg) 0 0 no-repeat;}
+.content_benefit .event_wrap .event_bannerad {position: absolute; top: -326px; right: 0; width: 415px; height: 530px; border-radius: 6px; overflow: hidden; background: url(../images/benefit/benefit_insurance01.jpg) 0 0 no-repeat;}
 .content_benefit .event_wrap .event_banner a {display: block;}
-
+.content_benefit .event_wrap .event_bannerad a {display: block;}
  /* 혜택영역 */
 .content_benefit .benefit_wrap {display: block; padding: 50px 0 0; font-size: 14px;}
 .content_benefit .benefit_wrap:after {content: ''; display: block; clear: both;}
 .content_benefit .benefit_wrap a {display: block; color: #fff; text-align: center;}
 .content_benefit .benefit_wrap P {color: #fff;}
 .content_benefit .benefit_wrap .user_menu, .content_benefit .benefit_wrap .grand_open {padding: 50px 0;}
-.content_benefit .benefit_wrap .user_menu_list li {float: left; width: calc(100% / 5); text-align: center;}
-.content_benefit .benefit_wrap .user_menu_list li:first-child a {margin-left: 0;}
-.content_benefit .benefit_wrap .user_menu_list li a {margin-left: 30px;}
-.content_benefit .benefit_wrap .user_menu_list li a:before {content: ''; display: block; width: 49px; height: 46px; margin: 0 auto 20px;}
+
+.content_benefit .benefit_wrap .user_menu_list:after {content: ''; display: block; clear: both;}
+.content_benefit .benefit_wrap .user_menu_list li {float: left; width: calc(20% - 30px); margin-left: 30px; text-align: center;}
+.content_benefit .benefit_wrap .user_menu_list li:first-child {width: calc(100% / 5); margin-left: 0;}
+.content_benefit .benefit_wrap .user_menu_list li a {position: relative; padding-top: 66px;}
+.content_benefit .benefit_wrap .user_menu_list li a:before {content: ''; display: block; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 49px; height: 46px; margin: 0 auto;}
 .content_benefit .benefit_wrap .user_menu_list li.user_viplounge a:before {background: url(../images/icon/ico-vip-main.png) 0 0 no-repeat;}
 .content_benefit .benefit_wrap .user_menu_list li.user_membership a:before {width: 36px; background: url(../images/icon/ico-membership-main.png) 0 0 no-repeat;}
 .content_benefit .benefit_wrap .user_menu_list li.user_discount_card a:before {background: url(../images/icon/ico-card-main.png) 0 0 no-repeat;}
 .content_benefit .benefit_wrap .user_menu_list li.user_event a:before {width: 44px; background: url(../images/icon/ico-event-main.png) 0 0 no-repeat;}
 .content_benefit .benefit_wrap .user_menu_list li.user_store a:before {width: 46px; background: url(../images/icon/ico-store-main.png) 0 0 no-repeat;}
  /* 그랜드 오픈 */
-.content_benefit .benefit_wrap .grand_open {border-top: 1px solid #5c419d;}
+.content_benefit .benefit_wrap .grand_open {position: relative; padding-left: 360px; border-top: 1px solid #5c419d;}
 .content_benefit .benefit_wrap .grand_open:after {content: ''; display: block; clear: both;}
+.content_benefit .benefit_wrap .grand_open .grand_open_tit {position: absolute; top: 50px; left: 0;}
 .content_benefit .benefit_wrap .grand_open .grand_open_tit strong {display: inline-block; margin-top: 15px; font-size: 28px;}
-.content_benefit .benefit_wrap .grand_open .grand_open_list {display: block; padding: 0 0 0 360px;}
 .content_benefit .benefit_wrap .grand_open .grand_open_list li {float: left; width: 204px; height: 204px; margin-right: 40px; border-radius: 204px; -webkit-box-shadow: 8px 8px 10px 1px rgba(0,0,0,.3); -moz-box-shadow: 8px 8px 10px 1px rgba(0,0,0,.3); box-shadow: 8px 8px 10px 1px rgba(0,0,0,.3); overflow: hidden; background: url(../images/benefit/bg-theater-new.jpg) 0 0 no-repeat; text-align: center;}
 .content_benefit .benefit_wrap .grand_open .grand_open_list li:hover, .content_benefit .benefit_wrap .grand_open .grand_open_list li:hover a {background: #fff;}
 .content_benefit .benefit_wrap .grand_open .grand_open_list li:hover p {color: #01738b;}
@@ -317,31 +317,31 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .content_curation {background: #252451;}
 .content_curation h2 {color: #fff;}
 .content_curation .curation_wrap {display: inline-block; width: 100%; padding: 30px 0 60px; color: #fff; font-weight: 400;}
+.content_curation .curation_wrap .curation_representative {position: relative; margin: 10px 50px 0 20px;}
+.content_curation .curation_wrap .curation_representative:before {content: ''; display: inline-block; position: absolute; top: -10px; left: -20px; width: 123px; height: 131px; background: url(../images/curation/bg-bage-curation-film.png) 0 0 no-repeat;}
 .content_curation .curation_wrap .curation_representative:after {content: ''; display: block; clear: both;}
-.content_curation .curation_wrap .curation_representative {position: relative; margin: 10px 0 0 20px;}
 .content_curation .curation_wrap .curation_representative .curation_representative_movie {display: block; width: 300px; height: 430px; border-radius: 8px; overflow: hidden;}
 .content_curation .curation_wrap .curation_representative .curation_representative_movie img {width: 100%; height: 100%;}
-.content_curation .curation_wrap .curation_representative:before {content: ''; display: inline-block; position: absolute; top: -10px; left: -20px; width: 123px; height: 131px; background: url(../images/curation/bg-bage-curation-film.png) 0 0 no-repeat;}
  /* 영화 좋아요/예매버튼 */
 .content_curation .curation_wrap .curation_representative .movies_btn {padding-top: 10px; font-size: 0;}
-.content_curation .curation_wrap .curation_representative .movies_btn a {display: inline-block; width: 145px; height: 50px; line-height: 50px; border-radius: 5px; background: none; text-align: center; font-size: 18px; color: #fff;}
+.content_curation .curation_wrap .curation_representative .movies_btn a {display: inline-block; width: 145px; height: 50px; line-height: 48px; border-radius: 5px; background: none; text-align: center; font-size: 18px; color: #fff;}
 .content_curation .curation_wrap .curation_representative .movies_btn .like {border: 1px solid #fff;}
-.content_curation .curation_wrap .curation_representative .movies_btn .reservation {margin-left: 10px; background: #037b94;}
+.content_curation .curation_wrap .curation_representative .movies_btn .reservation {margin-left: 10px; border: 1px solid #037b94; background: #037b94;}
  /* 필름소사이어티 */
-.content_curation .curation_wrap .film_society_wrap {margin-left: 370px; padding-top: 10px;}
+.content_curation .curation_wrap .film_society_wrap {display: inline-block; padding-top: 10px;}
 .content_curation .curation_wrap .film_society_wrap .film_society_txt {font-size: 14px;}
 .content_curation .curation_wrap .film_society_wrap .film_society_txt > .sub_tit {padding-bottom: 14px; font-size: 18px;}
 .content_curation .curation_wrap .film_society_wrap .film_society_txt > .sub_tit:before {content: '#'; display: inline-block;}
 .content_curation .curation_wrap .film_society_wrap .film_society_txt > .tit {padding-bottom: 36px; border-bottom: 1px solid #515074; font-size: 36px; letter-spacing: -4px;}
 .content_curation .curation_wrap .film_society_wrap .film_society_txt > .txt {height: 192px; overflow: hidden; line-height: 22px; padding-top: 20px;}
 .content_curation .curation_wrap .film_society_wrap .film_society_list {font-size: 0; padding-top: 10px;}
-.content_curation .curation_wrap .film_society_wrap .film_society_list li {display: inline-block; position: relative; margin-left: 16px;}
+.content_curation .curation_wrap .film_society_wrap .film_society_list li {display: inline-block; position: relative; margin-left: 16px; height: 100%;}
 .content_curation .curation_wrap .film_society_wrap .film_society_list li:first-child {margin-left: 0;}
-.content_curation .curation_wrap .film_society_wrap .film_society_list li a {display: block; width: 170px; height: 244px;}
-.content_curation .curation_wrap .film_society_wrap .film_society_list li a img {display: block; border-radius: 8px; overflow: hidden; font-size: 0;}
-.content_curation .curation_wrap .film_society_wrap .film_society_list li:before {content: ''; display: inline-block; position: absolute; top: -5px; left: 10px; width: 35px; height: 38px; background: url(../images/curation/bg-bage-curation-film-m.png) 0 0 no-repeat;}
+.content_curation .curation_wrap .film_society_wrap .film_society_list li a {display: block; padding-top: 10px; font-size: 14px; line-height: 20px; text-align: center; letter-spacing: -1px; color: #fff;}
+.content_curation .curation_wrap .film_society_wrap .film_society_list li a span {display: block; width: 170px; height: 244px; margin-bottom: 10px; border-radius: 8px; overflow: hidden;}
+.content_curation .curation_wrap .film_society_wrap .film_society_list li a img {height: 100%;}
+.content_curation .curation_wrap .film_society_wrap .film_society_list li:before {content: ''; display: inline-block; position: absolute; top: 0; left: 10px; width: 35px; height: 38px; background: url(../images/curation/bg-bage-curation-film-m.png) 0 0 no-repeat;}
 .content_curation .curation_wrap .film_society_wrap .film_society_list li:nth-child(2):before {background: url(../images/curation/bg-bage-curation-classic-m.png) 0 0 no-repeat;}
-.content_curation .curation_wrap .film_society_wrap .film_society_list li a > .tit {display: block; padding-top: 10px; font-size: 12px; text-align: center; letter-spacing: -2px; color: #fff;}
 
 /* 메가박스 안내 */
 .content_announce {background: #fff;}
@@ -360,19 +360,21 @@ ul.col4 li {float: left; width: calc(100% / 4);}
 .content_announce .notice_wrap a {font-size: 14px; font-weight: 400; color: #222;}
 .content_announce .notice_wrap .txt {position: relative; padding: 0 375px 0 70px; line-height: 20px;}
 .content_announce .notice_wrap .txt span {font-weight: 700; color: #01738b;}
-.content_announce .notice_wrap .txt:before {content: ''; display: inline-block; position: absolute; top: 3px; left: 35px; width: 1px; height: 14px; background: #e2e2e2;}
+.content_announce .notice_wrap .txt:before {content: ''; display: inline-block; position: absolute; top: 4px; left: 35px; width: 1px; height: 14px; background: #e2e2e2;}
 .content_announce .notice_wrap .txt a:hover {border-bottom: 1px solid #222;}
 .content_announce .notice_wrap .date {font-size: 14px; font-weight: 400; color: #666;}
 .content_announce .notice_wrap .more {position: relative; margin-left: 30px; padding-right: 16px; line-height: 20px;}
-.content_announce .notice_wrap .more:before {content: ''; display: inline-block; position: absolute; top: 3px; left: -14px; width: 1px; height: 14px; background: #e2e2e2;}
-.content_announce .notice_wrap .more:after {content: ''; display: inline-block; position: absolute; top: 3px; right: 0; width: 7px; height: 12px; background: url(../images/icon/ico-arr-right-gray.png) 0 0 no-repeat;}
+.content_announce .notice_wrap .more:hover span {border-bottom: 1px solid #222;}
+.content_announce .notice_wrap .more:before {content: ''; display: inline-block; position: absolute; top: 4px; left: -14px; width: 1px; height: 14px; background: #e2e2e2;}
+.content_announce .notice_wrap .more:after {content: ''; display: inline-block; position: absolute; top: 4px; right: 0; width: 7px; height: 12px; background: url(../images/icon/ico-arr-right-gray.png) 0 0 no-repeat;}
  /* 고객센터 */
 .content_announce .customer_wrap {width: 1100px; margin: 0 auto; padding: 50px 0 30px;}
 .content_announce .customer_wrap .customer_list{margin: 0 34px; text-align: center; font-size: 0;}
 .content_announce .customer_wrap .customer_list:after {content: ''; display: block; clear: both;}
-.content_announce .customer_wrap li {float: left; width: calc(100% / 6);}
-.content_announce .customer_wrap li a {display: block; font-size: 14px; font-weight: 400; color: #222;}
-.content_announce .customer_wrap li a:before {content: ''; display: block; width: 46px; height: 46px; margin: 0 auto 20px; background: url(../images/icon/ico-main-customer.png) 0 0 no-repeat;}
+.content_announce .customer_wrap li {float: left; width: calc(16.66% - 30px); margin-left: 30px;}
+.content_announce .customer_wrap li:first-child {width: calc(100% / 6); margin-left: 0;}
+.content_announce .customer_wrap li a {display: block; position: relative; padding-top: 66px; font-size: 14px; font-weight: 400; color: #222;}
+.content_announce .customer_wrap li a:before {content: ''; display: block; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 46px; height: 46px; margin: 0 auto; background: url(../images/icon/ico-main-customer.png) 0 0 no-repeat;}
 .content_announce .customer_wrap li:nth-child(2) a:before {width: 50px; background: url(../images/icon/ico-main-faq.png) 0 0 no-repeat;}
 .content_announce .customer_wrap li:nth-child(3) a:before {width: 43px; background: url(../images/icon/ico-main-qna.png) 0 0 no-repeat;}
 .content_announce .customer_wrap li:nth-child(4) a:before {width: 50px; background: url(../images/icon/ico-main-group.png) 0 0 no-repeat;}
