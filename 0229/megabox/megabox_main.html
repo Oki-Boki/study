@@ -39,12 +39,6 @@
                     <!-- 검색 -->
                     <div class="search">
                         <button type="button" title="검색" class="search_icon blind">검색</button>
-                        <!-- <ul class="sequence_tab">
-                            <li>예매율순</li>
-                            <li>누적관객순</li>
-                            <li>메가스코어순</li>
-                        </ul> -->
-
                     </div>
                     <!--// 검색 -->
 
@@ -199,7 +193,7 @@
                 <!-- // 카테고리_리스트 -->
 
                 <!-- 검색_리스트 -->
-                <div class="search_wrap" style="display: block;">
+                <div class="search_wrap" style="display: none;">
                     <div class="inner">
                         <div class="search_tab">
                             <ul class="search_tab_list">
@@ -207,19 +201,45 @@
                                 <li class=""><button type="button">메가박스 관객순</button></li>
                             </ul>
                         </div>
-                        <div class="reserve_img_list_wrap">
-                            <ul class="reserve_img_list">
-                                <li><img src="images/search_movies/IMRLp64rBXADlKOBW8GecnH6f4ggmFcG_316.jpg" alt="반도"></li>
-                            </ul>
+                        <div class="reserve_wrap" style="display: none;">
+                            <div class="reserve_img_list_wrap">
+                                <ul class="reserve_img_list">
+                                    <li><img src="images/search_movies/IMRLp64rBXADlKOBW8GecnH6f4ggmFcG_316.jpg" alt="반도"></li>
+                                    <!-- <li><img src="images/search_movies/IMRLp64rBXADlKOBW8GecnH6f4ggmFcG_316.jpg" alt="반도"></li>
+                                    <li><img src="images/search_movies/IMRLp64rBXADlKOBW8GecnH6f4ggmFcG_316.jpg" alt="반도"></li>
+                                    <li><img src="images/search_movies/IMRLp64rBXADlKOBW8GecnH6f4ggmFcG_316.jpg" alt="반도"></li>
+                                    <li><img src="images/search_movies/IMRLp64rBXADlKOBW8GecnH6f4ggmFcG_316.jpg" alt="반도"></li> -->
+                                </ul>
+                            </div>
+                            <div class="search_list_wrap">
+                                <ul class="reserve_list">
+                                    <li><em>1</em><a href="javascript:;">반도</a></li>
+                                    <li><em>2</em><a href="javascript:;">밤쉘:세상을 바꾼 폭탄선언</a></li>
+                                    <li><em>3</em><a href="javascript:;">#살아있다</a></li>
+                                    <li><em>4</em><a href="javascript:;">[시네도슨트] 빈센트 반 고흐 미술관&크롤러 뮐러 미술관</a></li>
+                                    <li><em>5</em><a href="javascript:;">킹 오브 프리즘 올 스타즈 -프리즘 쇼☆베스트10-</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="search_list_wrap">
-                            <ul class="reserve_list">
-                                <li><em>1</em><a href="javascript:;">반도</a></li>
-                                <li><em>2</em><a href="javascript:;">밤쉘:세상을 바꾼 폭탄선언</a></li>
-                                <li><em>3</em><a href="javascript:;">#살아있다</a></li>
-                                <li><em>4</em><a href="javascript:;">[시네도슨트] 빈센트 반 고흐 미술관&크롤러 뮐러 미술관</a></li>
-                                <li><em>5</em><a href="javascript:;">킹 오브 프리즘 올 스타즈 -프리즘 쇼☆베스트10-</a></li>
-                            </ul>
+                        <div class="audience_wrap" style="display: block;">
+                            <div class="audience_img_list_wrap">
+                                <ul class="audience_img_list">
+                                    <li><img src="images/search_movies/xIBdAOS5lJNBe1CBXovcV1WYE9Q6DWPV_316.jpg" alt="반도"></li>
+                                    <!-- <li><img src="images/search_movies/IMRLp64rBXADlKOBW8GecnH6f4ggmFcG_316.jpg" alt="반도"></li>
+                                    <li><img src="images/search_movies/IMRLp64rBXADlKOBW8GecnH6f4ggmFcG_316.jpg" alt="반도"></li>
+                                    <li><img src="images/search_movies/IMRLp64rBXADlKOBW8GecnH6f4ggmFcG_316.jpg" alt="반도"></li>
+                                    <li><img src="images/search_movies/IMRLp64rBXADlKOBW8GecnH6f4ggmFcG_316.jpg" alt="반도"></li> -->
+                                </ul>
+                            </div>
+                            <div class="search_list_wrap">
+                                <ul class="audience_list">
+                                    <li><em>1</em><a href="javascript:;">#살아있다</a></li>
+                                    <li><em>2</em><a href="javascript:;">결백</a></li>
+                                    <li><em>3</em><a href="javascript:;">트롤:월드투어</a></li>
+                                    <li><em>4</em><a href="javascript:;">스타 이즈 본</a></li>
+                                    <li><em>5</em><a href="javascript:;">침입자</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <!--<div class="search_list_wrap"> 
                             <ul class="audience_list">
@@ -232,8 +252,8 @@
                         </ul>
                     </div> -->
                         <div class="search_box_wrap">
-                            <input type="text" id="on_movie_title" autocomplete="off" name="movie_title" placeholder="영화명을 입력해 주세요" title="영화 검색" class="search_box">
-                            <a href="javascript:;" class="search_box_icon"></a>
+                            <input type="text" id="on_movie_title" autocomplete="off" name="movie_title" placeholder="영화를 검색하세요" title="영화 검색" class="search_box">
+                            <button type="button" href="javascript:;" class="search_box_icon"></a>
                         </div>
                     </div>
                 </div>
@@ -243,10 +263,9 @@
 
         <div class="container">
             <div class="bg"></div>
-            <!-- <div class="bg_wrap">
-                <div class="bg_pattern"></div>
+            <div class="bg_wrap">
                 <img src="images/movies/movie_bg.jpg" alt="" class="bg">
-            </div> -->
+            </div>
             <div class="content">
                 <!-- 박스오피스 -->
                 <div class="section content_movies">
