@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/style_main.css">
     <script src="js/jquery-3.4.1.slim.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/ui.js"></script>
 </head>
 <body>
@@ -32,13 +34,13 @@
 
                     <!-- 카테고리 -->
                     <div class="category">
-                        <button type="button" title="카테고리" class="category_icon blind">카테고리</button>
+                        <button type="button" title="카테고리" class="category_icon blind" onclick="toggleClass(this, '.category_wrap');">카테고리</button>
                     </div>
                     <!--// 카테고리 -->
 
                     <!-- 검색 -->
                     <div class="search">
-                        <button type="button" title="검색" class="search_icon blind">검색</button>
+                        <button type="button" title="검색" class="search_icon blind" onclick="toggleClass(this, '.search_wrap');">검색</button>
                     </div>
                     <!--// 검색 -->
 
@@ -106,7 +108,7 @@
                     <!--// 유틸 아이콘 메뉴 -->
                 </div>
                 <!-- 카테고리_리스트 -->
-                <div class="category_wrap" style="display: none;">
+                <div class="category_wrap">
                     <div class="inner">
                         <h2 class="alignL">SITEMAP</h2>
                         <ul class="category_list">
@@ -193,15 +195,15 @@
                 <!-- // 카테고리_리스트 -->
 
                 <!-- 검색_리스트 -->
-                <div class="search_wrap" style="display: none;">
+                <div class="search_wrap">
                     <div class="inner">
                         <div class="search_tab">
-                            <ul class="search_tab_list">
-                                <li class="on"><button type="button">예매율 순</button></li>
-                                <li class=""><button type="button">메가박스 관객순</button></li>
+                            <ul class="search_tab_list js-tab">
+                                <li class="on"><button type="button" onclick="activeTab(this)">예매율 순</button></li>
+                                <li class=""><button type="button" onclick="activeTab(this)">메가박스 관객순</button></li>
                             </ul>
                         </div>
-                        <div class="reserve_wrap" style="display: none;">
+                        <div class="reserve_wrap js-cont" style="display: block;">
                             <div class="reserve_img_list_wrap">
                                 <ul class="reserve_img_list">
                                     <li><img src="images/search_movies/IMRLp64rBXADlKOBW8GecnH6f4ggmFcG_316.jpg" alt="반도"></li>
@@ -221,7 +223,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="audience_wrap" style="display: block;">
+                        <div class="audience_wrap js-cont">
                             <div class="audience_img_list_wrap">
                                 <ul class="audience_img_list">
                                     <li><img src="images/search_movies/xIBdAOS5lJNBe1CBXovcV1WYE9Q6DWPV_316.jpg" alt="반도"></li>
@@ -373,18 +375,16 @@
                     <div class="scroll_down blind">스크롤 다운</div>
                     <!-- // 스크롤 다운 -->
                 </div>
-                
                 <!-- // 박스오피스 -->
-
 
                 <!-- 혜택 -->
                 <div class="section content_benefit">
                     <div class="inner">
                         <h2 class="alignL">혜택</h2>
                         <div class="event_wrap">
-                            <div class="event_slide">
-                                <ul class="event_slide_list">
-                                    <li>
+                            <div class="event_slide swiper-container">
+                                <div class="event_slide_list swiper-wrapper">
+                                    <div class="swiper-slide">
                                         <a href="javascript:;">
                                             <div class="list_text">
                                                 <p class="list_tit fontW_b">메가박스 특별기획전</p>
@@ -393,8 +393,8 @@
                                             </div>
                                             <div class="list_img"><img src="images/benefit/benefit_movie01.jpg" alt=""></div>
                                         </a>
-                                    </li>
-                                    <li>
+                                    </div>
+                                    <div class="swiper-slide">
                                         <a href="javascript:;">
                                             <div class="list_text">
                                                 <p class="list_tit fontW_b">메가박스 오리지널 티켓</p>
@@ -403,8 +403,8 @@
                                             </div>
                                             <div class="list_img"><img src="images/benefit/benefit_movie02.jpg" alt=""></div>
                                         </a>
-                                    </li>
-                                    <li>
+                                    </div>
+                                    <div class="swiper-slide">
                                         <a href="javascript:;">
                                             <div class="list_text">
                                                 <p class="list_tit fontW_b">메가박스 특별기획전</p>
@@ -413,8 +413,8 @@
                                             </div>
                                             <div class="list_img"><img src="images/benefit/benefit_movie03.jpg" alt=""></div>
                                         </a>
-                                    </li>
-                                    <li>
+                                    </div>
+                                    <div class="swiper-slide">
                                         <a href="javascript:;">
                                             <div class="list_text">
                                                 <p class="list_tit fontW_b">메가박스 특별기획전</p>
@@ -423,10 +423,43 @@
                                             </div>
                                             <div class="list_img"><img src="images/benefit/benefit_movie04.jpg" alt=""></div>
                                         </a>
-                                    </li>
-                                </ul>
-                                <div class="event_slide_bar"><span class="on"></span></div>
+                                    </div>
+                                </div>
+                                <div class="benefit_swiper_wrap">
+                                    <!-- Add Pagination -->
+                                    <div class="swiper-scrollbar"></div>
+                                    <div class="swiper-pagination"></div>
+                                    <!-- Add Arrows -->
+                                    <div class="swiper_button">   
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                    <button type="button" class="btn_action btn_pause" onclick="playBenefitSwiper(this)"><span class="blind">일시정지</span></button>
+                                    <!-- <button type="button" class="btn_action btn_play on" onclick="playBenefitSwiper(this)"><span class="blind">재생</span></button>
+                                    <button type="button" class="btn_action btn_pause" onclick="playBenefitSwiper(this)"><span class="blind">재생</span></button> -->
+                                </div>
                             </div>
+                            <!-- Initialize Swiper -->
+                            <script>
+                                var benefitSwiper = new Swiper('.swiper-container', {
+                                    pagination: {
+                                        el: '.swiper-pagination',
+                                        type: 'fraction',
+                                    },
+                                    scrollbar: {
+                                        el: '.swiper-scrollbar',
+                                        hide: false,
+                                    },
+                                    autoplay: {
+                                        delay: 2500,
+                                        disableOnInteraction: false,
+                                    },
+                                    navigation: {
+                                        nextEl: '.swiper-button-next',
+                                        prevEl: '.swiper-button-prev',
+                                    },
+                                });
+                            </script>
                             <div class="event_banner_wrap">
                                 <div class="event_banner"><a href="javascript:;"><img src="images/benefit/benefit_banner01.jpg" alt="목금토일 영화 6천원 할인"></a></div>
                                 <div class="event_banner event_banner02"><a href="javascript:;"><img src="images/benefit/benefit_banner02.jpg" alt="만원의 행복"></a></div>

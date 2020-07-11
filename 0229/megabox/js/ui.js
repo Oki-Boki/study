@@ -1,16 +1,39 @@
 $(function(){
-    tabActive('.brand_tab');
+    // $('.category_icon').click(function(){
+    //     console.log('d');
+    // });
+
+    // $('.category_icon').on('click', function(){
+    //     console.log('dd');
+    // });
 });
 
-var tabActive = function(pram){
-    var idx = 0;
-    var tabName = $(pram);
-    var tabLIstItem = tabName.find('.js_tab_list > li');
-    var tabLIstCont = tabName.find('.js_tab_cont > div');
 
-    tabLIstItem.on('click', function(){
-        $(this).addClass('on').siblings().removeClass('on');
-        idx = $(this).index();
-        tabLIstCont.eq(idx).show().siblings().hide();
-    });
-};
+var toggleClass = function(obj, target){
+    $(obj).toggleClass('active');
+    $(target).toggleClass('active');
+}
+
+var activeTab = function(obj){
+    var $this = $(obj);
+    var $parent = $this.parent();
+    var $tabCont = $('.js-cont');
+    var idx = $parent.index();
+
+    $parent.siblings().removeClass('on');
+    $parent.addClass('on');
+
+    $tabCont.hide().eq(idx).show();
+}
+
+var playBenefitSwiper = function(obj){
+    var $this = $(obj);
+
+    if( $this.hasClass('btn_pause') ){
+        $this.removeClass('btn_pause').addClass('btn_play');
+        benefitSwiper.autoplay.stop();
+    } else {
+        $this.removeClass('btn_play').addClass('btn_pause');
+        benefitSwiper.autoplay.start();
+    }
+}
