@@ -47,6 +47,12 @@
         <div class="container">
             <div class="content">
                 <div class="section_event">
+                    <div class="event_ver">
+                        <div class="inner">
+                            <button type="button" class="list_ver active"><span class="blind">리스트형 이벤트</span></button>
+                            <button type="button" class="card_ver"><span class="blind">카드형 이벤트</span></button>
+                        </div>
+                    </div>
                     <div class="section_event_swiper">
                         <div class="swiper-container">
                             <div class="event_swiper_wrap swiper-wrapper">
@@ -167,7 +173,6 @@
                                 <div class="swiper-button-prev"></div>
                             </div>
                             <button type="button" class="btn_action btn_pause" onclick="playBenefitSwiper(this)"><span class="blind">일시정지</span></button>
-                            <!-- Add Pagination -->
                             
                         </div>
                         <div class="inner_pagination"><div class="inner"><div class="swiper-pagination swiper-pagination_dots"></div></div></div>
@@ -200,6 +205,8 @@
                             },
                         });
                     </script>
+                    
+
                     <div class="quick_menu">
                         <div class="inner">
                             <ul class="quick_menu_list">
@@ -227,6 +234,7 @@
                     <div class="inner inner02">
                         <a href="javascript:;" class="more_view_event"><span>이벤트</span> 전체보기</a>
                     </div>
+                    <div class="scroll_down"><span class="blind">스크롤 다운</span></div>
                 </div>
             </div>
         </div>
