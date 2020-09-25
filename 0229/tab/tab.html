@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://static2.e-himart.co.kr/resources/layout/js/jquery-1.11.2.min.js"></script>
+    <style type="text/css">
+        h2 {font-weight: 540; border-bottom: 2px dashed #b71616; box-sizing: border-box; overflow: hidden; color: #b71616;}
+        .tab_wrap {width: 1000px; margin-top: 50px; border-radius: 10px; box-sizing: border-box; overflow: hidden; background: rgba(245,246,244,0.84);}
+        .tab_list_wrap .tab_list:after {content: ''; display: block; clear: both;}
+        .tab_list_wrap .tab_list li {padding: 40px; font-size: 24px; font-weight: 550; text-align: center; background:  rgba(245,246,244,0.84);}
+        .tab_list_wrap .tab_list li.current {color: #fff; background: tomato;}
+        .tab_list_wrap .tab_list li:nth-child(2).current {background: orange;}
+        .tab_list_wrap .tab_list li:last-child.current {background: salmon;}
+        .tab_content_wrap .tab_content_list li {font-size: 20px; padding: 40px;}
+        .tab_content_wrap .tab_content_list li:nth-child(n+2) {display: none;}
+        .tab_content_wrap .tab_content_list li p {padding-top: 20px;}
+        .tab_content_wrap .tab_content_list li p:first-child {padding-top: 0;}
+        .tab_content_wrap .tab_content_list li.current {color: #fff; background: tomato;}
+        .tab_content_wrap .tab_content_list li:nth-child(2).current {background: orange;}
+        .tab_content_wrap .tab_content_list li:last-child.current {background: salmon;}
+    </style>
+    
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="inner">
+                <h1 class="logo"><a href="">FOOD WORLD</a></h1>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="inner">
+                <h2>RED LINE FOOD</h2>
+                <div class="tab_wrap">
+                    <div class="tab_list_wrap">
+                        <ul class="tab_list col3">
+                            <li class="current">Tomato</li>
+                            <li>Orange</li>
+                            <li>Salmon</li>
+                        </ul>
+                    </div>
+                    <div class="tab_content_wrap">
+                        <ul class="tab_content_list">
+                            <li class="current">
+                                <p>
+                                    The tomato is the edible, often red berry of the plant Solanum lycopersicum, commonly known as a tomato plant. The species originated in western South America and Central America.
+                                    The Nahuatl (the language used by the Aztecs) word tomatl gave rise to the Spanish word tomate, from which the English word tomato derived.
+                                    Its domestication and use as a cultivated food may have originated with the indigenous peoples of Mexico. The Aztecs used tomatoes in their cooking at the time of the Spanish conquest 
+                                    of the Aztec Empire, and after the Spanish encountered the tomato for the first time after their contact with the Aztecs, they brought the plant to Europe. From there, the tomato was introduced 
+                                    to other parts of the European-colonized world during the 16th century.
+                                </p>
+                                <p>
+                                    Tomatoes are a significant source of umami flavor. The tomato is consumed in diverse ways, raw or cooked, in many dishes, sauces, salads, and drinks. 
+                                    While tomatoes are fruits—botanically classified as berries—they are commonly used as a vegetable ingredient or side dish.
+                                </p>
+                                <p>
+                                    Numerous varieties of the tomato plant are widely grown in temperate climates across the world, with greenhouses allowing for the production of tomatoes throughout all seasons of the year. 
+                                    Tomato plants typically grow to 1–3 meters (3–10 ft) in height. They are vines that have a weak stem that sprawls and typically needs support. Indeterminate tomato plants are perennials in their 
+                                    native habitat, but are cultivated as annuals. (Determinate, or bush, plants are annuals that stop growing at a certain height and produce a crop all at once.) The size of the tomato varies according 
+                                    to the cultivar, with a range of 1–10 cm (1⁄2–4 in) in width.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    The orange is the fruit of various citrus species in the family Rutaceae (see list of plants known as orange) it primarily refers to Citrus × sinensis, which is also called 
+                                    sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. The sweet orange reproduces asexually (apomixis through nucellar embryony) 
+                                    varieties of sweet orange arise through mutations.
+                                    The orange is a hybrid between pomelo (Citrus maxima) and mandarin (Citrus reticulata). The chloroplast genome, and therefore the maternal line, is that of pomelo. 
+                                    The sweet orange has had its full genome sequenced.
+                                </p>
+                                <p>
+                                    The orange originated in a region comprising Southern China, Northeast India, and Myanmar, and the earliest mention of the sweet orange was in Chinese literature in 314 BC. 
+                                    As of 1987, orange trees were found to be the most cultivated fruit tree in the world. Orange trees are widely grown in tropical and subtropical climates for their sweet fruit. 
+                                    The fruit of the orange tree can be eaten fresh, or processed for its juice or fragrant peel. As of 2012, sweet oranges accounted for approximately 70% of citrus production.
+                                </p>
+                                <p>
+                                    In 2017, 73 million tonnes of oranges were grown worldwide, with Brazil producing 24% of the world total, followed by China and India.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Salmon /ˈsæmən/ is the common name for several species of ray-finned fish in the family Salmonidae. Other fish in the same family include trout, char, grayling and whitefish. Salmon 
+                                    are native to tributaries of the North Atlantic (genus Salmo) and Pacific Ocean (genus Oncorhynchus). Many species of salmon have been introduced into non-native environments such as 
+                                    the Great Lakes of North America and Patagonia in South America. Salmon are intensively farmed in many parts of the world.
+                                </p>
+                                <p>
+                                    Typically, salmon are anadromous: they hatch in fresh water, migrate to the ocean, then return to fresh water to reproduce. However, populations of several species are restricted to 
+                                    fresh water through their lives. Folklore has it that the fish return to the exact spot where they hatched to spawn. Tracking studies have shown this to be mostly true. A portion of 
+                                    a returning salmon run may stray and spawn in different freshwater systems; the percent of straying depends on the species of salmon. Homing behavior has been shown to depend on 
+                                    olfactory memory. Salmon date back to the Neogene.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(function () {
+                var $logo = $(".logo");
+                
+                $logo.on("click", function () {
+                    console.log("hello");
+                });
+            });
+        </script>
+
+        <footer class="footer">
+            <div class="footer_wrap">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

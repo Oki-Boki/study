@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   reset
+  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com
+   ========================================================================== */
+html, body, header, footer, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; box-sizing:border-box; word-break:keep-all;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1; font-family:'Nanum Gothic','맑은고딕',Malgun Gothic,dotum,'돋음',arial,sans-serif; font-size:14px; color:#000; min-width:320px;}
+ol, ul {list-style:none;}
+ul:after {clear:both; display:block; content:"";}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after {content:''; content:none;}
+table {border-collapse:collapse; border-spacing:0; width:100%;}
+/* html, body {height:100%;} */
+button  {margin:0;padding:0;border-radius:2px; border:none; box-sizing:border-box; vertical-align:middle; font-size:20px; font-family:'Nanum Gothic','맑은고딕',Malgun Gothic,dotum,'돋음',arial,sans-serif; cursor:pointer; background:transparent; border-radius:0; outline:none;}
+/* button:hover {background:#66532b;}
+button:hover:not(:disabled) {background:#66532b;}
+button:disabled {background:#bfbbb2;color:#fff;} */
+button > span {position:relative;}
+
+a,
+a:link
+a:visited,
+a:hover,
+a:active,
+a:focus {/*color:#666;*/ text-decoration:none;}
+
+.hidden,
+caption,
+legend {overflow:hidden; width:1px; height:1px; margin:-1px 0 0 -1px; font-size:0; line-height:0; text-indent:-9999px;}
+.blind {clear:both; position:absolute; top:auto; left:0; overflow:hidden; width:1px; height:1px; padding:0; margin:0; font-size:0; line-height:0}
+.blind:after {display:none;}
+
+img {vertical-align:top; width:100%;}
+em {font-style:normal;}
+
+/* ==========================================================================
+	 layout
+   ========================================================================== */
+.wrap {position: relative; width: 1220px; margin: 0 auto; text-align: center;}
+.section {position: relative;}
+
+h2 {font-size: 30px; line-height: 44px; letter-spacing: -3px; font-weight: 540;}
+
+.alignL {text-align: left;}
+.alignC {text-align: center;}
+.alignR {text-align: right;}
+.floatL {float: left;}
+.floatR {float: right;}
+.fontW_b {font-weight: bold;}
+
+ul.col2 li {float: left; width: calc(100% / 2);}
+ul.col3 li {float: left; width: calc(100% / 3);}
+ul.col4 li {float: left; width: calc(100% / 4);}
+
+/* ==========================================================================
+   헤더
+  ========================================================================== */
+.header_wrap:after {content: ''; display: block; clear: both;}
+.header_wrap .logo {float: left; position: relative; left: 0; top: 0; width: 200px; height: 200px; text-align: center; font-size: 16px; background: #5c4fff;}
+.header_wrap .logo a {display: block;}
+
+/* ==========================================================================
+   메인메뉴
+  ========================================================================== */
+.header_wrap .header_menu {width: 100%; height: 70px; line-height: 70px; vertical-align: middle; color: #fff; background: #fffea1;}
+.header_wrap .header_menu .header_menu_list {float: right;}
+.header_wrap .header_menu:after {content: ''; display: block; clear: both;}
+.header_wrap .header_menu .header_menu_list li {float: left; width: 150px; height: 70px; background: #01008c;}
+.header_wrap .header_menu .header_menu_list li:nth-child(odd) {background: #006401;}
+.header_wrap .main_nav {float: left; width: 1020px; height: 130px; background: #cccccc;}
+
+.header_wrap .header_menu .header_menu_list li:hover {background: #87ceec;}
+/* ==========================================================================
+   content
+  ========================================================================== */
+.container {width: 100%; height: 700px; text-align: left; background: #1dc5c5;}
+
+/* ==========================================================================
+   footer
+  ========================================================================== */
+.footer {width: 100%; height: 100px; background: #fe0000;}
+
